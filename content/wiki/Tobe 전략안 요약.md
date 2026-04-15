@@ -5,7 +5,7 @@ created: 2026-04-08
 
 # 🎯 Tobe 전략안 요약
 
-← [[HOME|🏠 홈으로]] | 원본: [[아이부자 종합 전략안]] | [[INSIGHT_STRUCTURE]]
+← [[HOME|🏠 홈으로]] | 원본: [[아이부자-종합-전략안]] | [[INSIGHT_STRUCTURE]]
 
 ---
 
