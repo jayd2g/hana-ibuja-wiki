@@ -5,7 +5,7 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [Component.RecentNotes({ title: "최근 업데이트", limit: 10 })],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/jackyzha0/quartz",
