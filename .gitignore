@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+.AppleDouble
+
+# Obsidian 로컬 설정 (충돌 방지)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+
+# 임시 파일
+*.tmp
+conflict-files-obsidian-git.md
