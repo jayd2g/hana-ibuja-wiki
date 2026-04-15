@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아이부자 프로젝트 대시보드</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #0f0f13; color: #e8e8f0; }
+
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 32px 40px;
+    border-bottom: 1px solid #2a2a4a;
+  }
+  .header h1 { font-size: 24px; font-weight: 700; color: #fff; }
+  .header p { font-size: 13px; color: #8888aa; margin-top: 4px; }
+  .header .meta { display: flex; gap: 24px; margin-top: 16px; }
+  .header .meta span { font-size: 12px; background: rgba(255,255,255,0.08); padding: 4px 12px; border-radius: 20px; }
+
+  .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; padding: 24px 40px; }
+
+  .card {
+    background: #1a1a2e;
+    border: 1px solid #2a2a4a;
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .card h2 { font-size: 13px; font-weight: 600; color: #8888cc; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; }
+
+  /* KPI cards */
+  .kpi-grid { grid-column: span 12; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .kpi { background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 20px; }
+  .kpi .value { font-size: 36px; font-weight: 800; color: #fff; }
+  .kpi .label { font-size: 12px; color: #8888aa; margin-top: 4px; }
+  .kpi .sub { font-size: 11px; color: #6666aa; margin-top: 8px; }
+  .kpi.blue { border-top: 3px solid #4285f4; }
+  .kpi.green { border-top: 3px solid #34a853; }
+  .kpi.yellow { border-top: 3px solid #fbbc04; }
+  .kpi.red { border-top: 3px solid #ea4335; }
+
+  /* Charts */
+  .chart-nps { grid-column: span 7; }
+  .chart-pie { grid-column: span 5; }
+  .chart-journey { grid-column: span 12; }
+  .chart-compete { grid-column: span 6; }
+  .chart-issues { grid-column: span 6; }
+
+  canvas { width: 100% !important; }
+
+  /* Journey */
+  .journey { display: flex; align-items: center; gap: 0; margin-top: 8px; }
+  .journey-step {
+    flex: 1;
+    text-align: center;
+    padding: 16px 8px;
+    position: relative;
+  }
+  .journey-step .age { font-size: 11px; color: #8888aa; margin-bottom: 6px; }
+  .journey-step .score { font-size: 28px; font-weight: 800; }
+  .journey-step .label { font-size: 11px; margin-top: 4px; }
+  .journey-step .desc { font-size: 10px; color: #6666aa; margin-top: 6px; line-height: 1.4; }
+  .journey-arrow { color: #4a4a6a; font-size: 20px; flex-shrink: 0; }
+  .step-green .score { color: #34a853; }
+  .step-yellow .score { color: #fbbc04; }
+  .step-orange .score { color: #ff6d00; }
+  .step-red .score { color: #ea4335; }
+
+  /* Issues */
+  .issue-list { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+  .issue-item { display: flex; align-items: center; gap: 12px; }
+  .issue-bar-wrap { flex: 1; background: #2a2a4a; border-radius: 4px; height: 8px; overflow: hidden; }
+  .issue-bar { height: 100%; border-radius: 4px; }
+  .issue-name { font-size: 12px; color: #ccc; width: 100px; flex-shrink: 0; }
+  .issue-pct { font-size: 11px; color: #8888aa; width: 36px; text-align: right; flex-shrink: 0; }
+
+  /* Compete table */
+  .compete-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .compete-table th { color: #8888aa; font-weight: 500; padding: 8px; text-align: left; border-bottom: 1px solid #2a2a4a; }
+  .compete-table td { padding: 10px 8px; border-bottom: 1px solid #1e1e36; }
+  .compete-table tr:last-child td { border-bottom: none; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 600; }
+  .badge-green { background: rgba(52,168,83,0.2); color: #34a853; }
+  .badge-red { background: rgba(234,67,53,0.2); color: #ea4335; }
+  .badge-yellow { background: rgba(251,188,4,0.2); color: #fbbc04; }
+  .badge-blue { background: rgba(66,133,244,0.2); color: #4285f4; }
+
+  /* Sources */
+  .sources-grid { grid-column: span 12; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .source-card { background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 10px; padding: 14px; }
+  .source-card .year { font-size: 10px; color: #8888aa; }
+  .source-card .title { font-size: 12px; font-weight: 600; color: #ddd; margin-top: 4px; line-height: 1.4; }
+  .source-card .type { font-size: 10px; margin-top: 8px; }
+
+  .section-label {
+    grid-column: span 12;
+    font-size: 11px;
+    font-weight: 700;
+    color: #4a4a8a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 8px;
+    border-top: 1px solid #2a2a4a;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏦 하나은행 아이부자 — 프로젝트 대시보드</h1>
+  <p>UX 컨설팅 리서치 종합 현황</p>
+  <div class="meta">
+    <span>📄 소스 자료 12개</span>
+    <span>📊 NPS 42.6점</span>
+    <span>📱 1,154개 화면 분석</span>
+    <span>🗓 2026.04.07 기준</span>
+  </div>
+</div>
+
+<div class="grid">
+
+  <!-- KPIs -->
+  <div class="kpi-grid">
+    <div class="kpi blue">
+      <div class="value">42.6</div>
+      <div class="label">NPS 점수</div>
+      <div class="sub">추천 61% · 중립 21% · 비추천 18%</div>
+    </div>
+    <div class="kpi yellow">
+      <div class="value">1,154</div>
+      <div class="label">총 화면 수 (AS-IS)</div>
+      <div class="sub">8개 영역 / Giver·Taker 분기</div>
+    </div>
+    <div class="kpi red">
+      <div class="value">초5-6</div>
+      <div class="label">이탈 시작 시점</div>
+      <div class="sub">중학교 진입 시 결정적 이탈</div>
+    </div>
+    <div class="kpi green">
+      <div class="value">4,827</div>
+      <div class="label">NPS 응답 건수</div>
+      <div class="sub">부모 13% · 자녀 87%</div>
+    </div>
+  </div>
+
+  <!-- NPS 차트 -->
+  <div class="card chart-nps">
+    <h2>카테고리별 NPS 점수</h2>
+    <canvas id="npsChart" height="180"></canvas>
+  </div>
+
+  <!-- 응답자 구성 파이 -->
+  <div class="card chart-pie">
+    <h2>추천 지수 분포</h2>
+    <canvas id="pieChart" height="180"></canvas>
+  </div>
+
+  <!-- 연령별 여정 -->
+  <div class="card chart-journey">
+    <h2>연령별 만족도 & 이탈 패턴</h2>
+    <div class="journey">
+      <div class="journey-step step-green">
+        <div class="age">초등 저학년 (7-9세)</div>
+        <div class="score">9-10점</div>
+        <div class="label">🟢 안전 구간</div>
+        <div class="desc">첫 앱 경험<br>부모 의존도 높음</div>
+      </div>
+      <div class="journey-arrow">→</div>
+      <div class="journey-step step-yellow">
+        <div class="age">초등 고학년 (10-12세)</div>
+        <div class="score">7-8점</div>
+        <div class="label">🟡 주의 구간</div>
+        <div class="desc">또래 의식 증가<br>토스 친구 등장</div>
+      </div>
+      <div class="journey-arrow">→</div>
+      <div class="journey-step step-red">
+        <div class="age">중학생 (13-15세)</div>
+        <div class="score">5-6점</div>
+        <div class="label">🔴 이탈 임계점</div>
+        <div class="desc">소셜 기능 격차 체감<br>토스로 전환 결정</div>
+      </div>
+      <div class="journey-arrow">→</div>
+      <div class="journey-step step-red">
+        <div class="age">고등학생 (16-18세)</div>
+        <div class="score">토스</div>
+        <div class="label">🔴 이탈 완료</div>
+        <div class="desc">카카오도 유치<br>무조건 토스</div>
+      </div>
+      <div class="journey-arrow">→</div>
+      <div class="journey-step step-green">
+        <div class="age">대학/취업</div>
+        <div class="score">🏦</div>
+        <div class="label">🎯 재확보 기회</div>
+        <div class="desc">돈 많아지면<br>시중은행으로</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 경쟁사 비교 -->
+  <div class="card chart-compete">
+    <h2>경쟁사 포지셔닝</h2>
+    <table class="compete-table">
+      <thead>
+        <tr>
+          <th>서비스</th>
+          <th>10대 선호도</th>
+          <th>소셜 기능</th>
+          <th>실계좌</th>
+          <th>성인 전환</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>토스유스</strong></td>
+          <td><span class="badge badge-green">매우 높음</span></td>
+          <td><span class="badge badge-green">강함</span></td>
+          <td><span class="badge badge-green">완전</span></td>
+          <td><span class="badge badge-green">동일 앱</span></td>
+        </tr>
+        <tr>
+          <td><strong>카카오 미니</strong></td>
+          <td><span class="badge badge-yellow">보통</span></td>
+          <td><span class="badge badge-yellow">일부</span></td>
+          <td><span class="badge badge-yellow">제한적</span></td>
+          <td><span class="badge badge-yellow">카카오뱅크</span></td>
+        </tr>
+        <tr>
+          <td><strong style="color:#4285f4">아이부자</strong></td>
+          <td><span class="badge badge-red">낮음</span></td>
+          <td><span class="badge badge-red">없음</span></td>
+          <td><span class="badge badge-yellow">구현중</span></td>
+          <td><span class="badge badge-red">별도 앱</span></td>
+        </tr>
+        <tr>
+          <td><strong>퍼핏</strong></td>
+          <td><span class="badge badge-red">낮음</span></td>
+          <td><span class="badge badge-red">없음</span></td>
+          <td><span class="badge badge-red">없음</span></td>
+          <td><span class="badge badge-red">없음</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 개선 우선순위 -->
+  <div class="card chart-issues">
+    <h2>개선 과제 중요도 (NPS 기준)</h2>
+    <div class="issue-list">
+      <div class="issue-item">
+        <span class="issue-name">🔴 안정성</span>
+        <div class="issue-bar-wrap"><div class="issue-bar" style="width:24%; background:#ea4335;"></div></div>
+        <span class="issue-pct">24%</span>
+      </div>
+      <div class="issue-item">
+        <span class="issue-name">🟠 경쟁력</span>
+        <div class="issue-bar-wrap"><div class="issue-bar" style="width:17%; background:#ff6d00;"></div></div>
+        <span class="issue-pct">17%</span>
+      </div>
+      <div class="issue-item">
+        <span class="issue-name">🟡 용돈관리</span>
+        <div class="issue-bar-wrap"><div class="issue-bar" style="width:17%; background:#fbbc04;"></div></div>
+        <span class="issue-pct">17%</span>
+      </div>
+      <div class="issue-item">
+        <span class="issue-name">🟡 재미</span>
+        <div class="issue-bar-wrap"><div class="issue-bar" style="width:11%; background:#fbbc04;"></div></div>
+        <span class="issue-pct">11%</span>
+      </div>
+      <div class="issue-item">
+        <span class="issue-name">🔵 인지도</span>
+        <div class="issue-bar-wrap"><div class="issue-bar" style="width:9%; background:#4285f4;"></div></div>
+        <span class="issue-pct">9%</span>
+      </div>
+      <div class="issue-item">
+        <span class="issue-name">🟢 교육</span>
+        <div class="issue-bar-wrap"><div class="issue-bar" style="width:3%; background:#34a853;"></div></div>
+        <span class="issue-pct">3%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 소스 자료 현황 -->
+  <div class="section-label">📚 누적 소스 자료 현황</div>
+  <div class="sources-grid">
+    <div class="source-card">
+      <div class="year">2023.07</div>
+      <div class="title">하나금융연구소 잘파세대 금융 인식 점검</div>
+      <div class="type"><span class="badge badge-blue">시장조사</span></div>
+    </div>
+    <div class="source-card">
+      <div class="year">2023.08</div>
+      <div class="title">히든피겨스 청소년 인터뷰 rawdata</div>
+      <div class="type"><span class="badge badge-yellow">정성조사</span></div>
+    </div>
+    <div class="source-card">
+      <div class="year">2023.10</div>
+      <div class="title">히든피겨스 아이부자 3.0 UX컨설팅</div>
+      <div class="type"><span class="badge badge-green">외부컨설팅</span></div>
+    </div>
+    <div class="source-card">
+      <div class="year">2024.06</div>
+      <div class="title">아이부자 3.0 화면명세서 v1.0</div>
+      <div class="type"><span class="badge badge-blue">내부기획</span></div>
+    </div>
+    <div class="source-card">
+      <div class="year">2025.05</div>
+      <div class="title">오픈서베이 첫금융 트렌드 리포트</div>
+      <div class="type"><span class="badge badge-blue">시장조사</span></div>
+    </div>
+    <div class="source-card">
+      <div class="year">2025.09</div>
+      <div class="title">아이부자팀 부모자녀 사용자인터뷰</div>
+      <div class="type"><span class="badge badge-yellow">정성조사</span></div>
+    </div>
+    <div class="source-card">
+      <div class="year">2025.12</div>
+      <div class="title">아이부자팀 인앱 NPS 조사 (4,827건)</div>
+      <div class="type"><span class="badge badge-red">정량조사</span></div>
+    </div>
+    <div class="source-card">
+      <div class="year">2026.02</div>
+      <div class="title">하나금융연구소 주니어금융전략 재정립</div>
+      <div class="type"><span class="badge badge-blue">전략보고서</span></div>
+    </div>
+    <div class="source-card">
+      <div class="year">2026.02</div>
+      <div class="title">아이부자팀 리뉴얼 사전 자료 취합</div>
+      <div class="type"><span class="badge badge-green">내부기획</span></div>
+    </div>
+    <div class="source-card">
+      <div class="year">2026.04</div>
+      <div class="title">이해관계자 인터뷰 5건 (의사결정권자·담당자)</div>
+      <div class="type"><span class="badge badge-yellow">이해관계자</span></div>
+    </div>
+    <div class="source-card">
+      <div class="year">2026.04</div>
+      <div class="title">AS-IS UX/UI 분석 보고서 (1,154화면)</div>
+      <div class="type"><span class="badge badge-green">UX분석</span></div>
+    </div>
+    <div class="source-card" style="background: #0f0f1a; border-style: dashed; display:flex; align-items:center; justify-content:center;">
+      <div style="text-align:center; color: #4a4a6a; font-size: 12px;">+ 다음 자료<br>추가 예정</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// NPS 차트
+const npsCtx = document.getElementById('npsChart').getContext('2d');
+const npsData = {
+  labels: ['용돈/관리', '교육', '재미', '저금', '계좌', '디자인', '인지도', '안정성'],
+  datasets: [{
+    data: [93.1, 92.6, 87.3, 83.4, -2.1, -11.1, -45.9, -50.0],
+    backgroundColor: (ctx) => {
+      const v = ctx.raw;
+      return v > 0 ? 'rgba(52, 168, 83, 0.75)' : 'rgba(234, 67, 53, 0.75)';
+    },
+    borderColor: (ctx) => {
+      const v = ctx.raw;
+      return v > 0 ? '#34a853' : '#ea4335';
+    },
+    borderWidth: 1,
+    borderRadius: 4,
+  }]
+};
+new Chart(npsCtx, {
+  type: 'bar',
+  data: npsData,
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: (ctx) => ` NPS ${ctx.raw > 0 ? '+' : ''}${ctx.raw}`
+        }
+      }
+    },
+    scales: {
+      x: { grid: { color: '#2a2a4a' }, ticks: { color: '#aaa', font: { size: 11 } } },
+      y: {
+        grid: { color: '#2a2a4a' },
+        ticks: { color: '#aaa', font: { size: 11 } },
+        min: -60, max: 100,
+      }
+    }
+  }
+});
+
+// 파이 차트
+const pieCtx = document.getElementById('pieChart').getContext('2d');
+new Chart(pieCtx, {
+  type: 'doughnut',
+  data: {
+    labels: ['추천 고객 (61%)', '중립 고객 (21%)', '비추천 고객 (18%)'],
+    datasets: [{
+      data: [61, 21, 18],
+      backgroundColor: ['#34a853', '#fbbc04', '#ea4335'],
+      borderWidth: 0,
+      hoverOffset: 6,
+    }]
+  },
+  options: {
+    responsive: true,
+    cutout: '65%',
+    plugins: {
+      legend: {
+        position: 'bottom',
+        labels: { color: '#aaa', font: { size: 11 }, padding: 12 }
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>

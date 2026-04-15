@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>미성년자 금융 지식·행동 누적 경험맵</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  background: #F1F5F9;
+  color: #1E293B;
+  padding: 48px 40px 60px;
+  min-width: 1060px;
+}
+
+/* ─── Page Header ─── */
+.page-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.page-header h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.page-header .subtitle {
+  font-size: 13.5px;
+  color: #64748B;
+  line-height: 1.6;
+}
+
+/* ─── Legend ─── */
+.legend-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+.legend-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: white;
+  padding: 8px 18px;
+  border-radius: 30px;
+  border: 1px solid #E2E8F0;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #475569;
+  white-space: nowrap;
+}
+.legend-pip {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.legend-divider {
+  width: 1px;
+  height: 16px;
+  background: #E2E8F0;
+}
+.legend-inherited-box {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: #F1F5F9;
+  border: 1.5px dashed #94A3B8;
+  flex-shrink: 0;
+}
+
+/* ─── Main Columns ─── */
+.columns-wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.columns {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.phase-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Phase header bar */
+.ph-header {
+  padding: 16px 14px 12px;
+  border-radius: 14px 14px 0 0;
+  color: white;
+  text-align: center;
+}
+.ph-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+.ph-name {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+.ph-age {
+  font-size: 12px;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+/* New counter bar */
+.new-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 7px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  border-top: 1px solid rgba(255,255,255,0.22);
+  letter-spacing: 0.01em;
+}
+.counter-arrow {
+  font-size: 12px;
+}
+
+/* Blocks container */
+.ph-blocks {
+  padding: 10px 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-top: none;
+  border-radius: 0 0 14px 14px;
+}
+
+/* Separator */
+.block-sep {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 2px 2px;
+  font-size: 9.5px;
+  color: #94A3B8;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.block-sep::before, .block-sep::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #E9EDF3;
+}
+
+/* Block card */
+.block {
+  padding: 8px 10px;
+  border-radius: 7px;
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  border-left: 3px solid transparent;
+  cursor: default;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+.block:hover { transform: translateX(2px); filter: brightness(0.96); }
+
+.block.inherited {
+  opacity: 0.45;
+  background: #F8FAFC !important;
+  border-left-color: #CBD5E1 !important;
+}
+
+.block-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+
+.block-text { flex: 1; min-width: 0; }
+.block-title {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: inherit;
+}
+.block-sub {
+  font-size: 10px;
+  opacity: 0.72;
+  margin-top: 2px;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+
+.new-badge {
+  font-size: 8.5px;
+  font-weight: 800;
+  padding: 1.5px 5px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.1);
+  color: inherit;
+  flex-shrink: 0;
+  margin-top: 1px;
+  letter-spacing: 0.04em;
+  align-self: flex-start;
+  white-space: nowrap;
+}
+
+/* ─── Block Type Colors ─── */
+.t-cognitive  { background: #FEFCE8; border-left-color: #CA8A04; color: #713F12; }
+.t-behavior   { background: #EFF6FF; border-left-color: #2563EB; color: #1E3A8A; }
+.t-social     { background: #F0FDF4; border-left-color: #16A34A; color: #14532D; }
+.t-economic   { background: #FFF7ED; border-left-color: #EA580C; color: #7C2D12; }
+.t-planning   { background: #FAF5FF; border-left-color: #9333EA; color: #581C87; }
+
+/* ─── Diversity Meter ─── */
+.diversity-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 8px 2px;
+}
+.div-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #94A3B8;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.div-pips {
+  display: flex;
+  gap: 3px;
+}
+.div-pip {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+/* ─── Summary Cards ─── */
+.summary-cards {
+  display: flex;
+  gap: 10px;
+  max-width: 1120px;
+  margin: 20px auto 0;
+}
+.summary-card {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  overflow: hidden;
+}
+.summary-top {
+  padding: 10px 14px 9px;
+  color: white;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.summary-body { padding: 13px 14px; }
+
+.kw-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 9px;
+}
+.kw-chip {
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 2.5px 8px;
+  border-radius: 20px;
+  background: #F1F5F9;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.summary-desc {
+  font-size: 11.5px;
+  color: #475569;
+  line-height: 1.7;
+  word-break: keep-all;
+  margin-bottom: 10px;
+}
+.summary-desc strong { color: #1E293B; }
+
+.aibuja-box {
+  padding: 7px 10px;
+  border-radius: 7px;
+  font-size: 10.5px;
+  font-weight: 500;
+  line-height: 1.55;
+  word-break: keep-all;
+}
+</style>
+</head>
+<body>
+
+<!-- ─── Page Header ─── -->
+<div class="page-header">
+  <h1>미성년자 금융 지식·행동 누적 경험맵</h1>
+  <p class="subtitle">성장 단계를 따라 어떤 금융 지식과 행동이 쌓이고 다양해지는지 시각화 · 총 12개 역량의 누적 경로</p>
+</div>
+
+<!-- ─── Legend ─── -->
+<div class="legend-row">
+  <div class="legend-group">
+    <div class="legend-item"><div class="legend-pip" style="background:#CA8A04;"></div>인지·개념</div>
+    <div class="legend-divider"></div>
+    <div class="legend-item"><div class="legend-pip" style="background:#2563EB;"></div>행동·습관</div>
+    <div class="legend-divider"></div>
+    <div class="legend-item"><div class="legend-pip" style="background:#16A34A;"></div>사회·문화</div>
+    <div class="legend-divider"></div>
+    <div class="legend-item"><div class="legend-pip" style="background:#EA580C;"></div>경제·투자</div>
+    <div class="legend-divider"></div>
+    <div class="legend-item"><div class="legend-pip" style="background:#9333EA;"></div>계획·독립</div>
+  </div>
+  <div class="legend-group">
+    <div class="legend-item"><div class="legend-inherited-box"></div>이전 단계 축적</div>
+  </div>
+</div>
+
+<!-- ─── Main Columns ─── -->
+<div class="columns-wrap">
+<div class="columns">
+
+  <!-- ══ PHASE 1 ══ -->
+  <div class="phase-col">
+    <div class="ph-header" style="background: linear-gradient(135deg,#F59E0B,#FBBF24);">
+      <div class="ph-tag">PHASE 01</div>
+      <div class="ph-name">유아기</div>
+      <div class="ph-age">0 – 7세</div>
+    </div>
+    <div class="new-counter" style="background:linear-gradient(135deg,#D97706,#F59E0B);">
+      <span class="counter-arrow">↑</span> 신규 2개 도입 · 누적 2개
+    </div>
+    <div class="ph-blocks">
+      <div class="diversity-bar">
+        <span class="div-label">역량 유형</span>
+        <div class="div-pips">
+          <div class="div-pip" style="background:#CA8A04;" title="인지·개념"></div>
+          <div class="div-pip" style="background:#2563EB;" title="행동·습관"></div>
+        </div>
+      </div>
+      <div class="block t-cognitive">
+        <span class="block-icon">💡</span>
+        <div class="block-text">
+          <div class="block-title">화폐 가치 인식</div>
+          <div class="block-sub">돈의 존재와 교환 기능 이해</div>
+        </div>
+        <span class="new-badge">신규</span>
+      </div>
+      <div class="block t-behavior">
+        <span class="block-icon">🏦</span>
+        <div class="block-text">
+          <div class="block-title">기초 저축 행동</div>
+          <div class="block-sub">저금통·목표 저축 첫 경험</div>
+        </div>
+        <span class="new-badge">신규</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PHASE 2 ══ -->
+  <div class="phase-col">
+    <div class="ph-header" style="background: linear-gradient(135deg,#10B981,#34D399);">
+      <div class="ph-tag">PHASE 02</div>
+      <div class="ph-name">금융시장 유입기</div>
+      <div class="ph-age">8 – 12세</div>
+    </div>
+    <div class="new-counter" style="background:linear-gradient(135deg,#059669,#10B981);">
+      <span class="counter-arrow">↑</span> 신규 3개 추가 · 누적 5개
+    </div>
+    <div class="ph-blocks">
+      <div class="diversity-bar">
+        <span class="div-label">역량 유형</span>
+        <div class="div-pips">
+          <div class="div-pip" style="background:#CA8A04;"></div>
+          <div class="div-pip" style="background:#2563EB;"></div>
+          <div class="div-pip" style="background:#16A34A;"></div>
+        </div>
+      </div>
+      <div class="block t-behavior">
+        <span class="block-icon">📋</span>
+        <div class="block-text">
+          <div class="block-title">용돈 예산 관리</div>
+          <div class="block-sub">수입·지출 계획 세우기</div>
+        </div>
+        <span class="new-badge">신규</span>
+      </div>
+      <div class="block t-cognitive">
+        <span class="block-icon">🛒</span>
+        <div class="block-text">
+          <div class="block-title">소비 판단력</div>
+          <div class="block-sub">필요·욕구 구분, 가격 비교</div>
+        </div>
+        <span class="new-badge">신규</span>
+      </div>
+      <div class="block t-social">
+        <span class="block-icon">📱</span>
+        <div class="block-text">
+          <div class="block-title">디지털 금융 입문</div>
+          <div class="block-sub">계좌 개설, 앱 첫 사용 경험</div>
+        </div>
+        <span class="new-badge">신규</span>
+      </div>
+      <div class="block-sep">이전 단계에서 축적</div>
+      <div class="block inherited">
+        <span class="block-icon">💡</span>
+        <div class="block-text"><div class="block-title">화폐 가치 인식</div></div>
+      </div>
+      <div class="block inherited">
+        <span class="block-icon">🏦</span>
+        <div class="block-text"><div class="block-title">기초 저축 행동</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PHASE 3 ══ -->
+  <div class="phase-col">
+    <div class="ph-header" style="background: linear-gradient(135deg,#0891B2,#22D3EE);">
+      <div class="ph-tag">PHASE 03</div>
+      <div class="ph-name">금융생활 탐험기</div>
+      <div class="ph-age">13 – 17세</div>
+    </div>
+    <div class="new-counter" style="background:linear-gradient(135deg,#0E7490,#0891B2);">
+      <span class="counter-arrow">↑</span> 신규 4개 추가 · 누적 9개
+    </div>
+    <div class="ph-blocks">
+      <div class="diversity-bar">
+        <span class="div-label">역량 유형</span>
+        <div class="div-pips">
+          <div class="div-pip" style="background:#CA8A04;"></div>
+          <div class="div-pip" style="background:#2563EB;"></div>
+          <div class="div-pip" style="background:#16A34A;"></div>
+          <div class="div-pip" style="background:#EA580C;"></div>
+        </div>
+      </div>
+      <div class="block t-social">
+        <span class="block-icon">👥</span>
+        <div class="block-text">
+          <div class="block-title">또래 소비 문화</div>
+          <div class="block-sub">트렌드 소비, 구독서비스 참여</div>
+        </div>
+        <span class="new-badge">신규</span>
+      </div>
+      <div class="block t-economic">
+        <span class="block-icon">💼</span>
+        <div class="block-text">
+          <div class="block-title">아르바이트·부수입</div>
+          <div class="block-sub">자기 수입 창출 첫 경험</div>
+        </div>
+        <span class="new-badge">신규</span>
+      </div>
+      <div class="block t-economic">
+        <span class="block-icon">📈</span>
+        <div class="block-text">
+          <div class="block-title">투자 개념 탐색</div>
+          <div class="block-sub">주식·펀드 기초 학습</div>
+        </div>
+        <span class="new-badge">신규</span>
+      </div>
+      <div class="block t-behavior">
+        <span class="block-icon">⚠️</span>
+        <div class="block-text">
+          <div class="block-title">리스크·신용 인식</div>
+          <div class="block-sub">과소비·부채 위험 이해</div>
+        </div>
+        <span class="new-badge">신규</span>
+      </div>
+      <div class="block-sep">이전 단계에서 축적</div>
+      <div class="block inherited">
+        <span class="block-icon">📋</span>
+        <div class="block-text"><div class="block-title">용돈 예산 관리</div></div>
+      </div>
+      <div class="block inherited">
+        <span class="block-icon">🛒</span>
+        <div class="block-text"><div class="block-title">소비 판단력</div></div>
+      </div>
+      <div class="block inherited">
+        <span class="block-icon">📱</span>
+        <div class="block-text"><div class="block-title">디지털 금융 입문</div></div>
+      </div>
+      <div class="block inherited">
+        <span class="block-icon">💡</span>
+        <div class="block-text"><div class="block-title">화폐 가치 인식</div></div>
+      </div>
+      <div class="block inherited">
+        <span class="block-icon">🏦</span>
+        <div class="block-text"><div class="block-title">기초 저축 행동</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PHASE 4 ══ -->
+  <div class="phase-col">
+    <div class="ph-header" style="background: linear-gradient(135deg,#4F46E5,#818CF8);">
+      <div class="ph-tag">PHASE 04</div>
+      <div class="ph-name">금융생활 독립 준비기</div>
+      <div class="ph-age">18 – 20세</div>
+    </div>
+    <div class="new-counter" style="background:linear-gradient(135deg,#4338CA,#4F46E5);">
+      <span class="counter-arrow">↑</span> 신규 3개 추가 · 누적 12개
+    </div>
+    <div class="ph-blocks">
+      <div class="diversity-bar">
+        <span class="div-label">역량 유형</span>
+        <div class="div-pips">
+          <div class="div-pip" style="background:#CA8A04;"></div>
+          <div class="div-pip" style="background:#2563EB;"></div>
+          <div class="div-pip" style="background:#16A34A;"></div>
+          <div class="div-pip" style="background:#EA580C;"></div>
+          <div class="div-pip" style="background:#9333EA;"></div>
+        </div>
+      </div>
+      <div class="block t-planning">
+        <span class="block-icon">🎯</span>
+        <div class="block-text">
+          <div class="block-title">자산 형성 계획</div>
+          <div class="block-sub">중장기 저축·투자 전략 수립</div>
+        </div>
+        <span class="new-badge">신규</span>
+      </div>
+      <div class="block t-economic">
+        <span class="block-icon">🛡️</span>
+        <div class="block-text">
+          <div class="block-title">보험·세금 이해</div>
+          <div class="block-sub">사회보험, 소득세 기초 학습</div>
+        </div>
+        <span class="new-badge">신규</span>
+      </div>
+      <div class="block t-planning">
+        <span class="block-icon">🗺️</span>
+        <div class="block-text">
+          <div class="block-title">독립 금융 설계</div>
+          <div class="block-sub">독립 생활비·목표 로드맵</div>
+        </div>
+        <span class="new-badge">신규</span>
+      </div>
+      <div class="block-sep">이전 단계에서 축적</div>
+      <div class="block inherited">
+        <span class="block-icon">👥</span>
+        <div class="block-text"><div class="block-title">또래 소비 문화</div></div>
+      </div>
+      <div class="block inherited">
+        <span class="block-icon">💼</span>
+        <div class="block-text"><div class="block-title">아르바이트·부수입</div></div>
+      </div>
+      <div class="block inherited">
+        <span class="block-icon">📈</span>
+        <div class="block-text"><div class="block-title">투자 개념 탐색</div></div>
+      </div>
+      <div class="block inherited">
+        <span class="block-icon">⚠️</span>
+        <div class="block-text"><div class="block-title">리스크·신용 인식</div></div>
+      </div>
+      <div class="block inherited">
+        <span class="block-icon">📋</span>
+        <div class="block-text"><div class="block-title">용돈 예산 관리</div></div>
+      </div>
+      <div class="block inherited">
+        <span class="block-icon">🛒</span>
+        <div class="block-text"><div class="block-title">소비 판단력</div></div>
+      </div>
+      <div class="block inherited">
+        <span class="block-icon">📱</span>
+        <div class="block-text"><div class="block-title">디지털 금융 입문</div></div>
+      </div>
+      <div class="block inherited">
+        <span class="block-icon">💡</span>
+        <div class="block-text"><div class="block-title">화폐 가치 인식</div></div>
+      </div>
+      <div class="block inherited">
+        <span class="block-icon">🏦</span>
+        <div class="block-text"><div class="block-title">기초 저축 행동</div></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /columns -->
+
+<!-- ─── Phase Summary Cards ─── -->
+<div class="summary-cards">
+
+  <div class="summary-card">
+    <div class="summary-top" style="background:linear-gradient(135deg,#F59E0B,#FBBF24);">PHASE 01 · 유아기</div>
+    <div class="summary-body">
+      <div class="kw-row">
+        <span class="kw-chip">화폐 인식</span>
+        <span class="kw-chip">저축 입문</span>
+        <span class="kw-chip">2가지 역량</span>
+      </div>
+      <p class="summary-desc">
+        부모 주도의 금융 경험. 돈의 <strong>존재와 가치</strong>를 처음 인식하고, 저금통을 통한 <strong>목표 저축의 즐거움</strong>을 경험하는 시기.
+      </p>
+      <div class="aibuja-box" style="background:#FEF3C7;color:#92400E;">
+        💡 아이부자: 부모 연계 저축 목표 설정, 시각화 동기부여 UI
+      </div>
+    </div>
+  </div>
+
+  <div class="summary-card">
+    <div class="summary-top" style="background:linear-gradient(135deg,#10B981,#34D399);">PHASE 02 · 금융시장 유입기</div>
+    <div class="summary-body">
+      <div class="kw-row">
+        <span class="kw-chip">용돈 관리</span>
+        <span class="kw-chip">소비 판단</span>
+        <span class="kw-chip">디지털 금융</span>
+        <span class="kw-chip">5가지 역량</span>
+      </div>
+      <p class="summary-desc">
+        첫 계좌와 함께 <strong>금융 시스템에 진입</strong>. 용돈으로 예산을 배우고 필요·욕구를 구분하는 소비 판단력이 형성되는 결정적 시기.
+      </p>
+      <div class="aibuja-box" style="background:#D1FAE5;color:#065F46;">
+        💡 아이부자: 용돈 관리 미션, 소비 카테고리 분류, 잔액 시각화
+      </div>
+    </div>
+  </div>
+
+  <div class="summary-card">
+    <div class="summary-top" style="background:linear-gradient(135deg,#0891B2,#22D3EE);">PHASE 03 · 금융생활 탐험기</div>
+    <div class="summary-body">
+      <div class="kw-row">
+        <span class="kw-chip">또래 소비</span>
+        <span class="kw-chip">부수입</span>
+        <span class="kw-chip">투자 탐색</span>
+        <span class="kw-chip">9가지 역량</span>
+      </div>
+      <p class="summary-desc">
+        또래 문화와 충돌하며 <strong>자기 주도 금융 행동이 폭발적으로 다양</strong>해짐. 아르바이트로 첫 수입 경험, 투자 호기심 발생. 이탈 위기 구간.
+      </p>
+      <div class="aibuja-box" style="background:#CFFAFE;color:#164E63;">
+        💡 아이부자: 투자 시뮬레이션, 체크카드 소비 인사이트, 또래 비교 기능
+      </div>
+    </div>
+  </div>
+
+  <div class="summary-card">
+    <div class="summary-top" style="background:linear-gradient(135deg,#4F46E5,#818CF8);">PHASE 04 · 독립 준비기</div>
+    <div class="summary-body">
+      <div class="kw-row">
+        <span class="kw-chip">자산 설계</span>
+        <span class="kw-chip">보험·세금</span>
+        <span class="kw-chip">독립 로드맵</span>
+        <span class="kw-chip">12가지 역량</span>
+      </div>
+      <p class="summary-desc">
+        이전 모든 경험이 통합되며 <strong>종합적 금융 설계 역량</strong> 완성. 성인 금융 생활의 기초를 확립하고 하나원큐로 자연스럽게 전환되는 단계.
+      </p>
+      <div class="aibuja-box" style="background:#EDE9FE;color:#4C1D95;">
+        💡 아이부자: 하나원큐 연계 전환, 자산 형성 목표 설계, 독립 체크리스트
+      </div>
+    </div>
+  </div>
+
+</div><!-- /summary-cards -->
+
+</div><!-- /columns-wrap -->
+
+</body>
+</html>
