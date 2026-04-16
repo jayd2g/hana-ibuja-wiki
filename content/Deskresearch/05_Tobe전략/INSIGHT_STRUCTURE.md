@@ -1,3 +1,11 @@
+---
+title: "INSIGHT_STRUCTURE"
+type: analysis
+tags: []
+date_updated: 2026-04-09
+author_type: llm
+provenance: inferred
+---
 # 04_인사이트 폴더 구조 및 통합 가이드
 
 ## 📋 개요

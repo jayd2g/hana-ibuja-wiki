@@ -3,6 +3,9 @@ type: source
 title: 히든피겨스 청소년 인터뷰 rawdata (2023.08)
 date_ingested: 2026-04-07
 tags: [청소년인터뷰, 정성조사, 금융행태, 10대, 용돈관리]
+author_type: llm
+provenance: extracted
+date_updated: 2026-04-08
 ---
 
 ## 핵심 요약

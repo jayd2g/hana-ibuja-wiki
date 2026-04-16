@@ -3,6 +3,9 @@ type: concept
 title: 연령별 UX 전략
 source_count: 2
 tags: [UX, 연령별설계, 아이부자, 초중고]
+author_type: llm
+provenance: inferred
+date_updated: 2026-04-08
 ---
 
 ## 정의

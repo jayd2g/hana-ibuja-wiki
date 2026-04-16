@@ -1,3 +1,11 @@
+---
+title: "log"
+type: log
+tags: []
+date_updated: 2026-04-15
+author_type: llm
+provenance: inferred
+---
 # 위키 활동 로그
 
 > append-only 파일입니다. 기존 항목은 수정하지 않습니다.

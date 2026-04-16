@@ -3,6 +3,9 @@ type: concept
 title: 아이부자 AS-IS 화면 분석
 source_count: 2
 tags: [ASIS, 화면분석, UX, IA, 디자인시스템, Giver, Taker]
+author_type: llm
+provenance: inferred
+date_updated: 2026-04-08
 ---
 
 ## 정의

@@ -1,3 +1,11 @@
+---
+title: "index"
+type: navigation
+tags: []
+date_updated: 2026-04-15
+author_type: llm
+provenance: inferred
+---
 # 위키 인덱스
 
 > LLM이 자료를 추가할 때마다 이 파일을 업데이트합니다.

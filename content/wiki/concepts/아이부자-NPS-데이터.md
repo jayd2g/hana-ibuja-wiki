@@ -3,6 +3,9 @@ type: concept
 title: 아이부자 NPS 데이터 (2025.12 기준)
 source_count: 2
 tags: [NPS, 정량데이터, 사용자만족도, 강점약점]
+author_type: llm
+provenance: inferred
+date_updated: 2026-04-08
 ---
 
 ## 정의

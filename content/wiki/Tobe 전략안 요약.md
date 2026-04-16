@@ -1,6 +1,11 @@
 ---
 tags: [wiki, 전략, Tobe, 실행계획]
 created: 2026-04-08
+author_type: llm
+provenance: inferred
+date_updated: 2026-04-15
+type: topic
+title: "Tobe 전략안 요약"
 ---
 
 # 🎯 Tobe 전략안 요약

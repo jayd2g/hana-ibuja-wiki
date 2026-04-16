@@ -1,6 +1,11 @@
 ---
 tags: [wiki, home, 아이부자]
 created: 2026-04-08
+author_type: llm
+provenance: inferred
+date_updated: 2026-04-15
+type: navigation
+title: "HOME"
 ---
 
 # 🏠 아이부자 컨설팅 Wiki

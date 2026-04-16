@@ -3,6 +3,9 @@ type: source
 title: 경제 인지 발달에 대한 Piaget의 관점과 영역-특수적 관점의 비교
 date_ingested: 2026-04-10
 tags: [발달심리학, Piaget, 경제인지, 인지발달단계, 이론]
+author_type: llm
+provenance: extracted
+date_updated: 2026-04-13
 ---
 
 ## 핵심 요약

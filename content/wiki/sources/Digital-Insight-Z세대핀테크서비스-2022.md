@@ -3,6 +3,9 @@ type: source
 title: 글로벌 핀테크의 Z세대 타겟 서비스 사례와 시사점 (Digital Insight)
 date_ingested: 2026-04-10
 tags: [Z세대, 글로벌핀테크, Revolut, 게임화, 커뮤니티, 소셜금융]
+author_type: llm
+provenance: extracted
+date_updated: 2026-04-13
 ---
 
 ## 핵심 요약

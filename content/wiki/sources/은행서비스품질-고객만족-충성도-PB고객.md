@@ -3,6 +3,9 @@ type: source
 title: 은행의 서비스 품질이 고객만족, 충성도에 미치는 영향 — PB고객과 일반고객 차이 분석
 date_ingested: 2026-04-14
 tags: [은행, 서비스품질, 고객만족, 충성도, PB고객, SERVQUAL, 구조방정식]
+author_type: llm
+provenance: extracted
+date_updated: 2026-04-14
 ---
 
 ## 핵심 요약

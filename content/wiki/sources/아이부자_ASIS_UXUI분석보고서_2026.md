@@ -3,6 +3,9 @@ type: source
 title: 아이부자 AS-IS 화면 UX/UI 분석 보고서 (2026.04)
 date_ingested: 2026-04-07
 tags: [ASIS, UX분석, UI분석, 화면분석, 정보구조, 디자인시스템]
+author_type: llm
+provenance: extracted
+date_updated: 2026-04-08
 ---
 
 ## 핵심 요약
