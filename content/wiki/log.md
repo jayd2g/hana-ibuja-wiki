@@ -140,3 +140,10 @@ provenance: inferred
   2. `wiki/전략 인사이트 요약.md` — 경쟁 구도 재해석, 하나은행 당위, 부자들의 방식, 리서치 연결 근거로 전면 재작성
 - **이전 내용 보존**: `Deskresearch/05_Tobe전략/아이부자-종합-전략안.md`에 구버전 전략 내용이 유지됨
 - **기준 원본**: `Deskresearch/05_Tobe전략/아이부자_전략장표_내러티브_260414.md`
+
+## [2026-04-16] rename | Deskresearch/ → Consulting/ 폴더 이름 변경
+
+- **변경 내용**: `Deskresearch/` → `Consulting/` (폴더명 변경)
+- **수정 파일**: wiki/index.md, wiki/HOME.md, content/CLAUDE.md, _meta/CLAUDE.md, _meta/index.md (총 5개, 14곳 교체)
+- **미수정 항목**: log.md 내 과거 로그 항목 (append-only 원칙, 역사적 경로 보존)
+- **하위 구조 변경 없음**: 00_가설~05_Tobe전략 내부 구조 그대로 유지
