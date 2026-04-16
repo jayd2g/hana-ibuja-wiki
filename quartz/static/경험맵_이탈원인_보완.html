@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>미성년자 금융 경험맵 · 아이부자</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  background: #F1F5F9;
+  padding: 40px 36px 60px;
+  min-width: 1400px;
+  color: #1E293B;
+}
+
+
+
+/* ── Header ── */
+.page-title {
+  text-align:center;
+  font-size:26px;
+  font-weight:900;
+  color:#0F172A;
+  margin-bottom:8px;
+  letter-spacing:-0.03em;
+}
+.page-sub {
+  text-align:center;
+  font-size:14px;
+  color:#475569;
+  margin-bottom:32px;
+  font-weight:500;
+}
+
+/* ── Map wrapper ── */
+.map {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #D1D5DB;
+  overflow: hidden;
+}
+
+/* ══ MAIN GRID ══
+   Cols: label | 유아기(3-6) | 금융시장(7-11) | 탐험기(12-13) | 독립준비기(14-18) | 성인기(19-20)
+   Proportional: 4yr : 5yr : 2yr : 5yr : 2yr = 4:5:2:5:2
+*/
+.em {
+  display: grid;
+  grid-template-columns: 90px 4fr 5fr 4fr 5fr 2fr;
+}
+
+/* ── Generic border rules ── */
+.row-label {
+  background: #F0F4F8;
+  border-right: 2px solid #CBD5E1;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: #475569;
+  line-height: 1.6;
+  padding: 12px 8px;
+  letter-spacing: -0.01em;
+}
+
+/* ══════════════════════════
+   ROW 1 — MILESTONES
+══════════════════════════ */
+.ms-cell {
+  border-right: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
+  background: #FAFAFA;
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+.ms-cell:last-child { border-right: none; }
+.ms-flag {
+  display: inline-flex;
+  align-items: center;
+  background: #1E293B;
+  color: white;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 6px;
+  letter-spacing: -0.01em;
+}
+.ms-flag sup { font-size: 8px; margin-left: 2px; color: #94A3B8; font-weight: 400; }
+.reversal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #fff1f2;
+  border: 1.5px solid #fecdd3;
+  color: #e11d48;
+  font-size: 11.5px;
+  font-weight: 800;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+/* ══════════════════════════
+   ROW 2 — AGE AXIS
+══════════════════════════ */
+.age-cell {
+  background: #F8FAFC;
+  border-right: 1px solid #E2E8F0;
+  border-bottom: 2px solid #CBD5E1;
+  padding: 7px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.age-cell:last-child { border-right: none; }
+.age-num {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94A3B8;
+}
+.age-num.hot { color: #e11d48; font-weight: 800; }
+
+/* ══════════════════════════
+   ROW 3 — STAGES
+══════════════════════════ */
+.stage-cell {
+  border-right: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
+  padding: 24px 18px;
+}
+.stage-cell:last-child { border-right: none; }
+.stage-name {
+  font-size: 18px;
+  font-weight: 900;
+  color: #0F172A;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+.stage-desc {
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.8;
+  font-weight: 500;
+}
+.stage-bg { background: #FFFFFF; }
+.stage-churn {
+  background: #FFF7F7;
+  border-top: 4px solid #EF4444;
+}
+
+/* ══════════════════════════
+   ROW 4 — INTERVIEWS & APP SERVICES
+══════════════════════════ */
+.iv-cell {
+  border-right: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.iv-cell:last-child { border-right: none; }
+.iv-emoji { font-size: 22px; display: block; margin-bottom: 4px; }
+.iv-quote {
+  background: #F8FAFC;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 11px 12px;
+  font-size: 12px;
+  color: #1E293B;
+  line-height: 1.7;
+  font-weight: 500;
+}
+.iv-quote.hot-quote {
+  background: #FEF2F2;
+  border-color: #FECDD3;
+  color: #9F1239;
+}
+
+
+/* ══════════════════════════
+   ROW 5 — APP SERVICES (이전 ROW 6)
+══════════════════════════ */
+.app-cell {
+  border-right: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.app-cell:last-child { border-right: none; }
+.app-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.actor {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 900;
+  color: white;
+  flex-shrink: 0;
+  border: 2px solid white;
+  box-shadow: 0 0 0 1.5px #CBD5E1;
+}
+.actor-p { background: #F59E0B; }
+.actor-c { background: #10B981; }
+
+.bar-ibuja {
+  flex: 1;
+  height: 28px;
+  background: linear-gradient(90deg, #7c3aed 0%, #8b5cf6 60%, #a78bfa 100%);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: white;
+}
+.bar-ibuja.fading {
+  background: linear-gradient(90deg, #a78bfa 0%, #ddd6fe 100%);
+  opacity: 0.55;
+}
+.bar-toss {
+  flex: 1;
+  height: 28px;
+  background: linear-gradient(90deg, #1E293B 0%, #334155 100%);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: white;
+}
+.unused-zone {
+  flex: 1;
+  height: 56px;
+  background: repeating-linear-gradient(
+    45deg, #F8FAFC, #F8FAFC 7px, #EEF2F7 7px, #EEF2F7 14px
+  );
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #94A3B8;
+  text-align: center;
+  line-height: 1.5;
+}
+.sub-badge {
+  display: inline-block;
+  background: #1E293B;
+  color: white;
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+  align-self: flex-end;
+}
+.divider-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #fca5a5, transparent);
+  margin: 0 -4px;
+}
+
+/* ══════════════════════════
+   ROW 6 — ENTRY / CHURN (이전 ROW 7)
+══════════════════════════ */
+.ec-cell {
+  border-right: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
+  padding: 18px 16px;
+}
+.ec-cell:last-child { border-right: none; }
+
+/* Tag pills */
+.tag-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.tag-entry { background: #3B82F6; color: white; }
+.tag-churn { background: #EF4444; color: white; }
+.tag-done  { background: #991B1B; color: white; }
+.tag-child { background: #10B981; color: white; }
+.tag-parent { background: #F59E0B; color: white; }
+
+/* Bullet list */
+.ec-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.ec-item {
+  font-size: 12px;
+  color: #1E293B;
+  line-height: 1.7;
+  padding-left: 16px;
+  position: relative;
+  font-weight: 500;
+}
+.ec-item::before { content: '•'; position: absolute; left: 4px; color: #94A3B8; font-size: 16px; line-height: 1; }
+.ec-item strong { color: #0F172A; font-weight: 800; }
+
+/* Pain point card (이탈 원인) */
+.pain-card {
+  background: #FEF2F2;
+  border-left: 4px solid #EF4444;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #7F1D1D;
+  line-height: 1.7;
+  margin-bottom: 8px;
+  border-right: 1px solid #FECDD3;
+}
+.pain-card strong { color: #991B1B; font-weight: 800; display: block; margin-bottom: 3px; font-size: 12px; }
+.pain-card .sub-text { color: #7F1D1D; font-size: 11px; }
+
+/* NPS badge */
+.nps-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FEE2E2;
+  color: #991B1B;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  border: 1px solid #FECDD3;
+}
+
+/* Entry cell bg */
+.ec-entry { background: #F0F9FF; }
+.ec-churn { background: #FEF2F2; }
+.ec-done  { background: #FEFEF8; }
+.ec-empty { background: #F8FAFC; }
+
+/* ══════════════════════════
+   ROW 7 — EXISTING SOLUTIONS (이전 ROW 8)
+══════════════════════════ */
+.sol-cell {
+  border-right: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  position: relative;
+  min-height: 100px;
+  justify-content: flex-start;
+}
+.sol-cell:last-child { border-right: none; }
+
+.sol-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #F0F4FF;
+  border: 1px solid #C7D2FE;
+  color: #3B82F6;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 5px 9px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.sol-badge.ui { background: #FEE2E2; border-color: #FECDD3; color: #DC2626; }
+.sol-badge.feature { background: #DBEAFE; border-color: #93C5FD; color: #1E40AF; }
+.sol-badge.marketing { background: #F3F4F6; border-color: #D1D5DB; color: #374151; }
+
+.sol-problem {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 10px;
+  font-weight: 800;
+  color: #EF4444;
+  text-align: right;
+  line-height: 1.2;
+}
+</style>
+</head>
+<body>
+
+<div class="page-title">미성년자 금융 경험맵 · 아이부자</div>
+<p class="page-sub">부모→자녀 영향력 역전 구간 중심 · 이탈 원인 상세 분석</p>
+
+<div class="map">
+<div class="em">
+
+<!-- ══ ROW 1: MILESTONES ══ -->
+<div class="row-label" style="border-bottom:1px solid #E2E8F0;"></div>
+
+<div class="ms-cell">
+  <span class="ms-flag">'돈'에 대한 개념 생성 <sup>2,3</sup></span>
+</div>
+<div class="ms-cell">
+  <span class="ms-flag">소액 간헐적 용돈 시작 <sup>2,3</sup></span>
+</div>
+<div class="ms-cell" style="background:#FFF8F8;">
+  <span class="ms-flag">정기적 용돈 시작 <sup>2,3</sup></span>
+  <span class="reversal-badge">⚠️ 역전 구간</span>
+</div>
+<div class="ms-cell">
+  <span class="ms-flag">본인명의 계좌개설 및 용돈 증가 <sup>2,3,4</sup></span>
+</div>
+<div class="ms-cell">
+  <span class="ms-flag">성인</span>
+</div>
+
+<!-- ══ ROW 2: AGE AXIS ══ -->
+<div class="row-label" style="border-bottom:2px solid #CBD5E1; font-size:10px; font-weight:800; color:#94A3B8; letter-spacing:0.05em;">Age</div>
+
+<div class="age-cell">
+  <span class="age-num">3</span><span class="age-num">4</span><span class="age-num">5</span><span class="age-num">6</span>
+</div>
+<div class="age-cell">
+  <span class="age-num">7</span><span class="age-num">8</span><span class="age-num">9</span><span class="age-num">10</span><span class="age-num">11</span>
+</div>
+<div class="age-cell" style="background:#FEF2F2;">
+  <span class="age-num hot">12</span><span class="age-num hot">13</span>
+</div>
+<div class="age-cell">
+  <span class="age-num">14</span><span class="age-num">15</span><span class="age-num">16</span><span class="age-num">17</span><span class="age-num">18</span>
+</div>
+<div class="age-cell">
+  <span class="age-num">19</span><span class="age-num">20</span>
+</div>
+
+<!-- ══ ROW 3: STAGES ══ -->
+<div class="row-label">Stages</div>
+
+<div class="stage-cell stage-bg">
+  <div class="stage-name">유아기</div>
+  <div class="stage-desc">부모의 행동을 통해 금융의<br>기본 개념 이해를 시작<sup>1</sup></div>
+</div>
+<div class="stage-cell stage-bg">
+  <div class="stage-name">금융시장 유입기</div>
+  <div class="stage-desc">아직 본인이 금융소비자가 되었음을<br>인지하지 못한 채 부모 주도아래 금융을 학습<sup>1</sup></div>
+</div>
+<div class="stage-cell stage-churn">
+  <div class="stage-name" style="font-size:15px;">금융생활 탐험기</div>
+  <div class="stage-desc">또래 집단력 및<br>소비와 활동 범위 증가<sup>1,2</sup></div>
+</div>
+<div class="stage-cell stage-bg">
+  <div class="stage-name" style="font-size:15px;">금융생활 독립준비기</div>
+  <div class="stage-desc">경제적 독립을 향한 자아정체성이 형성되며,<br>투자, 아르바이트 등 복합적인 금융 활동을 경험<sup>1,2</sup></div>
+</div>
+<div class="stage-cell stage-bg">
+  <div class="stage-name" style="font-size:14px;">성인기</div>
+  <div class="stage-desc">경제적 독립 및<br>재정적 책임<sup>3</sup></div>
+</div>
+
+<!-- ══ ROW 4: USER INTERVIEWS ══ -->
+<div class="row-label">사용자<br>인터뷰</div>
+
+<div class="iv-cell" style="background:#F8FAFC;"></div>
+
+<div class="iv-cell">
+  <span class="iv-emoji">😊</span>
+  <div class="iv-quote">"문제를 맞히면 돈을 주고 이야기도 재미있어서요."<br>"아이부자를 하면서 용돈 저축을 자동으로 실천하게 돼요!"<sup>8</sup></div>
+</div>
+
+<div class="iv-cell" style="background:#FFF8F8;">
+  <span class="iv-emoji">😞</span>
+  <div class="iv-quote hot-quote">"친구들은 다<br>토스 쓰는데..."<sup>10</sup></div>
+</div>
+
+<div class="iv-cell">
+  <span class="iv-emoji">😒</span>
+  <div class="iv-quote">"주변에 쓰는 사람 잘 없고 잼민이 취급 받음."<br>"토스 쓰지, 왜 아이부자씀?"<sup>10</sup></div>
+</div>
+
+<div class="iv-cell" style="background:#F8FAFC;"></div>
+
+<!-- ══ ROW 5: INFLUENCE BARS (NEW) ══ -->
+
+<!-- ══ ROW 6: APP SERVICES ══ -->
+<div class="row-label" style="font-size:10px;">주 사용<br>앱 서비스</div>
+
+<!-- 유아기: 미사용 -->
+<div class="app-cell" style="background:#F8FAFC; border-bottom:1px solid #E2E8F0;">
+  <div class="unused-zone">자녀 금융 앱 서비스<br>미사용 구간</div>
+</div>
+
+<!-- 금융시장 유입기: 아이부자 주 사용 -->
+<div class="app-cell" style="border-bottom:1px solid #E2E8F0;">
+  <div class="app-bar-row">
+    <div class="actor actor-p">P</div>
+    <div class="bar-ibuja">아이부자 주 사용<sup>1,8</sup></div>
+    <div class="actor actor-c">C</div>
+  </div>
+</div>
+
+<!-- 탐험기: 아이부자 끝 → 이탈 → 토스 시작 -->
+<div class="app-cell" style="background:#FFF8F8; border-bottom:1px solid #E2E8F0; display:flex; flex-direction:column; gap:10px; justify-content:center;">
+
+  <!-- 아이부자 끝 -->
+  <div class="app-bar-row">
+    <div class="bar-ibuja">아이부자 주 사용<sup>1,8</sup></div>
+    <div class="actor actor-c">C</div>
+  </div>
+
+  <!-- 빨간색 이탈 표시 -->
+  <div style="display:flex; justify-content:center; align-items:center; gap:8px; padding:6px 0;">
+    <span style="font-size:20px; color:#e11d48;">⚠️</span>
+    <span style="font-size:10.5px; font-weight:800; color:#e11d48;">이탈 발생 구간</span>
+  </div>
+
+  <!-- 토스 시작 -->
+  <div class="app-bar-row">
+    <div class="actor actor-c">C</div>
+    <div class="bar-toss">토스 / 카카오뱅크<sup>2,4,10</sup></div>
+  </div>
+</div>
+
+<!-- 독립준비기: 토스 라인 계속 -->
+<div class="app-cell" style="border-bottom:1px solid #E2E8F0;">
+  <div class="app-bar-row">
+    <div class="bar-toss">토스 / 카카오뱅크<sup>2,5,6</sup></div>
+  </div>
+</div>
+
+<!-- 성인기: 토스 계속 + 시중은행 + 하나1Q -->
+<div class="app-cell" style="border-bottom:1px solid #E2E8F0; display:flex; flex-direction:column; gap:8px; justify-content:center;">
+
+  <!-- 토스/카카오 계속 -->
+  <div class="app-bar-row">
+    <div class="bar-toss">토스 / 카카오뱅크<sup>6</sup></div>
+  </div>
+
+  <!-- 시중은행 타행 -->
+  <div style="font-size:10.5px; font-weight:700; color:#475569;">
+    <span style="background:#EFF6FF; border:1px solid #3b82f6; color:#3b82f6; padding:3px 8px; border-radius:4px; display:inline-block;">+ 시중은행 타행<sup>6</sup></span>
+  </div>
+
+  <!-- 하나1Q: 단절된 것을 표시 -->
+  <div style="display:flex; align-items:center; gap:8px; padding:6px 0;">
+    <span style="font-size:18px;">→</span>
+    <span style="background:#FEE2E2; border:1.5px solid #EF4444; color:#DC2626; padding:4px 10px; border-radius:4px; display:inline-block; font-size:10px; font-weight:800;">하나1Q<sup>3</sup></span>
+  </div>
+
+  <div style="font-size:9px; color:#7F1D1D; font-weight:700; padding-left:26px;">❌ 아이부자에서의 연결 실패</div>
+</div>
+
+<!-- ══ ROW 7: ENTRY / CHURN ══ -->
+<div class="row-label" style="border-bottom:none; align-self:stretch;">유입·이탈<br>원인</div>
+
+<!-- 유아기: 빈 칸 -->
+<div class="ec-cell ec-empty"></div>
+
+<!-- 금융시장 유입기: 유입 동인 -->
+<div class="ec-cell ec-entry">
+  <div class="tag-row">
+    <span class="tag tag-entry">유입 동인</span>
+    <span class="tag tag-parent">부모 주도 가입<sup>7</sup></span>
+  </div>
+  <ul class="ec-list">
+    <li class="ec-item"><strong>부모와 함께 첫 계좌 개설</strong><sup>1</sup><br>아이부자 주요 진입 경로</li>
+    <li class="ec-item"><strong>저금통 목표·미션 수행</strong><sup>8</sup>을 통한 소액 보상 경험</li>
+    <li class="ec-item">캐릭터·시각 요소로 신기함 자체가 강한 동기 (만족도 9–10점)<sup>4</sup></li>
+  </ul>
+</div>
+
+<!-- 탐험기: 이탈 원인 (상세 보완) -->
+<div class="ec-cell ec-churn" style="border-right:1px solid #E2E8F0;">
+  <div class="tag-row">
+    <span class="tag tag-churn">⚠️ 이탈 원인</span>
+    <span class="tag tag-child">자녀 주도 결정</span>
+  </div>
+
+  <div style="background:#E11D48;color:white;padding:10px 12px;border-radius:8px;margin-bottom:10px;font-size:12px;font-weight:700;line-height:1.6;letter-spacing:-0.01em;">
+    💡 <strong>핵심 정의:</strong> 부모 영향력 감소 + 또래 중심화<sup>1</sup> + 소셜 기능 격차<sup>2</sup> → 자녀 자율적 이탈
+  </div>
+
+  <div class="pain-card">
+    <strong>① 또래 비교·동조 소비 압력</strong>
+    <span class="sub-text">친구들이 토스 쓰기 시작<sup>1</sup> → "나만 아이부자" 소외감<br>또래 문화가 앱 선택의 결정권을 쥐게 됨<sup>2</sup></span>
+  </div>
+
+  <div class="pain-card">
+    <strong>② 브랜드 거부감</strong>
+    <span class="sub-text">"아이부자" 이름·캐릭터 유치함 인식<sup>1</sup><br>부모가 설정해준 앱이라는 이미지 자체가 이탈 동기</span>
+  </div>
+
+  <div class="pain-card">
+    <strong>③ 소셜 기능 부재</strong>
+    <span class="sub-text">토스 친구 간 쿠폰 공유·송금 일상화<sup>2</sup><br>아이부자 송금 불가 → 이탈 가속<sup>2,4</sup></span>
+  </div>
+
+  <div class="pain-card">
+    <strong>④ 독립성 욕구 충돌</strong>
+    <span class="sub-text">부모 동의 없이 쓸 수 있는 앱 욕구<sup>1</sup><br>부모 연결 구조가 자율성 침해로 인식 전환</span>
+  </div>
+
+  <div class="nps-tag">📉 만족도 9–10점 → 5–7점 급락<sup>4</sup> (NPS 42.6)</div>
+</div>
+
+<!-- 독립준비기: 이탈 완료 -->
+<div class="ec-cell ec-done">
+  <div class="tag-row">
+    <span class="tag tag-done">이탈 완료</span>
+    <span class="tag tag-child">자녀 주도 결정<sup>2</sup></span>
+  </div>
+  <ul class="ec-list">
+    <li class="ec-item"><strong>투자·적금</strong><sup>2</sup> 등 다양한 금융상품 접근 시작</li>
+    <li class="ec-item"><strong>아르바이트 소득 관리</strong> 등 실제 재무 지식·경험 체득<sup>1</sup></li>
+    <li class="ec-item">카카오뱅크도 유치 → <strong>토스 독점</strong><sup>2</sup></li>
+    <li class="ec-item">하나은행 재접점 기회 <strong>사실상 상실</strong><sup>3</sup></li>
+  </ul>
+</div>
+
+<!-- 성인기: 빈 칸 -->
+<div class="ec-cell ec-empty" style="border-right:none;"></div>
+
+<!-- ══ ROW 8: EXISTING SOLUTIONS ══ -->
+<div class="row-label">기존<br>솔루션<br>시도</div>
+
+<!-- 유아기: 솔루션 없음 -->
+<div class="sol-cell" style="background:#F8FAFC; position:relative;"></div>
+
+<!-- 금융시장: 솔루션 -->
+<div class="sol-cell" style="position:relative;">
+  <div style="font-size:11px; font-weight:700; color:#64748B; margin-bottom:4px;">금융시장 유입기</div>
+  <div class="sol-badge ui">🎨 UI 개선</div>
+  <div class="sol-badge feature">➕ 기능 추가</div>
+  <div class="sol-badge marketing">📢 마케팅</div>
+  <div class="sol-problem">⚠️ 또래<br>의식</div>
+</div>
+
+<!-- 탐험기: 솔루션 -->
+<div class="sol-cell" style="background:#FFF8F8; position:relative;">
+  <div style="font-size:11px; font-weight:700; color:#64748B; margin-bottom:4px;">탐험기</div>
+  <div class="sol-badge ui">🎨 UI 개선</div>
+  <div class="sol-badge feature">➕ 기능 추가</div>
+  <div class="sol-badge marketing">📢 마케팅</div>
+  <div class="sol-problem">🚫 브랜드<br>낙인</div>
+</div>
+
+<!-- 독립준비기: 솔루션 -->
+<div class="sol-cell" style="position:relative;">
+  <div style="font-size:11px; font-weight:700; color:#64748B; margin-bottom:4px;">독립준비기</div>
+  <div class="sol-badge ui">🎨 UI 개선</div>
+  <div class="sol-badge feature">➕ 기능 추가</div>
+  <div class="sol-badge marketing">📢 마케팅</div>
+  <div class="sol-problem">❌ 생애주기<br>붕괴</div>
+</div>
+
+<!-- 성인기: 솔루션 없음 -->
+<div class="sol-cell" style="background:#F8FAFC; position:relative;">
+  <div style="font-size:11px; font-weight:700; color:#94A3B8; text-align:center;">추구<br>불가능</div>
+  <div class="sol-problem" style="bottom:50%; right:auto; left:50%; transform:translateX(-50%);">너무<br>늦음</div>
+</div>
+
+</div><!-- /em -->
+</div><!-- /map -->
+
+<!-- ══════════════════════════════════
+   BEHAVIOR SUMMARY SECTION
+══════════════════════════════════ -->
+<div style="background:white; border-radius:16px; border:1px solid #CBD5E1; margin-top:32px; padding:0; overflow:hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+  <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; min-height:200px;">
+
+    <!-- 좌측: 유입 동인 -->
+    <div style="background:linear-gradient(135deg, #DBEAFE, #EFF6FF); border-right:1px solid #D1D5DB; padding:24px; display:flex; flex-direction:column; justify-content:center;">
+      <div style="font-size:11px; font-weight:800; color:#1e40af; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px;">유입 동인</div>
+      <div style="font-size:14px; font-weight:800; color:#1E293B; line-height:1.6; margin-bottom:10px;">부모 주도<br>가입</div>
+      <ul style="list-style:none; font-size:11.5px; color:#475569; line-height:1.8;">
+        <li style="margin-bottom:6px;">• 부모와 함께 첫 계좌 개설</li>
+        <li style="margin-bottom:6px;">• 저금통 목표·미션 수행</li>
+        <li>• 신기함이 강한 사용 동기</li>
+      </ul>
+    </div>
+
+    <!-- 중앙: 핵심 문제 -->
+    <div style="background:linear-gradient(135deg, #FEE2E2, #FEF2F2); border-right:1px solid #D1D5DB; padding:24px; display:flex; flex-direction:column; justify-content:center;">
+      <div style="font-size:11px; font-weight:800; color:#b91c1c; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px;">핵심 문제정의</div>
+      <div style="font-size:14px; font-weight:800; color:#9f1239; line-height:1.7;">자녀 입장에서<br><strong>'아이부자를 쓸<br>이유' 소멸</strong></div>
+    </div>
+
+    <!-- 우측: 이탈 메커니즘 -->
+    <div style="background:#F8FAFC; padding:24px; display:flex; flex-direction:column; justify-content:center;">
+      <div style="font-size:11px; font-weight:800; color:#64748B; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px;">이탈 메커니즘</div>
+      <div style="font-size:13.5px; font-weight:700; color:#1E293B; line-height:1.8;">자녀 소수의 선택으로,<br><strong style="color:#e11d48;">또래 문화에 따라</strong><br>이탈</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+   CORE INSIGHT
+══════════════════════════════════ -->
+<div style="background:linear-gradient(135deg,#1e293b,#0f172a); border-radius:16px; padding:32px 36px; margin-top:32px; color:white; border-left:6px solid #3B82F6;">
+  <h2 style="font-size:18px; font-weight:900; margin-bottom:16px; color:#DBEAFE; letter-spacing:-0.02em;">💡 핵심 인사이트 — 이탈의 본질</h2>
+  <p style="font-size:14px; line-height:1.9; color:#F1F5F9; margin-bottom:16px; font-weight:500;">
+    아이부자의 이탈은 <strong style="color:#FBBF24; font-weight:900;">기능의 문제가 아닌 '이 앱을 쓸 이유'의 소멸</strong>에서 비롯된다.<br><br>
+    부모가 설정해준 앱이라는 이미지, 또래와 함께 쓸 수 없는 구조, 유치하게 느껴지는 브랜드가 맞물리며 <strong style="color:#FBBF24; font-weight:900;">자녀 스스로의 선택으로, 또래 문화에 따라</strong> 이탈이 이뤄진다. 이 이탈은 단순한 앱 교체가 아닌 <strong style="color:#FBBF24; font-weight:900;">하나은행 전체 생애주기 전략의 붕괴</strong>를 의미한다.
+  </p>
+  <div style="display:flex; flex-wrap:wrap; gap:8px;">
+    <span style="background:rgba(59,130,246,0.2); border:1px solid rgba(59,130,246,0.4); border-radius:6px; padding:6px 12px; font-size:12px; color:#DBEAFE; font-weight:700;">또래 문화 주도</span>
+    <span style="background:rgba(59,130,246,0.2); border:1px solid rgba(59,130,246,0.4); border-radius:6px; padding:6px 12px; font-size:12px; color:#DBEAFE; font-weight:700;">자녀 자율 결정</span>
+    <span style="background:rgba(59,130,246,0.2); border:1px solid rgba(59,130,246,0.4); border-radius:6px; padding:6px 12px; font-size:12px; color:#DBEAFE; font-weight:700;">소셜 기능 부재</span>
+    <span style="background:rgba(59,130,246,0.2); border:1px solid rgba(59,130,246,0.4); border-radius:6px; padding:6px 12px; font-size:12px; color:#DBEAFE; font-weight:700;">브랜드 정체성 위기</span>
+    <span style="background:rgba(59,130,246,0.2); border:1px solid rgba(59,130,246,0.4); border-radius:6px; padding:6px 12px; font-size:12px; color:#DBEAFE; font-weight:700;">생애주기 붕괴</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+   REFERENCES
+══════════════════════════════════ -->
+<div style="background:white; border-radius:16px; border:1px solid #D1D5DB; margin-top:24px; padding:24px 28px;">
+  <h2 style="font-size:14px; font-weight:800; color:#0F172A; margin-bottom:18px; letter-spacing:-0.01em;">📚 참고문헌 및 출처</h2>
+
+  <div style="display:grid; gap:14px; font-size:11.5px; line-height:1.7; color:#475569;">
+    <!-- CONCEPT DOCUMENTS -->
+    <div style="border-bottom:1px solid #E2E8F0; padding-bottom:14px;">
+      <div style="font-weight:800; color:#1E293B; margin-bottom:10px; font-size:12px;">📖 Wiki 개념 문서</div>
+
+      <div style="margin-bottom:10px;">
+        <span style="font-weight:800; color:#6366f1;">[1]</span>
+        <span style="font-weight:700; color:#1E293B;"> 연령별-UX-전략</span>
+        <div style="margin-top:4px; color:#64748B;">또래 의식 시작 시점(10-12세), 브랜드 거부감, 독립성 욕구 증가, 소셜 기능 필요성</div>
+        <div style="margin-top:3px; font-size:10.5px; color:#94A3B8;">🔗 F0401-의사결정권자-인터뷰 · F0401-직접이해관계자-인터뷰</div>
+      </div>
+
+      <div style="margin-bottom:10px;">
+        <span style="font-weight:800; color:#6366f1;">[2]</span>
+        <span style="font-weight:700; color:#1E293B;"> 청소년-금융앱-경쟁구도</span>
+        <div style="margin-top:4px; color:#64748B;">토스의 또래 소셜 기능(쿠폰 공유, 송금), "어른처럼 쓰는 느낌", 중학교 결정적 이탈 시점, 성인 주거래 고착</div>
+        <div style="margin-top:3px; font-size:10.5px; color:#94A3B8;">🔗 F0401-의사결정권자-인터뷰 · F0401-직접이해관계자-인터뷰 · F0402-이해관계자-인터뷰 · 오픈서베이_첫금융트렌드리포트_2025 · 아이부자팀_인앱NPS조사_2025 · 히든피겨스_청소년인터뷰_rawdata_2023 · 컨슈머인사이트-주거래은행조사-2023년11월</div>
+      </div>
+
+      <div>
+        <span style="font-weight:800; color:#6366f1;">[3]</span>
+        <span style="font-weight:700; color:#1E293B;"> 고객-생애주기-전략</span>
+        <div style="margin-top:4px; color:#64748B;">미성년 조기 확보 → 성인 전환 전략, 중학교 이탈 시 생애주기 전략 전체 붕괴, 하나원큐 연계 필요성</div>
+        <div style="margin-top:3px; font-size:10.5px; color:#94A3B8;">🔗 F0401-의사결정권자-인터뷰 · F0401-직접이해관계자-인터뷰 · F0402-이해관계자-인터뷰</div>
+      </div>
+    </div>
+
+    <!-- QUANTITATIVE DATA -->
+    <div style="border-bottom:1px solid #E2E8F0; padding-bottom:14px;">
+      <div style="font-weight:800; color:#1E293B; margin-bottom:10px; font-size:12px;">📊 정량 데이터</div>
+
+      <div style="margin-bottom:10px;">
+        <span style="font-weight:800; color:#6366f1;">[4]</span>
+        <span style="font-weight:700; color:#1E293B;"> 아이부자-NPS-데이터 (2025.12)</span>
+        <div style="margin-top:4px; color:#64748B;">NPS 42.6점 · 만족도 9-10점(초등)→5-7점(중학) · 경쟁력/인지도 -45.9점 · 계좌/가상계좌 부재</div>
+        <div style="margin-top:3px; font-size:10.5px; color:#94A3B8;">🔗 아이부자팀_인앱NPS조사_2025 · 아이부자팀_리뉴얼사전자료_2026</div>
+      </div>
+
+      <div style="margin-bottom:10px;">
+        <span style="font-weight:800; color:#6366f1;">[5]</span>
+        <span style="font-weight:700; color:#1E293B;"> 오픈서베이_첫금융트렌드리포트_2025</span>
+        <div style="margin-top:4px; color:#64748B;">10대 첫 금융사 선택 시 토스뱅크/카카오뱅크 압도적 선호</div>
+      </div>
+
+      <div>
+        <span style="font-weight:800; color:#6366f1;">[6]</span>
+        <span style="font-weight:700; color:#1E293B;"> 컨슈머인사이트-주거래은행조사-2023년11월</span>
+        <div style="margin-top:4px; color:#64748B;">성인 주거래율 토스 48.8% 1위 · 청소년기 선점이 성인 고착으로 이어짐</div>
+      </div>
+    </div>
+
+    <!-- PRIMARY SOURCES (INTERVIEWS) -->
+    <div style="border-bottom:1px solid #E2E8F0; padding-bottom:14px;">
+      <div style="font-weight:800; color:#1E293B; margin-bottom:10px; font-size:12px;">🎤 인터뷰 자료</div>
+
+      <div style="margin-bottom:10px;">
+        <span style="font-weight:800; color:#6366f1;">[7]</span>
+        <span style="font-weight:700; color:#1E293B;"> F0401-의사결정권자-인터뷰</span>
+        <div style="margin-top:4px; color:#64748B;">아이부자 프로젝트 스폰서 및 의사결정권자 대상 인터뷰 · 전략적 방향성 및 제약 사항 파악</div>
+      </div>
+
+      <div style="margin-bottom:10px;">
+        <span style="font-weight:800; color:#6366f1;">[8]</span>
+        <span style="font-weight:700; color:#1E293B;"> F0401-직접이해관계자-인터뷰</span>
+        <div style="margin-top:4px; color:#64748B;">아이부자 운영팀, PM, 디자인팀 등 직접 담당자 인터뷰 · 현장 실무 관점</div>
+      </div>
+
+      <div>
+        <span style="font-weight:800; color:#6366f1;">[9]</span>
+        <span style="font-weight:700; color:#1E293B;"> F0402-이해관계자-인터뷰</span>
+        <div style="margin-top:4px; color:#64748B;">마케팅, 리스크, 외부 파트너 등 주변 이해관계자 인터뷰</div>
+      </div>
+    </div>
+
+    <!-- USER RESEARCH -->
+    <div>
+      <div style="font-weight:800; color:#1E293B; margin-bottom:10px; font-size:12px;">👥 사용자 조사</div>
+
+      <div style="margin-bottom:10px;">
+        <span style="font-weight:800; color:#6366f1;">[10]</span>
+        <span style="font-weight:700; color:#1E293B;"> 히든피겨스_청소년인터뷰_rawdata_2023</span>
+        <div style="margin-top:4px; color:#64748B;">초등-고등 청소년 대상 심층 인터뷰 · 실제 사용 경험과 앱 선택 이유 · "토스 쓰지 누가 아이부자씀?" 등 직접 음성</div>
+      </div>
+
+      <div>
+        <span style="font-weight:800; color:#6366f1;">[11]</span>
+        <span style="font-weight:700; color:#1E293B;"> 아이부자팀_인앱NPS조사_2025</span>
+        <div style="margin-top:4px; color:#64748B;">아이부자 앱 내 자체 NPS 조사 · 4,827건 응답(부모 13%, 자녀 87%) · 카테고리별 강점/약점 분석</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#F8FAFC; border-left:3px solid #6366f1; border-radius:0 6px 6px 0; margin-top:16px; padding:12px 14px; font-size:11px; color:#64748B;">
+    💡 <strong style="color:#1E293B;">통합 출처 구조:</strong> 이 경험맵은 11개의 primary/secondary source를 Wiki 내 4개 concept 문서로 통합하여 체계적으로 검증된 인사이트를 제공합니다. 각 이탈 원인은 다중 출처(삼각측량)를 통해 신뢰성을 확보했습니다.
+  </div>
+</div>
+
+
+
+</body>
+</html>
