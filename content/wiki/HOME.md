@@ -61,7 +61,7 @@ hana-ibuja-wiki/
 │   ├── concepts/                ← 개념·아이디어 페이지
 │   └── entities/                ← 인물·프로젝트·조직
 │
-├── 📁 Deskresearch/             ← 상세 분석 작업 문서
+├── 📁 Consulting/             ← 상세 분석 작업 문서
 │   ├── 00_가설/
 │   │   └── 연구-가설-및-질문.md
 │   ├── 01_시장/

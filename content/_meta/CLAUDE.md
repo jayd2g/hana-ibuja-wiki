@@ -37,7 +37,7 @@ content/
 │   ├── concepts/    개념·아이디어·프레임워크
 │   ├── entities/    인물·조직·프로젝트
 │   └── (root)       주제 요약 페이지 (시장/경쟁사/사용자/전략 요약)
-├── Deskresearch/    분석 작업 문서 (카테고리별 심층 분석)
+├── Consulting/    분석 작업 문서 (카테고리별 심층 분석)
 │   ├── 00_가설/
 │   ├── 01_시장/
 │   ├── 02_경쟁사/
@@ -56,7 +56,7 @@ content/
 - `wiki/sources/` → sc/ 자료를 읽고 핵심 인사이트를 요약한 마크다운. 1 PDF = 1 sources 파일 (중복 금지).
 - `wiki/concepts/` → 여러 소스에서 반복 등장하는 개념·아이디어. 단일 소스에서만 나오는 내용은 sources 파일 내 섹션으로 처리.
 - `wiki/entities/` → 실명 인물(엄태성 상무 등), 특정 프로젝트, 조직.
-- `Deskresearch/` → 분석·비교·종합 작업 문서. "인사이트를 도출하는 과정"이 담긴 파일.
+- `Consulting/` → 분석·비교·종합 작업 문서. "인사이트를 도출하는 과정"이 담긴 파일.
 - `output/` → 외부 발표용 PPT, 보고서 HTML, 차트 이미지 등 최종 산출물.
 
 ---
@@ -72,7 +72,7 @@ content/
 - 날짜 포함 시: `아이부자_전략장표_내용_260414.md` (YYMMDD 형식)
 - 공백 대신 하이픈, 언더스코어 모두 허용 (단, 파일 내에서 일관성 유지)
 
-### Deskresearch/ 파일명
+### Consulting/ 파일명
 - 소문자+하이픈 또는 언더스코어: `부자가정_자녀금융교육_리서치.md`
 - 날짜 포함 버전: `데이터보강_전략검증_260415.md`
 
@@ -103,7 +103,7 @@ provenance: extracted | inferred | ambiguous
 | `concept` | `wiki/concepts/` | 개념·아이디어·프레임워크 |
 | `entity` | `wiki/entities/` | 인물·프로젝트·조직 |
 | `topic` | `wiki/` 루트 | 주제 요약·개요 페이지 |
-| `analysis` | `Deskresearch/` | 분석·종합 작업 문서 |
+| `analysis` | `Consulting/` | 분석·종합 작업 문서 |
 | `navigation` | HOME.md, index.md | 탐색 허브 |
 | `log` | log.md | 활동 로그 |
 | `glossary` | 용어 사전.md | 용어 정의집 |
@@ -116,7 +116,7 @@ provenance: extracted | inferred | ambiguous
 
 **`provenance`**
 - `extracted`: 원본 자료에서 직접 추출 (sources/, entities/ 인터뷰 요약)
-- `inferred`: 여러 소스를 종합해 LLM이 추론·합성 (concepts/, Deskresearch/)
+- `inferred`: 여러 소스를 종합해 LLM이 추론·합성 (concepts/, Consulting/)
 - `ambiguous`: 출처 불명확, 추론과 인용의 경계가 모호한 경우
 
 **`date_updated`**: 마지막으로 내용이 의미있게 변경된 날짜 (YYYY-MM-DD). 파일 저장 날짜가 아닌 내용 갱신 날짜.
@@ -222,7 +222,7 @@ LLM이 추론한 내용 중 불확실한 부분은 callout으로 표시:
 ```
 
 ### 전략 방향 충돌 (이전 전략안 vs 새 전략안)
-- 이전 전략안은 삭제하지 않고 `Deskresearch/05_Tobe전략/` 내에 날짜 버전으로 보존
+- 이전 전략안은 삭제하지 않고 `Consulting/05_Tobe전략/` 내에 날짜 버전으로 보존
 - `wiki/` 내 요약 페이지는 최신 전략만 반영하되, 이전 버전 링크 유지
 
 ---
