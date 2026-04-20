@@ -1,6 +1,6 @@
 <mxfile host="Electron">
   <diagram name="아이부자 아이시점 Flow v8" id="v8">
-    <mxGraphModel dx="681" dy="454" grid="0" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1232" dy="822" grid="0" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -70,9 +70,6 @@
         <mxCell id="25" parent="1" style="rounded=9;fillColor=#0A0A0A;strokeColor=none;fontColor=#FFFFFF;fontSize=8;fontStyle=1;html=1;" value="트리거: 체크카드 발급" vertex="1">
           <mxGeometry height="18" width="135" x="5790" y="57" as="geometry" />
         </mxCell>
-        <mxCell id="26" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=8;fontColor=#C0C0C0;fontStyle=0;whiteSpace=wrap;" value="어조: 선생님" vertex="1">
-          <mxGeometry height="22" width="180" x="1800" y="31" as="geometry" />
-        </mxCell>
         <mxCell id="27" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=8;fontColor=#C0C0C0;fontStyle=0;whiteSpace=wrap;" value="코치" vertex="1">
           <mxGeometry height="22" width="180" x="3600" y="31" as="geometry" />
         </mxCell>
@@ -111,9 +108,6 @@
             <mxPoint x="7520" as="sourcePoint" />
             <mxPoint x="7520" y="538" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="35" parent="1" style="rounded=0;fillColor=#F5F5F5;strokeColor=none;opacity=55;" value="" vertex="1">
-          <mxGeometry height="440" width="960" x="110" y="55" as="geometry" />
         </mxCell>
         <mxCell id="36" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" value="" vertex="1">
           <mxGeometry height="14" width="14" x="163" y="78" as="geometry" />
@@ -236,19 +230,19 @@
           <mxGeometry height="16" width="16" x="1890" y="77" as="geometry" />
         </mxCell>
         <mxCell id="83" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="부모가 매칭 비율 설정 (0.5배/1배/2배) 자동 입금 시작" vertex="1">
-          <mxGeometry height="50" width="120" x="1838" y="57" as="geometry" />
+          <mxGeometry height="50" width="120" x="1838" y="99" as="geometry" />
         </mxCell>
         <mxCell id="84" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" value="" vertex="1">
           <mxGeometry height="16" width="16" x="2153" y="77" as="geometry" />
         </mxCell>
         <mxCell id="85" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="생일 선물금 이벤트 시드" vertex="1">
-          <mxGeometry height="50" width="120" x="2101" y="57" as="geometry" />
+          <mxGeometry height="50" width="120" x="2101" y="95" as="geometry" />
         </mxCell>
         <mxCell id="86" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" value="" vertex="1">
           <mxGeometry height="16" width="16" x="2416" y="77" as="geometry" />
         </mxCell>
         <mxCell id="87" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="부모 투자계좌 아이부자에 공개" vertex="1">
-          <mxGeometry height="50" width="120" x="2364" y="57" as="geometry" />
+          <mxGeometry height="50" width="120" x="2364" y="98" as="geometry" />
         </mxCell>
         <mxCell id="88" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" value="" vertex="1">
           <mxGeometry height="16" width="16" x="2679" y="77" as="geometry" />
