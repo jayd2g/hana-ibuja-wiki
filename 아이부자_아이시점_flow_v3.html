@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>아이부자 — 아이 시점 Flow v3</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#F2F2F2; font-family:'Noto Sans KR',sans-serif; overflow-x:auto; }
+.wrapper { padding:40px; }
+h1 { font-size:16px; font-weight:700; color:#111; margin-bottom:5px; }
+.sub { font-size:11px; color:#999; margin-bottom:28px; }
+
+.canvas {
+  position:relative; width:6300px; height:820px;
+  background-color:#FAFAFA;
+  background-image:radial-gradient(circle, #D7D7D7 1px, transparent 1px);
+  background-size:18px 18px;
+  border-radius:16px; overflow:hidden;
+}
+
+.pb {
+  position:absolute; top:28px; height:36px;
+  border-radius:32px; display:flex; align-items:center;
+  padding:0 20px; font-size:11.5px; font-weight:700;
+  color:white; letter-spacing:-0.3px; z-index:3;
+}
+.sub-pill {
+  position:absolute; top:73px;
+  font-size:9.5px; font-weight:600; color:white;
+  background:rgba(0,0,0,0.2); padding:2px 9px;
+  border-radius:12px; z-index:3; white-space:nowrap;
+}
+.tone {
+  position:absolute; top:75px; font-size:9px;
+  color:#BBBBBB; font-style:italic; z-index:3;
+}
+.ll {
+  position:absolute; left:20px; background:#0A0A0A; color:white;
+  border-radius:32px; padding:6px 14px; font-size:11px;
+  font-weight:600; transform:translateY(-50%); z-index:10;
+}
+.div { position:absolute; left:0; right:0; height:1px; background:#E5E5E5; z-index:1; }
+.n {
+  position:absolute; display:flex; flex-direction:column;
+  align-items:center; gap:5px; transform:translateX(-50%); z-index:5;
+}
+.d { border-radius:50%; flex-shrink:0; }
+.d14 { width:14px; height:14px; }
+.d18 { width:18px; height:18px; }
+.d24 { width:24px; height:24px; }
+.lbl { font-size:10.5px; font-weight:500; color:#1A1A1A; text-align:center; line-height:1.5; max-width:100px; }
+.lbl.s { font-size:9.5px; color:#888; }
+.ab { order:-1; }
+.dim { position:absolute; top:0; bottom:0; background:rgba(250,250,250,0.62); pointer-events:none; z-index:4; }
+.trig {
+  position:absolute; top:82px; background:#0A0A0A; color:white;
+  font-size:10px; font-weight:600; padding:4px 12px;
+  border-radius:20px; white-space:nowrap; transform:translateX(-50%); z-index:6;
+}
+.up {
+  position:absolute; transform:translateX(-50%);
+  background:white; border:1.5px solid #0058A8; color:#0058A8;
+  font-size:9.5px; font-weight:700; padding:3px 10px;
+  border-radius:20px; white-space:nowrap; z-index:6;
+}
+.note {
+  position:absolute; background:white; padding:9px 12px;
+  font-size:10px; color:#555; line-height:1.75;
+  border-left:3px solid #F97316; border-radius:0 8px 8px 0;
+  box-shadow:0 1px 4px rgba(0,0,0,0.06); z-index:5;
+}
+.qa {
+  position:absolute; background:#FFFBF0; border:1px solid #F0D080;
+  border-radius:8px; padding:8px 11px; font-size:9.5px;
+  color:#775500; line-height:1.7; z-index:5; max-width:200px;
+}
+.prog {
+  position:absolute; background:white; border-radius:8px;
+  padding:8px 12px; font-size:9.5px; color:#555;
+  line-height:1.7; z-index:5; border-top:2px solid;
+}
+.dim-note { position:absolute; font-size:10px; color:#C0C0C0; font-style:italic; line-height:1.7; z-index:6; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <h1>아이부자 — 아이 시점 Flow v3 &nbsp;<span style="font-size:12px;color:#999;font-weight:400;">(베스트 케이스)</span></h1>
+  <div class="sub">외부 레인 / 아이부자 레인 &nbsp;·&nbsp; 관찰자(7–9) → 선택자(10–12) → 제안자(13–15) → 운용자(16–18) → 하나원큐 이관</div>
+  <div class="canvas">
+    <svg id="sv" style="position:absolute;top:0;left:0;width:6300px;height:820px;pointer-events:none;z-index:2;"></svg>
+
+    <!-- Stage 1 dim -->
+    <div class="dim" style="left:140px;width:875px;"></div>
+
+    <!-- Phase bars -->
+    <div class="pb" style="left:140px;width:865px;background:#C0C0C0;">STAGE 1 · 유아기 · 3–8세 · 아이 부재</div>
+    <div class="pb" style="left:1055px;width:2115px;background:#0058A8;">STAGE 2 · 금융시장 유입기 · 7–12세</div>
+    <div class="pb" style="left:3220px;width:1305px;background:#6D28D9;">STAGE 3 · 금융생활 탐험기 · 13–15세</div>
+    <div class="pb" style="left:4575px;width:1595px;background:#0D9488;">STAGE 4 · 금융생활 독립준비기 · 16–18세</div>
+
+    <!-- Sub-stage pills -->
+    <div class="sub-pill" style="left:1070px;">1단계 관찰자</div>
+    <div class="sub-pill" style="left:2375px;">2단계 선택자</div>
+    <div class="sub-pill" style="left:3235px;">3단계 제안자</div>
+    <div class="sub-pill" style="left:4590px;">4단계 운용자</div>
+
+    <!-- Tone labels -->
+    <div class="tone" style="left:1380px;">서비스 어조: 선생님</div>
+    <div class="tone" style="left:2380px;">코치</div>
+    <div class="tone" style="left:3390px;">동료·파트너</div>
+    <div class="tone" style="left:4700px;">금융 어드바이저</div>
+
+    <!-- Lane labels -->
+    <div class="ll" style="top:180px;">외부</div>
+    <div class="div" style="top:340px;"></div>
+    <div class="ll" style="top:510px;">아이부자</div>
+
+    <!-- Stage 1 note -->
+    <div class="dim-note" style="left:220px;top:200px;">부모 앱 설치 · 자녀 등록<br>시드 입금 · 세뱃돈 유입<br><strong style="color:#F97316;">→ 아이는 모른다</strong></div>
+    <div class="dim-note" style="left:220px;top:470px;">백그라운드 축적<br>(투자연대기 시작)</div>
+
+    <!-- Triggers -->
+    <div class="trig" style="left:1082px;">트리거: 스마트폰 소지</div>
+    <div class="trig" style="left:3195px;">트리거: 정기 용돈 시작</div>
+    <div class="trig" style="left:4550px;">트리거: 체크카드 발급</div>
+
+    <!-- Stage-up marker -->
+    <div class="up" style="left:2245px;top:104px;">관찰자 → 선택자 단계 업 🎉</div>
+
+
+    <!-- ══════ STAGE 2a 관찰자 ══════ -->
+
+    <!-- 외부 -->
+    <div class="n" style="left:1110px;top:139px;">
+      <div class="lbl ab">부모 앱 설치<br>권유</div>
+      <div class="d d14" style="background:#0058A8;"></div>
+    </div>
+
+    <!-- 간헐적 이벤트 용돈 — Q1 핵심 -->
+    <div class="n" style="left:1400px;top:173px;">
+      <div class="d d14" style="background:#0058A8;"></div>
+      <div class="lbl">간헐적 이벤트 용돈<br>(심부름 2,000원<br>세뱃돈 50,000원…)</div>
+    </div>
+
+    <div class="n" style="left:1710px;top:139px;">
+      <div class="lbl ab">부모 매칭<br>자동 입금</div>
+      <div class="d d14" style="background:#0058A8;"></div>
+    </div>
+
+    <div class="n" style="left:1990px;top:173px;">
+      <div class="d d14" style="background:#0058A8;"></div>
+      <div class="lbl">이벤트 용돈<br>지속 유입</div>
+    </div>
+
+    <!-- 아이부자 레인 -->
+    <!-- ⭐ 첫 공개 모먼트 + 첫 금융 대화 통합 — Q2 핵심 -->
+    <div class="n" style="left:1130px;top:498px;">
+      <div class="d d24" style="background:#F97316;"></div>
+      <div class="lbl" style="color:#F97316;font-weight:700;">"748,000원!<br>이게 뭐야?"<br><span style="font-size:9.5px;color:#F97316;">⭐ 첫 공개 = 첫 금융 대화</span></div>
+    </div>
+
+    <!-- 패시브 인컴 첫 목격 -->
+    <div class="n" style="left:1360px;top:469px;">
+      <div class="lbl ab">아침에 혼자 발견<br>"배당금 120원 들어왔어"</div>
+      <div class="d d14" style="background:#0058A8;"></div>
+    </div>
+
+    <!-- 이벤트 용돈 분기 — Q1의 답 -->
+    <div class="n" style="left:1600px;top:501px;">
+      <div class="d d18" style="background:#F97316;"></div>
+      <div class="lbl">세뱃돈 받았어<br>"넣을까, 쓸까?"<br><span class="s">→ 선택 자체가 교육</span></div>
+    </div>
+
+    <!-- 소비 목표 설정 -->
+    <div class="n" style="left:1820px;top:469px;">
+      <div class="lbl ab">소비 목표 설정<br>"레고 35,000원"<br><span class="s" style="color:#F97316;">💡 달성 예상 3주</span></div>
+      <div class="d d14" style="background:#0058A8;"></div>
+    </div>
+
+    <!-- 목표 달성 -->
+    <div class="n" style="left:2020px;top:503px;">
+      <div class="d d14" style="background:#0058A8;"></div>
+      <div class="lbl">35,000원 달성<br>→ 레고 구매 완료 ✓<br><span class="s">투자계좌A는 계속 성장</span></div>
+    </div>
+
+
+    <!-- ══════ STAGE 2b 선택자 ══════ -->
+
+    <!-- 외부 -->
+    <!-- 정기 용돈 시작 — Q1: 이제부터 저축 비중이 의미 있음 -->
+    <div class="n" style="left:2370px;top:139px;">
+      <div class="lbl ab">정기 용돈 시작<br>10,000원/월</div>
+      <div class="d d14" style="background:#0058A8;"></div>
+    </div>
+
+    <div class="n" style="left:2760px;top:173px;">
+      <div class="d d14" style="background:#0058A8;"></div>
+      <div class="lbl">월 매칭<br>자동 입금 지속</div>
+    </div>
+
+    <!-- 아이부자 레인 -->
+    <!-- 저축 비중 첫 설정 — Q1: 정기 용돈이 생겼으니 이제 가능 -->
+    <div class="n" style="left:2390px;top:469px;">
+      <div class="lbl ab">정기 용돈이니까<br>저축 30% 처음 설정<br><span class="s">→ 비중 선택이 이제 의미 있음</span></div>
+      <div class="d d14" style="background:#0058A8;"></div>
+    </div>
+
+    <!-- 투자 선택지 -->
+    <div class="n" style="left:2590px;top:503px;">
+      <div class="d d14" style="background:#0058A8;"></div>
+      <div class="lbl">펀드 A · B · C 중<br>이달 내가 직접 선택</div>
+    </div>
+
+    <!-- 수익 확인 -->
+    <div class="n" style="left:2790px;top:469px;">
+      <div class="lbl ab">"내가 고른 펀드<br>+2.3% 올랐어"</div>
+      <div class="d d14" style="background:#0058A8;"></div>
+    </div>
+
+    <!-- 저축 자발적 상향 -->
+    <div class="n" style="left:2990px;top:501px;">
+      <div class="d d18" style="background:#F97316;"></div>
+      <div class="lbl">저축 비중<br>50%로 자발적 상향 ↑<br><span class="s">또래 평균 35% vs 내 50%</span></div>
+    </div>
+
+
+    <!-- ══════ STAGE 3 제안자 ══════ -->
+
+    <!-- 외부 -->
+    <div class="n" style="left:3290px;top:139px;">
+      <div class="lbl ab">정기 용돈<br>30,000원으로 증가</div>
+      <div class="d d14" style="background:#6D28D9;"></div>
+    </div>
+
+    <!-- 또래 토스 — Q3 핵심 -->
+    <div class="n" style="left:3570px;top:173px;">
+      <div class="d d14" style="background:#6D28D9;"></div>
+      <div class="lbl" style="color:#6D28D9;font-weight:600;">또래들 토스 카드<br>만들기 시작<br><span class="s" style="color:#888;">(실제로 친구들이 씀)</span></div>
+    </div>
+
+    <!-- 아이도 토스 설치 — Q3 -->
+    <div class="n" style="left:3820px;top:139px;">
+      <div class="lbl ab" style="color:#6D28D9;font-weight:600;">아이도 토스 설치<br>(소비·교통카드용)<br><span class="s" style="color:#888;font-weight:400;">이탈 아님 → 역할 분담</span></div>
+      <div class="d d14" style="background:#6D28D9;"></div>
+    </div>
+
+    <div class="n" style="left:4110px;top:173px;">
+      <div class="d d14" style="background:#6D28D9;"></div>
+      <div class="lbl">부모 승인 알림<br>(자동 한도 내)</div>
+    </div>
+
+    <!-- 아이부자 레인 -->
+    <!-- 저축 60% 재설정 -->
+    <div class="n" style="left:3290px;top:469px;">
+      <div class="lbl ab">저축 60%로 재설정<br>소비 40%는 토스로</div>
+      <div class="d d14" style="background:#6D28D9;"></div>
+    </div>
+
+    <!-- 💡 역할 분담 — Q3의 핵심 결과 -->
+    <div class="n" style="left:3560px;top:501px;">
+      <div class="d d18" style="background:#F97316;"></div>
+      <div class="lbl">💡 역할 재정의<br>"토스=소비관리<br>아이부자=자산형성"</div>
+    </div>
+
+    <!-- ⭐ 첫 투자 제안서 -->
+    <div class="n" style="left:3760px;top:498px;">
+      <div class="d d24" style="background:#F97316;"></div>
+      <div class="lbl" style="color:#F97316;font-weight:700;">⭐ 첫 투자 제안서<br>"○○ ETF에 투자하고<br>싶은 이유는..."</div>
+    </div>
+
+    <!-- 앱 자동 분석 -->
+    <div class="n" style="left:3970px;top:469px;">
+      <div class="lbl ab">앱 분석 "리스크 중간<br>연 4.2% 예상"<br>→ 자체 승인</div>
+      <div class="d d14" style="background:#6D28D9;"></div>
+    </div>
+
+    <!-- 첫 ETF 투자 -->
+    <div class="n" style="left:4160px;top:503px;">
+      <div class="d d14" style="background:#6D28D9;"></div>
+      <div class="lbl">첫 ETF<br>투자 실행</div>
+    </div>
+
+    <!-- ⭐ 첫 손실 -->
+    <div class="n" style="left:4340px;top:467px;">
+      <div class="lbl ab">⭐ 첫 손실<br>"○○ ETF -3.2%<br>처음 손실 났어요"</div>
+      <div class="d d18" style="background:#F97316;"></div>
+    </div>
+
+    <!-- 💡 첫 손실 가이드 -->
+    <div class="n" style="left:4510px;top:503px;">
+      <div class="d d14" style="background:#6D28D9;"></div>
+      <div class="lbl">💡 "이게 정상이에요"<br>분기 리포트:<br>수익률 +7.1%</div>
+    </div>
+
+
+    <!-- ══════ STAGE 4 운용자 ══════ -->
+
+    <!-- 외부 -->
+    <div class="n" style="left:4680px;top:139px;">
+      <div class="lbl ab">체크카드 발급<br>독립 소비 시작</div>
+      <div class="d d14" style="background:#0D9488;"></div>
+    </div>
+
+    <div class="n" style="left:4960px;top:173px;">
+      <div class="d d14" style="background:#0D9488;"></div>
+      <div class="lbl">알바 수입<br>일부 자발적 투자</div>
+    </div>
+
+    <!-- ⭐⭐ 고3 360만원 -->
+    <div class="n" style="left:5360px;top:112px;">
+      <div class="lbl ab" style="color:#F97316;font-weight:700;max-width:120px;">⭐⭐ 고3 1월 1일<br>연 용돈 360만원<br>일괄 지급</div>
+      <div class="d d24" style="background:#F97316;"></div>
+    </div>
+
+    <!-- 아이부자 레인 -->
+    <div class="n" style="left:4680px;top:503px;">
+      <div class="d d14" style="background:#0D9488;"></div>
+      <div class="lbl">개별 주식 직접 투자<br>저축 비중 70%+<br><span class="s">소비는 거의 토스에서</span></div>
+    </div>
+
+    <!-- 투자 연대기 -->
+    <div class="n" style="left:4940px;top:469px;">
+      <div class="lbl ab">연대기 열람<br>"첫 배당 340원(8년 전)<br>→ 이달 배당 4,800원"</div>
+      <div class="d d14" style="background:#0D9488;"></div>
+    </div>
+
+    <!-- 수익률 자율 관리 -->
+    <div class="n" style="left:5150px;top:503px;">
+      <div class="d d14" style="background:#0D9488;"></div>
+      <div class="lbl">수익률 +12.3%<br>포트폴리오<br>자율 관리</div>
+    </div>
+
+    <!-- 💡 Fineritage 클라이맥스 -->
+    <div class="n" style="left:5380px;top:450px;">
+      <div class="lbl ab" style="color:#F97316;font-weight:700;max-width:125px;">💡 Fineritage 클라이맥스<br>360만 + 780만<br>= 1,140만원 재구성</div>
+      <div class="d d24" style="background:#F97316;"></div>
+    </div>
+
+    <!-- D-365 화면 -->
+    <div class="n" style="left:5660px;top:503px;">
+      <div class="d d14" style="background:#0D9488;"></div>
+      <div class="lbl">D-365 화면<br>"18세에 약<br>1,380만원 예상"</div>
+    </div>
+
+    <!-- ⭐ 하나원큐 이관 — Q4 핵심 -->
+    <div class="n" style="left:5920px;top:467px;">
+      <div class="lbl ab" style="color:#0D9488;font-weight:700;">⭐ 하나원큐 이관<br>(만 18세, 법적 의무)<br><span style="font-size:9.5px;font-weight:400;color:#888;">8년치 연대기 이어짐</span></div>
+      <div class="d d18" style="background:#0D9488;"></div>
+    </div>
+
+
+    <!-- ══════ Q4 분기 노트 ══════ -->
+    <div class="qa" style="left:5990px;top:440px;">
+      <strong>이관 이후</strong><br>
+      아이 본인: 아이부자 이용 불가<br>
+      (만 18세 이상 법적 제한)<br>
+      <br>
+      → 투자·연대기는 하나원큐<br>
+      → 동생 있으면 부모는<br>
+      &nbsp;&nbsp;아이부자 계속 사용 가능
+    </div>
+
+    <!-- ══════ Q1 설명 노트 ══════ -->
+    <div class="qa" style="left:1060px;top:620px;border-color:#0058A8;background:#F0F4FF;color:#003388;">
+      <strong>Q. 간헐적 용돈으로 저축?</strong><br>
+      관찰자: 이벤트 용돈 → "넣을까 쓸까" 선택<br>
+      (저축 비중 개념 없음, 선택 자체가 교육)<br>
+      선택자: 정기 용돈 시작 → 이때부터 비중 설정 가능
+    </div>
+
+    <!-- ══════ BOTTOM PROGRESS TRACK ══════ -->
+    <div class="prog" style="left:1060px;top:710px;border-color:#BBDCFF;max-width:340px;">
+      <strong style="color:#0058A8;">관찰자 (7–9세)</strong><br>
+      저축 개념 없음 · 이벤트 선택 · 패시브 인컴 첫 목격
+    </div>
+    <div class="prog" style="left:2360px;top:710px;border-color:#0058A8;max-width:290px;">
+      <strong style="color:#0058A8;">선택자 (10–12세) ↑</strong><br>
+      저축 30%→50% 자발적 상향 · 펀드 수익 체감
+    </div>
+    <div class="prog" style="left:3230px;top:710px;border-color:#6D28D9;max-width:330px;">
+      <strong style="color:#6D28D9;">제안자 (13–15세) ↑</strong><br>
+      토스 병행 · 저축 60% · ETF 자체 승인 · +7.1%
+    </div>
+    <div class="prog" style="left:4585px;top:710px;border-color:#0D9488;max-width:360px;">
+      <strong style="color:#0D9488;">운용자 (16–18세) ↑</strong><br>
+      저축 70%+ · 개별주식 · 연 +12.3% · 예상자산 1,380만원
+    </div>
+
+    <!-- Design notes -->
+    <div class="note" style="left:18px;top:708px;max-width:245px;">
+      <strong style="color:#F97316;">설계 원칙</strong><br>
+      ⭐ Fineritage 서사 랜드마크<br>
+      💡 데이터 기반 개입 포인트<br>
+      트리거 = 나이 아닌 라이프 이벤트<br>
+      단계 UP = 6개월 저축 + 퀴즈 통과
+    </div>
+
+  </div>
+</div>
+
+<script>
+const sv = document.getElementById('sv');
+
+(function addMarkers() {
+  const d = document.createElementNS('http://www.w3.org/2000/svg','defs');
+  [['b','#0058A8'],['p','#6D28D9'],['t','#0D9488'],['o','#F97316'],['g','#AAAAAA']].forEach(([id,c])=>{
+    const m = document.createElementNS('http://www.w3.org/2000/svg','marker');
+    m.setAttribute('id','a'+id); m.setAttribute('markerWidth','7'); m.setAttribute('markerHeight','7');
+    m.setAttribute('refX','5.5'); m.setAttribute('refY','3.5'); m.setAttribute('orient','auto');
+    const pg = document.createElementNS('http://www.w3.org/2000/svg','polygon');
+    pg.setAttribute('points','0 0,6 3.5,0 7'); pg.setAttribute('fill',c);
+    m.appendChild(pg); d.appendChild(m);
+  });
+  sv.appendChild(d);
+})();
+
+const C={b:'#0058A8',p:'#6D28D9',t:'#0D9488',o:'#F97316',g:'#AAAAAA'};
+
+function arr(x1,y1,x2,y2,cid,dash=false) {
+  const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+  const same=Math.abs(y1-y2)<5;
+  p.setAttribute('d', same ? `M${x1},${y1} L${x2-2},${y2}` : `M${x1},${y1} C${(x1+x2)/2},${y1} ${(x1+x2)/2},${y2} ${x2-2},${y2}`);
+  p.setAttribute('stroke',C[cid]); p.setAttribute('stroke-width','1.5'); p.setAttribute('fill','none');
+  if(dash) p.setAttribute('stroke-dasharray','5,4');
+  p.setAttribute('marker-end',`url(#a${cid})`);
+  sv.appendChild(p);
+}
+
+function dln(x1,y1,x2,y2,color,dash='4,4') {
+  const l=document.createElementNS('http://www.w3.org/2000/svg','line');
+  l.setAttribute('x1',x1); l.setAttribute('y1',y1);
+  l.setAttribute('x2',x2); l.setAttribute('y2',y2);
+  l.setAttribute('stroke',color); l.setAttribute('stroke-width','1.3');
+  l.setAttribute('stroke-dasharray',dash);
+  sv.appendChild(l);
+}
+
+function vline(x,y1,y2,color='#CCCCCC') { dln(x,y1,x,y2,color); }
+
+
+/* ═══ STAGE 2a EXTERNAL ═══ */
+arr(1117,180, 1393,180, 'b');
+arr(1407,180, 1703,180, 'b');
+arr(1717,180, 1983,180, 'b');
+
+/* ═══ STAGE 2a IB ═══ */
+arr(1142,510, 1353,510, 'b');
+arr(1367,510, 1591,510, 'b');
+arr(1609,510, 1813,510, 'b');
+arr(1827,510, 2013,510, 'b');
+
+/* Cross-lane 2a */
+dln(1110,180, 1130,498, '#0058A8');          // 부모설치 → 첫공개
+dln(1400,180, 1600,501, '#888888');           // 이벤트용돈 → 넣을까쓸까
+dln(1990,180, 2020,503, '#888888');           // 이벤트지속 → 목표달성
+
+/* Stage-up vertical */
+vline(2248, 118, 680, '#CCCCCC');
+
+/* ═══ STAGE 2b EXTERNAL ═══ */
+arr(1990,180, 2363,180, 'b', true);          // gap bridge (dashed)
+arr(2377,180, 2753,180, 'b');
+// 2b IB to 2b external cross
+dln(2370,180, 2390,487, '#0058A8');           // 정기용돈 → 저축30% (직접 연결)
+
+/* ═══ STAGE 2b IB ═══ */
+arr(2027,510, 2263,510, 'b', true);          // 목표달성 → stage-up gap
+arr(2265,510, 2383,510, 'b');
+arr(2397,510, 2583,510, 'b');
+arr(2597,510, 2783,510, 'b');
+arr(2797,510, 2981,510, 'b');
+
+/* Cross-lane 2b */
+dln(2760,180, 2990,501, '#888888');           // 매칭입금 → 저축50%상향
+
+/* ═══ STAGE 3 EXTERNAL ═══ */
+arr(3297,180, 3563,180, 'p');
+arr(3577,180, 3813,180, 'p');
+arr(3827,180, 4103,180, 'p');
+
+/* ═══ STAGE 3 IB ═══ */
+arr(3297,510, 3551,510, 'p');
+arr(3569,510, 3748,510, 'p');
+arr(3772,510, 3963,510, 'p');
+arr(3977,510, 4153,510, 'p');
+arr(4167,510, 4331,510, 'p');
+arr(4349,510, 4503,510, 'p');
+
+/* Cross-lane 3 */
+/* 또래 토스(3570 ext) → 역할분담(3560 IB) — Q3의 핵심 */
+dln(3570,180, 3560,501, '#6D28D9');
+/* 아이도 토스 설치(3820 ext) → 역할분담(3560 IB) — 보강 */
+arr(3820,180, 3570,501, 'p', true);
+/* 부모승인(4110 ext) → ETF실행(4160 IB) */
+dln(4110,180, 4160,503, '#6D28D9');
+
+/* ═══ STAGE 4 EXTERNAL ═══ */
+arr(4687,180, 4953,180, 't');
+arr(4967,180, 5348,180, 't');
+
+/* ═══ STAGE 4 IB ═══ */
+arr(4687,510, 4933,510, 't');
+arr(4947,510, 5143,510, 't');
+arr(5157,510, 5368,510, 't');
+arr(5392,510, 5653,510, 't');
+arr(5667,510, 5911,510, 't');
+
+/* Cross-lane 4 */
+dln(5360,180, 5380,474, '#F97316');           // 360만원 → 클라이맥스
+
+/* Stage transitions IB */
+arr(3000,510, 3280,510, 'g', true);           // S2 → S3
+arr(4517,510, 4670,510, 'g', true);           // S3 → S4
+
+/* Stage transitions External */
+arr(2000,180, 2360,180, 'b', true);           // already drawn above
+
+</script>
+</body>
+</html>
