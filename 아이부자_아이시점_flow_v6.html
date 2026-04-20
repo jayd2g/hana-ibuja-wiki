@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>아이부자 — 아이 시점 Flow v6</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#F2F2F2; font-family:'Noto Sans KR',sans-serif; overflow-x:auto; }
+.wrapper { padding:40px; }
+h1 { font-size:16px; font-weight:700; color:#111; margin-bottom:5px; }
+.meta { font-size:11px; color:#999; margin-bottom:28px; }
+
+.canvas {
+  position:relative; width:9200px; height:760px;
+  background-color:#FAFAFA;
+  background-image:radial-gradient(circle,#D7D7D7 1px,transparent 1px);
+  background-size:18px 18px;
+  border-radius:16px; overflow:hidden;
+}
+.lane-ext { position:absolute;left:0;right:0;top:0;height:265px;background:rgba(0,88,168,0.025);pointer-events:none;z-index:0; }
+.lane-inv { position:absolute;left:0;right:0;top:265px;height:225px;background:rgba(13,148,136,0.025);pointer-events:none;z-index:0; }
+.lane-con { position:absolute;left:0;right:0;top:490px;height:155px;background:rgba(0,0,0,0.012);pointer-events:none;z-index:0; }
+
+.pb { position:absolute;top:14px;height:32px;border-radius:32px;display:flex;align-items:center;padding:0 18px;font-size:11px;font-weight:700;color:white;letter-spacing:-.3px;z-index:3; }
+.sp { position:absolute;top:53px;font-size:9.5px;font-weight:600;color:white;background:rgba(0,0,0,0.18);padding:2px 9px;border-radius:12px;z-index:3;white-space:nowrap; }
+.tone { position:absolute;top:56px;font-size:9px;color:#BBBBBB;font-style:italic;z-index:3; }
+.trig { position:absolute;top:70px;background:#0A0A0A;color:white;font-size:9.5px;font-weight:600;padding:3px 11px;border-radius:20px;white-space:nowrap;transform:translateX(-50%);z-index:6; }
+.up { position:absolute;transform:translateX(-50%);background:white;border:1.5px solid #7C3AED;color:#7C3AED;font-size:9px;font-weight:700;padding:2px 9px;border-radius:20px;white-space:nowrap;z-index:6; }
+.ll  { position:absolute;left:20px;background:#0A0A0A;color:white;border-radius:32px;padding:5px 13px;font-size:11px;font-weight:600;transform:translateY(-50%);z-index:10; }
+.lls { position:absolute;left:20px;background:#C0C8D0;color:white;border-radius:32px;padding:4px 11px;font-size:10px;font-weight:600;transform:translateY(-50%);z-index:10; }
+
+.n   { position:absolute;display:flex;flex-direction:column;align-items:center;gap:5px;transform:translateX(-50%);z-index:5; }
+.d   { border-radius:50%;flex-shrink:0; }
+.d14 { width:14px;height:14px; }
+.d18 { width:18px;height:18px; }
+.d24 { width:24px;height:24px; }
+.lbl  { font-size:10.5px;font-weight:500;color:#1A1A1A;text-align:center;line-height:1.5;max-width:112px; }
+.lblg { font-size:10px;font-weight:400;color:#BBBBBB;text-align:center;line-height:1.5;max-width:100px; }
+.s  { font-size:9.5px;color:#888; }
+.sg { font-size:9.5px;color:#CCCCCC; }
+.ab { order:-1; }
+
+.dim  { position:absolute;top:0;bottom:0;background:rgba(250,250,250,0.62);pointer-events:none;z-index:4; }
+.dn   { position:absolute;font-size:10px;color:#C0C0C0;font-style:italic;line-height:1.7;z-index:6; }
+.note { position:absolute;background:white;padding:8px 11px;font-size:10px;color:#555;line-height:1.75;border-left:3px solid #F97316;border-radius:0 8px 8px 0;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:5; }
+.qa   { position:absolute;background:#FFFBF0;border:1px solid #F0D080;border-radius:8px;padding:7px 10px;font-size:9.5px;color:#775500;line-height:1.7;z-index:5;max-width:200px; }
+.prog { position:absolute;background:white;border-radius:8px;padding:7px 11px;font-size:9.5px;color:#555;line-height:1.7;z-index:5;border-top:2px solid; }
+.co   { position:absolute;top:53px;font-size:9px;font-weight:600;color:rgba(0,88,168,0.7);background:rgba(0,88,168,0.09);padding:2px 9px;border-radius:12px;z-index:3;white-space:nowrap; }
+/* 난이도 레벨 뱃지 */
+.lv   { position:absolute;font-size:8.5px;font-weight:700;color:#F97316;background:rgba(255,255,255,0.9);border:1px solid rgba(249,115,22,0.35);border-radius:10px;padding:1px 7px;z-index:7;white-space:nowrap;transform:translateX(-50%); }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <h1>아이부자 — 아이 시점 Flow v6 <span style="font-size:12px;color:#999;font-weight:400;">(베스트 케이스 · 260420 반영)</span></h1>
+  <div class="meta">
+    외부 레인(위) &nbsp;/&nbsp; <strong>저축·투자 레인</strong>(중, 메인 서사) &nbsp;/&nbsp; <span style="color:#BBBBBB;">소비목표 레인(아래, 보조)</span>
+    &nbsp;·&nbsp; 화살표: 각 레인 안에서 왼→오른 일방향 &nbsp;·&nbsp; 수직선: 같은 시점 레인 간 인과 &nbsp;·&nbsp;
+    <em>The Wealth Apprentice — 견습 자산가를 키우는 청소년 금융</em>
+  </div>
+
+  <div class="canvas">
+    <svg id="sv" style="position:absolute;top:0;left:0;width:9200px;height:760px;pointer-events:none;z-index:2;"></svg>
+    <div class="lane-ext"></div>
+    <div class="lane-inv"></div>
+    <div class="lane-con"></div>
+    <!-- 레인 구분선 -->
+    <div style="position:absolute;left:140px;right:0;top:265px;height:1px;background:#DCDCDC;z-index:1;"></div>
+    <div style="position:absolute;left:140px;right:0;top:490px;height:1px;background:#E8E8E8;z-index:1;border-style:dashed;"></div>
+
+    <!-- S1 dim -->
+    <div class="dim" style="left:140px;width:940px;"></div>
+
+    <!-- ── Phase bars ── -->
+    <div class="pb" style="left:140px;width:930px;background:#C0C0C0;">STAGE 1 · 유아기 · 3–8세 · 아이 부재</div>
+    <div class="pb" style="left:1080px;width:1800px;background:#0058A8;">STAGE 2 · 금융시장 유입기 · 7–9세 · 관찰자</div>
+    <div class="pb" style="left:2880px;width:3000px;background:#7C3AED;">STAGE 3 · 금융생활 탐험기 · 10–15세</div>
+    <div class="pb" style="left:5880px;width:2090px;background:#0D9488;">STAGE 4 · 금융생활 독립준비기 · 16–18세</div>
+    <div class="pb" style="left:8010px;width:960px;background:#475569;opacity:0.8;">5단계 · 독립 견습 · 19세~독립 · 하나원큐</div>
+
+    <!-- sub-pills -->
+    <div class="sp" style="left:2895px;">2단계 선택자</div>
+    <div class="sp" style="left:3955px;">3단계 제안자</div>
+    <div class="sp" style="left:5895px;">4단계 운용자</div>
+    <div class="co" style="left:2080px;">💡 부모 계좌 공유 · 공동 투자 학습</div>
+
+    <!-- tone labels -->
+    <div class="tone" style="left:1700px;">어조: 선생님</div>
+    <div class="tone" style="left:3050px;">코치</div>
+    <div class="tone" style="left:4250px;">동료·파트너 ("협상 앱")</div>
+    <div class="tone" style="left:6400px;">금융 어드바이저</div>
+
+    <!-- triggers -->
+    <div class="trig" style="left:1100px;">트리거: 스마트폰 소지</div>
+    <div class="trig" style="left:2900px;">트리거: 정기 용돈 시작</div>
+    <div class="trig" style="left:5900px;">트리거: 체크카드 발급</div>
+
+    <!-- stage-up markers -->
+    <div class="up" style="left:2880px;top:90px;">관찰자 → 선택자 단계 업 🎉</div>
+    <div class="up" style="left:3940px;top:90px;">선택자 → 제안자 단계 업 🎉</div>
+
+    <!-- lane labels -->
+    <div class="ll"  style="top:155px;">외부</div>
+    <div class="ll"  style="top:375px;">저축·투자</div>
+    <div class="lls" style="top:560px;">소비목표</div>
+
+    <!-- S1 notes -->
+    <div class="dn" style="left:230px;top:130px;">부모 앱 설치 · 자녀 등록<br>시드 입금 · 세뱃돈 유입<br><strong style="color:#F97316;">→ 아이는 모른다</strong></div>
+    <div class="dn" style="left:230px;top:320px;">백그라운드 축적<br>(투자연대기 시작)</div>
+
+    <!-- 난이도 Lv 뱃지 — Stage 2 INV 레인 위 -->
+    <div class="lv" style="left:1140px;top:272px;">Lv.1 수동 인식</div>
+    <div class="lv" style="left:1650px;top:272px;">Lv.2 자연 증가 발견</div>
+    <div class="lv" style="left:2160px;top:272px;">Lv.3 칭찬 루프</div>
+    <div class="lv" style="left:2580px;top:272px;">Lv.4 공동 학습</div>
+
+    <!-- ══════════════════════════════
+         STAGE 2 · 관찰자 (7–9세)
+         아주 낮은 허들부터 단계적으로
+    ══════════════════════════════ -->
+
+    <!-- EXT Stage 2 -->
+    <div class="n" style="left:1140px;top:108px;">
+      <div class="lbl ab">부모 앱 설치<br>권유</div>
+      <div class="d d14" style="background:#0058A8;"></div>
+    </div>
+    <div class="n" style="left:1380px;top:93px;">
+      <div class="lbl ab">세뱃돈 50,000원<br>이벤트 시드 유입<br><span class="s">심부름 · 생일 선물</span></div>
+      <div class="d d14" style="background:#0058A8;"></div>
+    </div>
+    <div class="n" style="left:1660px;top:108px;">
+      <div class="lbl ab">부모 매칭<br>자동 입금 시작</div>
+      <div class="d d14" style="background:#0058A8;"></div>
+    </div>
+    <div class="n" style="left:1940px;top:108px;">
+      <div class="lbl ab">이벤트 시드 계속<br>생일 선물금 유입</div>
+      <div class="d d14" style="background:#0058A8;"></div>
+    </div>
+    <div class="n" style="left:2180px;top:108px;">
+      <div class="lbl ab">부모 칭찬 알림<br>수신 ✓</div>
+      <div class="d d14" style="background:#0058A8;"></div>
+    </div>
+    <div class="n" style="left:2400px;top:108px;">
+      <div class="lbl ab">부모 투자계좌<br>아이부자에 공개</div>
+      <div class="d d14" style="background:#0058A8;"></div>
+    </div>
+
+    <!-- INV Stage 2 — 단계별 허들 설계 (핵심 변경) -->
+    <!-- Lv.1: 수동 인식 — 아무것도 안 해도 된다 -->
+    <div class="n" style="left:1140px;top:362px;">
+      <div class="d d24" style="background:#F97316;"></div>
+      <div class="lbl" style="color:#F97316;font-weight:700;">"748,000원!<br>이게 뭐야?"<br><span style="font-size:9.5px;">⭐ 첫 공개 = 첫 금융 대화</span></div>
+    </div>
+    <div class="n" style="left:1380px;top:368px;">
+      <div class="d d14" style="background:#0058A8;"></div>
+      <div class="lbl">세뱃돈 → 투자계좌A<br>자동 전환<br><span class="s">(부모가 대신 결정)</span></div>
+    </div>
+    <!-- Lv.2: 자연 증가 발견 — 아이가 아무것도 안 했는데 돈이 늘었다 -->
+    <div class="n" style="left:1570px;top:368px;">
+      <div class="d d14" style="background:#0058A8;"></div>
+      <div class="lbl">배당금 128원<br>"내 돈이 일했다!"</div>
+    </div>
+    <div class="n" style="left:1750px;top:365px;">
+      <div class="d d18" style="background:#F97316;"></div>
+      <div class="lbl" style="color:#F97316;font-weight:700;">"어? 더 늘었어!"<br>750,000→752,000원<br><span style="font-size:9px;font-weight:400;color:#888;">아무것도 안 했는데</span></div>
+    </div>
+    <!-- Lv.3: 칭찬 루프 — 우연한 절약 + 피드백 -->
+    <div class="n" style="left:1970px;top:368px;">
+      <div class="d d14" style="background:#0058A8;"></div>
+      <div class="lbl">이번 달 용돈<br>300원 남겼어<br><span class="s">(우연한 절약)</span></div>
+    </div>
+    <div class="n" style="left:2180px;top:365px;">
+      <div class="d d18" style="background:#F97316;"></div>
+      <div class="lbl" style="color:#F97316;font-weight:700;">절약 뱃지 획득!<br>부모 칭찬 ✓<br><span style="font-size:9px;font-weight:400;color:#888;">반복하고 싶어진다</span></div>
+    </div>
+    <!-- Lv.4: 공동 학습 -->
+    <div class="n" style="left:2400px;top:368px;">
+      <div class="d d14" style="background:#0058A8;"></div>
+      <div class="lbl">"아빠 포트폴리오<br>+8%" 함께 확인</div>
+    </div>
+    <div class="n" style="left:2590px;top:365px;">
+      <div class="d d18" style="background:#F97316;"></div>
+      <div class="lbl">"같이 골라보자"<br>공동 첫 투자 결정</div>
+    </div>
+    <div class="n" style="left:2770px;top:365px;">
+      <div class="d d18" style="background:#F97316;"></div>
+      <div class="lbl" style="color:#F97316;font-weight:700;">잔액 100만원<br>돌파! 패시브인컴<br>첫 실감</div>
+    </div>
+
+    <!-- CON Stage 2 — 보조 서사, 연하게 처리 -->
+    <div class="n" style="left:1820px;top:553px;">
+      <div class="d d14" style="background:#CCCCCC;"></div>
+      <div class="lblg">목표계좌 B<br>"에어팟 35,000원"</div>
+    </div>
+    <div class="n" style="left:2040px;top:553px;">
+      <div class="d d14" style="background:#CCCCCC;"></div>
+      <div class="lblg">35,000원 달성<br>→ 에어팟 ✓</div>
+    </div>
+
+    <!-- ══════════════════════════════
+         STAGE 3 · 선택자 (10–12세) — 민법 제6조
+    ══════════════════════════════ -->
+
+    <!-- EXT Stage 3 선택자 -->
+    <div class="n" style="left:2960px;top:93px;">
+      <div class="lbl ab">정기 용돈 시작<br>10,000원/월<br><span class="s">3번째 시드 채널</span></div>
+      <div class="d d14" style="background:#7C3AED;"></div>
+    </div>
+    <div class="n" style="left:3220px;top:108px;">
+      <div class="lbl ab">부모 매칭<br>계속 입금</div>
+      <div class="d d14" style="background:#7C3AED;"></div>
+    </div>
+    <div class="n" style="left:3680px;top:93px;">
+      <div class="lbl ab">성과 기반 용돈 협상<br>"6개월 잘 모았으니<br>올려줘!"</div>
+      <div class="d d14" style="background:#7C3AED;"></div>
+    </div>
+    <div class="n" style="left:3880px;top:108px;">
+      <div class="lbl ab">정기 용돈<br>15,000원으로 증가</div>
+      <div class="d d14" style="background:#7C3AED;"></div>
+    </div>
+
+    <!-- INV Stage 3 선택자 -->
+    <div class="n" style="left:2960px;top:368px;">
+      <div class="d d14" style="background:#7C3AED;"></div>
+      <div class="lbl">저축 30% 처음 설정<br><span class="s">민법 제6조 허락 범위</span></div>
+    </div>
+    <div class="n" style="left:3100px;top:368px;">
+      <div class="d d14" style="background:#7C3AED;"></div>
+      <div class="lbl">이달 펀드 A·B·C<br>중 직접 선택</div>
+    </div>
+    <div class="n" style="left:3320px;top:368px;">
+      <div class="d d14" style="background:#7C3AED;"></div>
+      <div class="lbl">"내가 고른 펀드<br>+2.3% 올랐어"</div>
+    </div>
+    <div class="n" style="left:3520px;top:365px;">
+      <div class="d d18" style="background:#F97316;"></div>
+      <div class="lbl">저축 50%로<br>자발적 상향 ↑<br><span class="s">또래 35% vs 내 50%</span></div>
+    </div>
+    <div class="n" style="left:3900px;top:368px;">
+      <div class="d d14" style="background:#7C3AED;"></div>
+      <div class="lbl">첫 손실 "-1.8%"<br><span class="s">→ "이게 정상이에요"</span></div>
+    </div>
+    <div class="n" style="left:4090px;top:368px;">
+      <div class="d d14" style="background:#7C3AED;"></div>
+      <div class="lbl">투자 연대기<br>100번째 기록 🎉</div>
+    </div>
+    <div class="n" style="left:4280px;top:368px;">
+      <div class="d d14" style="background:#7C3AED;"></div>
+      <div class="lbl">분기 리포트<br>수익률 +5.4%</div>
+    </div>
+
+    <!-- CON Stage 3 선택자 — 더 연하게 -->
+    <div class="n" style="left:3100px;top:553px;">
+      <div class="d d14" style="background:#DDDDDD;"></div>
+      <div class="lblg">목표계좌 B:<br>게임기 120,000원</div>
+    </div>
+    <div class="n" style="left:3600px;top:553px;">
+      <div class="d d14" style="background:#DDDDDD;"></div>
+      <div class="lblg">3개월 만에<br>달성 ✓</div>
+    </div>
+
+    <!-- ══════════════════════════════
+         STAGE 3 · 제안자 (13–15세) — 민법 제5조 / 마이크로 협상
+    ══════════════════════════════ -->
+
+    <!-- EXT Stage 3 제안자 -->
+    <div class="n" style="left:4520px;top:108px;">
+      <div class="lbl ab">정기 용돈<br>30,000원으로 증가</div>
+      <div class="d d14" style="background:#7C3AED;"></div>
+    </div>
+    <div class="n" style="left:4750px;top:93px;">
+      <div class="lbl ab" style="color:#7C3AED;font-weight:600;">또래들 토스 카드<br>만들기 시작<br><span style="font-size:9.5px;color:#888;font-weight:400;">(친구들이 실제로 씀)</span></div>
+      <div class="d d14" style="background:#7C3AED;"></div>
+    </div>
+    <div class="n" style="left:5000px;top:93px;">
+      <div class="lbl ab" style="color:#7C3AED;font-weight:600;">아이도 토스 설치<br>(소비·교통카드용)<br><span style="font-size:9.5px;color:#888;font-weight:400;">이탈 아님 → 역할 분담</span></div>
+      <div class="d d14" style="background:#7C3AED;"></div>
+    </div>
+    <div class="n" style="left:5320px;top:108px;">
+      <div class="lbl ab">부모 디지털 동의<br><span class="s">(민법 제5조 충족)</span></div>
+      <div class="d d14" style="background:#7C3AED;"></div>
+    </div>
+
+    <!-- INV Stage 3 제안자 -->
+    <div class="n" style="left:4520px;top:368px;">
+      <div class="d d14" style="background:#7C3AED;"></div>
+      <div class="lbl">저축 60%로<br>재설정</div>
+    </div>
+    <div class="n" style="left:4710px;top:365px;">
+      <div class="d d18" style="background:#F97316;"></div>
+      <div class="lbl">💡 역할 재정의<br>"토스=소비<br>아이부자=자산"</div>
+    </div>
+    <div class="n" style="left:4910px;top:362px;">
+      <div class="d d24" style="background:#F97316;"></div>
+      <div class="lbl" style="color:#F97316;font-weight:700;">⭐ 마이크로 협상<br>"이번 달 ETF<br>5만원 올려줘"</div>
+    </div>
+    <div class="n" style="left:5120px;top:368px;">
+      <div class="d d14" style="background:#7C3AED;"></div>
+      <div class="lbl">앱 리스크 분석<br>"연 4.2% 예상"<br><span class="s">부모에게 전달</span></div>
+    </div>
+    <div class="n" style="left:5320px;top:368px;">
+      <div class="d d14" style="background:#7C3AED;"></div>
+      <div class="lbl">즉시 매수 실행 ✓<br><span class="s">첫 ETF 투자</span></div>
+    </div>
+    <div class="n" style="left:5510px;top:365px;">
+      <div class="d d18" style="background:#F97316;"></div>
+      <div class="lbl">⭐ 첫 손실<br>"-3.2%"<br>+ 가이드 수신</div>
+    </div>
+    <div class="n" style="left:5710px;top:368px;">
+      <div class="d d14" style="background:#7C3AED;"></div>
+      <div class="lbl">분기 리포트 +7.1%<br><span class="s">친구한테 공유</span></div>
+    </div>
+
+    <!-- CON Stage 3 제안자 — 소비 토스로 이관 -->
+    <div style="position:absolute;left:4600px;top:516px;font-size:9.5px;color:#CCCCCC;font-style:italic;z-index:5;">← 소비 활동은 토스 앱으로 이관 (아이부자 역할 분리 완료)</div>
+
+    <!-- ══════════════════════════════
+         STAGE 4 · 운용자 (16–18세) — 민법 제6조 포괄
+    ══════════════════════════════ -->
+
+    <!-- EXT Stage 4 -->
+    <div class="n" style="left:5980px;top:108px;">
+      <div class="lbl ab">체크카드 발급<br>독립 소비 시작</div>
+      <div class="d d14" style="background:#0D9488;"></div>
+    </div>
+    <div class="n" style="left:6250px;top:108px;">
+      <div class="lbl ab">알바 수입<br>일부 자발적 투자</div>
+      <div class="d d14" style="background:#0D9488;"></div>
+    </div>
+    <div class="n" style="left:6900px;top:90px;">
+      <div class="lbl ab" style="color:#F97316;font-weight:600;">부모에게 처음으로<br>투자 조언 💬<br><span style="font-size:9.5px;color:#888;font-weight:400;">역할 역전</span></div>
+      <div class="d d18" style="background:#F97316;"></div>
+    </div>
+    <div class="n" style="left:7060px;top:87px;">
+      <div class="lbl ab" style="color:#F97316;font-weight:700;max-width:125px;">⭐⭐ 학제별 일괄 달성<br>신뢰 완성 증거<br><span style="font-size:9.5px;font-weight:400;">운용시간 극대화</span></div>
+      <div class="d d24" style="background:#F97316;"></div>
+    </div>
+
+    <!-- INV Stage 4 -->
+    <div class="n" style="left:6250px;top:368px;">
+      <div class="d d14" style="background:#0D9488;"></div>
+      <div class="lbl">개별 주식 직접 투자<br>저축 70%+</div>
+    </div>
+    <div class="n" style="left:6480px;top:368px;">
+      <div class="d d14" style="background:#0D9488;"></div>
+      <div class="lbl">연대기 열람<br>"첫 배당 340원(8년 전)<br>→ 이달 4,800원"</div>
+    </div>
+    <div class="n" style="left:6650px;top:368px;">
+      <div class="d d14" style="background:#0D9488;"></div>
+      <div class="lbl">포트폴리오<br>리밸런싱<br>직접 실행</div>
+    </div>
+    <div class="n" style="left:6820px;top:368px;">
+      <div class="d d14" style="background:#0D9488;"></div>
+      <div class="lbl">수익률 +12.3%<br>자율 관리</div>
+    </div>
+    <div class="n" style="left:7060px;top:362px;">
+      <div class="d d24" style="background:#F97316;"></div>
+      <div class="lbl" style="color:#F97316;font-weight:700;">💡 The Wealth<br>Apprentice 클라이맥스<br><span style="font-size:9px;">360만+780만=1,140만</span></div>
+    </div>
+    <div class="n" style="left:7340px;top:368px;">
+      <div class="d d14" style="background:#0D9488;"></div>
+      <div class="lbl">하나원큐 미리보기<br><span class="s">성인 계좌 미리보기</span></div>
+    </div>
+    <div class="n" style="left:7580px;top:368px;">
+      <div class="d d14" style="background:#0D9488;"></div>
+      <div class="lbl">D-365 화면<br>"18세에 약<br>1,380만원 예상"</div>
+    </div>
+    <div class="n" style="left:7820px;top:365px;">
+      <div class="d d18" style="background:#0D9488;"></div>
+      <div class="lbl" style="color:#0D9488;font-weight:700;">⭐ 하나원큐 이관<br>(만 18세)<br><span style="font-size:9.5px;font-weight:400;color:#888;">독립 견습 계속 →</span></div>
+    </div>
+
+    <!-- ══════════════════════════════
+         5단계 · 독립 견습 (19세~독립 시점)
+    ══════════════════════════════ -->
+    <div class="n" style="left:8200px;top:368px;">
+      <div class="d d14" style="background:#475569;"></div>
+      <div class="lbl" style="color:#475569;">하나원큐 자율 운용<br>대학·군복무 시기<br><span class="s">습관 체화 지속</span></div>
+    </div>
+    <div class="n" style="left:8560px;top:362px;">
+      <div class="d d24" style="background:#475569;"></div>
+      <div class="lbl" style="color:#475569;font-weight:700;">재정 독립 ✓<br>독립 시드<br>+ 체화된 습관</div>
+    </div>
+
+    <!-- QA annotation -->
+    <div class="qa" style="left:7890px;top:255px;">
+      <strong>이관 이후 (5단계 독립 견습)</strong><br>
+      18세: 법적 대리 해소, 하나원큐 이관<br>
+      → 실질 재정독립은 20대 중후반<br>
+      → 독립 견습이 그때까지 지속<br><br>
+      <strong>진짜 종착점</strong><br>
+      독립 시드 + 체화된 금융 습관<br><br>
+      <span style="font-size:9px;color:#AAA;">동생 있으면 부모는 계속 사용 가능</span>
+    </div>
+
+    <!-- Progress bars -->
+    <div class="prog" style="left:1090px;top:650px;border-color:#BBDCFF;max-width:380px;">
+      <strong style="color:#0058A8;">관찰자 (7–9세)</strong><br>
+      Lv.1 수동인식 → Lv.2 자연증가 발견 → Lv.3 우연절약+칭찬루프 → Lv.4 공동학습 → 100만원 돌파
+    </div>
+    <div class="prog" style="left:2890px;top:650px;border-color:#7C3AED;max-width:310px;">
+      <strong style="color:#7C3AED;">선택자 (10–12세) ↑</strong><br>
+      저축 30%→50% 자발적 상향 · 용돈 협상 성공 · 민법 제6조
+    </div>
+    <div class="prog" style="left:3955px;top:650px;border-color:#7C3AED;max-width:310px;">
+      <strong style="color:#7C3AED;">제안자 (13–15세) ↑</strong><br>
+      마이크로 협상 · 저축 60% · 디지털 동의 · +7.1% · 민법 제5조
+    </div>
+    <div class="prog" style="left:5890px;top:650px;border-color:#0D9488;max-width:360px;">
+      <strong style="color:#0D9488;">운용자 (16–18세) ↑</strong><br>
+      저축 70%+ · 개별주식 · 학제별 일괄 · 운용시간 극대화 · +12.3%
+    </div>
+
+    <!-- 용돈 주기 확장 -->
+    <div style="position:absolute;left:2890px;top:694px;z-index:5;background:white;border-radius:8px;padding:6px 11px;font-size:9.5px;color:#555;line-height:1.7;border-top:2px solid #7C3AED;max-width:380px;">
+      <strong style="color:#7C3AED;">용돈 주기 확장 — 신뢰의 가시적 지표</strong><br>
+      이벤트 → 주별 → 월별 → 분기 → 반기 → <strong>학제별</strong>&nbsp; 같은 총액도 긴 주기 = 운용시간 극대화
+    </div>
+
+    <div class="note" style="left:18px;top:650px;max-width:240px;">
+      <strong style="color:#F97316;">The Wealth Apprentice</strong><br>
+      ⭐ 견습 서사의 랜드마크<br>
+      💡 데이터 기반 개입 포인트<br>
+      감시 앱 아닌 협상 앱<br>
+      트리거 = 나이 아닌 라이프 이벤트<br>
+      단계 UP = 6개월 저축 + 퀴즈 통과
+    </div>
+
+  </div><!-- canvas -->
+</div>
+
+<script>
+const sv = document.getElementById('sv');
+const E=155, V=375, C=560;  /* EXT_Y, INV(저축)_Y, CON(소비목표)_Y */
+
+/* ── 화살촉 마커 정의 ── */
+(function(){
+  const defs=document.createElementNS('http://www.w3.org/2000/svg','defs');
+  [['b','#0058A8'],['p','#7C3AED'],['t','#0D9488'],['o','#F97316'],['g','#AAAAAA'],['sl','#475569'],['lg','#CCCCCC']].forEach(([id,col])=>{
+    const m=document.createElementNS('http://www.w3.org/2000/svg','marker');
+    m.setAttribute('id','a'+id); m.setAttribute('markerWidth','9'); m.setAttribute('markerHeight','9');
+    m.setAttribute('refX','6'); m.setAttribute('refY','4.5'); m.setAttribute('orient','auto');
+    const pg=document.createElementNS('http://www.w3.org/2000/svg','polygon');
+    pg.setAttribute('points','0 0,8 4.5,0 9'); pg.setAttribute('fill',col);
+    m.appendChild(pg); defs.appendChild(m);
+  });
+  sv.appendChild(defs);
+})();
+const CL={b:'#0058A8',p:'#7C3AED',t:'#0D9488',o:'#F97316',g:'#AAAAAA',sl:'#475569',lg:'#CCCCCC'};
+
+/* 수평 화살표 — 흰 배경 outline으로 도트 그리드 위에서 선명하게 */
+function arr(x1,y,x2,cid,dash=false){
+  const bg=document.createElementNS('http://www.w3.org/2000/svg','path');
+  bg.setAttribute('d',`M${x1},${y} L${x2},${y}`);
+  bg.setAttribute('stroke','white'); bg.setAttribute('stroke-width','4'); bg.setAttribute('fill','none');
+  sv.appendChild(bg);
+  const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+  p.setAttribute('d',`M${x1},${y} L${x2-2},${y}`);
+  p.setAttribute('stroke',CL[cid]); p.setAttribute('stroke-width',cid==='lg'?'1.5':'2.5'); p.setAttribute('fill','none');
+  if(dash) p.setAttribute('stroke-dasharray','6,5');
+  p.setAttribute('marker-end','url(#a'+cid+')');
+  sv.appendChild(p);
+}
+
+/* 수직 연결선 — 레인 간 인과관계, 아래 방향 화살촉 */
+function vconn(x,y1,y2,color){
+  const bg=document.createElementNS('http://www.w3.org/2000/svg','line');
+  bg.setAttribute('x1',x); bg.setAttribute('y1',y1); bg.setAttribute('x2',x); bg.setAttribute('y2',y2);
+  bg.setAttribute('stroke','white'); bg.setAttribute('stroke-width','5');
+  sv.appendChild(bg);
+  const l=document.createElementNS('http://www.w3.org/2000/svg','line');
+  l.setAttribute('x1',x); l.setAttribute('y1',y1); l.setAttribute('x2',x); l.setAttribute('y2',y2-7);
+  l.setAttribute('stroke',color); l.setAttribute('stroke-width','2'); l.setAttribute('stroke-dasharray','4,3');
+  const tri=document.createElementNS('http://www.w3.org/2000/svg','polygon');
+  tri.setAttribute('points',`${x-5},${y2-7} ${x+5},${y2-7} ${x},${y2}`);
+  tri.setAttribute('fill',color);
+  sv.appendChild(l); sv.appendChild(tri);
+}
+
+/* 스테이지 구분선 */
+function vdiv(x,y1,y2){
+  const l=document.createElementNS('http://www.w3.org/2000/svg','line');
+  l.setAttribute('x1',x); l.setAttribute('y1',y1); l.setAttribute('x2',x); l.setAttribute('y2',y2);
+  l.setAttribute('stroke','#CCCCCC'); l.setAttribute('stroke-width','1'); l.setAttribute('stroke-dasharray','6,5');
+  sv.appendChild(l);
+}
+
+/* ════════════════════════════
+   STAGE 2 · 관찰자 — 단계별 허들
+════════════════════════════ */
+// EXT
+arr(1147,E, 1373,'b');
+arr(1387,E, 1653,'b');
+arr(1667,E, 1933,'b');
+arr(1947,E, 2173,'b');
+arr(2187,E, 2393,'b');
+// INV (저축·투자 메인 서사)
+arr(1152,V, 1373,'b');   // 첫공개(d24)→세뱃돈
+arr(1387,V, 1563,'b');   // 세뱃돈→배당
+arr(1577,V, 1741,'b');   // 배당→자연증가(d18)
+arr(1759,V, 1963,'b');   // 자연증가→우연절약
+arr(1977,V, 2171,'b');   // 우연절약→칭찬루프(d18)
+arr(2189,V, 2393,'b');   // 칭찬루프→아빠포트폴리오
+arr(2407,V, 2581,'b');   // 아빠포트폴리오→공동투자(d18)
+arr(2599,V, 2761,'b');   // 공동투자→100만원(d18)
+// CON (소비목표, 연하게)
+arr(1827,C, 2033,'lg');
+// 레인 간 인과 (EXT→INV)
+vconn(1140, 162, 363, '#0058A8');  // 부모설치 → 첫공개(d24 top=363)
+vconn(1380, 162, 368, '#0058A8');  // 세뱃돈 → 자동전환(d14 top=368)
+vconn(2180, 162, 366, '#0058A8');  // 부모칭찬 ↕ 절약뱃지(d18 top=366)
+vconn(2400, 162, 368, '#0058A8');  // 부모계좌공개 ↕ 아빠포트폴리오
+// 스테이지 구분선
+vdiv(2880, 14, 645);
+arr(2779,V, 2953,'g',true);  // IB bridge
+
+/* ════════════════════════════
+   STAGE 3 · 선택자 (민법 제6조)
+════════════════════════════ */
+// EXT
+arr(2967,E, 3213,'p');
+arr(3227,E, 3673,'p');
+arr(3687,E, 3873,'p');
+// INV
+arr(2967,V, 3093,'p');
+arr(3107,V, 3313,'p');
+arr(3327,V, 3511,'p');
+arr(3529,V, 3893,'p');
+arr(3907,V, 4083,'p');
+arr(4097,V, 4273,'p');
+// CON (연하게)
+arr(3107,C, 3593,'lg');
+// 레인 간 인과
+vconn(2960, 162, 368, '#7C3AED');  // 정기용돈 → 저축30%
+// 하위 구분선 (선택자→제안자)
+vdiv(3940, 53, 645);
+arr(4287,V, 4513,'g',true);
+
+/* ════════════════════════════
+   STAGE 3 · 제안자 (민법 제5조 디지털 동의)
+════════════════════════════ */
+// EXT
+arr(4527,E, 4743,'p');
+arr(4757,E, 4993,'p');
+arr(5007,E, 5313,'p');
+// INV
+arr(4527,V, 4701,'p');
+arr(4719,V, 4898,'p');
+arr(4922,V, 5113,'p');
+arr(5127,V, 5313,'p');
+arr(5327,V, 5501,'p');
+arr(5519,V, 5703,'p');
+arr(5717,V, 5973,'g',true);
+// 레인 간 인과
+vconn(5320, 162, 368, '#7C3AED');  // 부모 디지털 동의 ↕ 즉시 매수
+// 스테이지 구분선
+vdiv(5880, 14, 645);
+
+/* ════════════════════════════
+   STAGE 4 · 운용자 (민법 제6조 포괄)
+════════════════════════════ */
+// EXT
+arr(5987,E, 6243,'t');
+arr(6257,E, 6891,'t');
+arr(6909,E, 7048,'t');
+// INV
+arr(6257,V, 6473,'t');
+arr(6487,V, 6643,'t');
+arr(6657,V, 6813,'t');
+arr(6827,V, 7048,'t');
+arr(7072,V, 7333,'t');
+arr(7347,V, 7573,'t');
+arr(7587,V, 7811,'t');
+// 레인 간 인과
+vconn(6250, 162, 368, '#0D9488');   // 알바수입 → 개별주식
+vconn(7060, 167, 363, '#F97316');   // 학제별일괄(d24) ↕ TWA클라이맥스(d24)
+// 스테이지 구분선
+vdiv(8010, 14, 645);
+
+/* ════════════════════════════
+   5단계 · 독립 견습
+════════════════════════════ */
+arr(7829,V, 8193,'sl',true);   // 이관 dashed bridge
+arr(8207,V, 8548,'sl');        // 자율운용 → 재정독립
+</script>
+</body>
+</html>
