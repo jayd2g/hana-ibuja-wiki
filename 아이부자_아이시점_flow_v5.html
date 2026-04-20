@@ -108,11 +108,11 @@ h1 { font-size:16px; font-weight:700; color:#111; margin-bottom:5px; }
       <div class="d d14" style="background:#0058A8;"></div>
     </div>
     <div class="n" style="left:1380px;top:134px;">
-      <div class="lbl ab">이벤트 시드 ①<br>세뱃돈 50,000원<br><span class="s">심부름 · 생일 선물</span></div>
+      <div class="lbl ab">세뱃돈 50,000원<br>이벤트 시드 유입<br><span class="s">심부름 · 생일 선물</span></div>
       <div class="d d14" style="background:#0058A8;"></div>
     </div>
     <div class="n" style="left:1660px;top:150px;">
-      <div class="lbl ab">시드 채널 ②<br>부모 매칭 자동 입금</div>
+      <div class="lbl ab">부모 매칭<br>자동 입금 시작</div>
       <div class="d d14" style="background:#0058A8;"></div>
     </div>
     <div class="n" style="left:1940px;top:150px;">
@@ -172,7 +172,7 @@ h1 { font-size:16px; font-weight:700; color:#111; margin-bottom:5px; }
 
     <!-- EXT -->
     <div class="n" style="left:2960px;top:150px;">
-      <div class="lbl ab">시드 채널 ③<br>정기 용돈 시작<br><span class="s">10,000원/월</span></div>
+      <div class="lbl ab">정기 용돈 시작<br>10,000원/월<br><span class="s">시드 3번째 채널</span></div>
       <div class="d d14" style="background:#7C3AED;"></div>
     </div>
     <div class="n" style="left:3220px;top:150px;">
@@ -404,10 +404,10 @@ const E=195, I=385;
   const d=document.createElementNS('http://www.w3.org/2000/svg','defs');
   [['b','#0058A8'],['p','#7C3AED'],['t','#0D9488'],['o','#F97316'],['g','#AAAAAA'],['sl','#475569']].forEach(([id,c])=>{
     const m=document.createElementNS('http://www.w3.org/2000/svg','marker');
-    m.setAttribute('id','a'+id);m.setAttribute('markerWidth','7');m.setAttribute('markerHeight','7');
-    m.setAttribute('refX','5.5');m.setAttribute('refY','3.5');m.setAttribute('orient','auto');
+    m.setAttribute('id','a'+id);m.setAttribute('markerWidth','9');m.setAttribute('markerHeight','9');
+    m.setAttribute('refX','6');m.setAttribute('refY','4.5');m.setAttribute('orient','auto');
     const pg=document.createElementNS('http://www.w3.org/2000/svg','polygon');
-    pg.setAttribute('points','0 0,6 3.5,0 7');pg.setAttribute('fill',c);
+    pg.setAttribute('points','0 0,8 4.5,0 9');pg.setAttribute('fill',c);
     m.appendChild(pg);d.appendChild(m);
   });
   sv.appendChild(d);
@@ -415,18 +415,35 @@ const E=195, I=385;
 const C={b:'#0058A8',p:'#7C3AED',t:'#0D9488',o:'#F97316',g:'#AAAAAA',sl:'#475569'};
 
 function arr(x1,y,x2,cid,dash=false){
+  /* white outline for contrast against dot grid */
+  const bg=document.createElementNS('http://www.w3.org/2000/svg','path');
+  bg.setAttribute('d',`M${x1},${y} L${x2-2},${y}`);
+  bg.setAttribute('stroke','white');bg.setAttribute('stroke-width','4');bg.setAttribute('fill','none');
+  sv.appendChild(bg);
   const p=document.createElementNS('http://www.w3.org/2000/svg','path');
   p.setAttribute('d',`M${x1},${y} L${x2-2},${y}`);
-  p.setAttribute('stroke',C[cid]);p.setAttribute('stroke-width','1.5');p.setAttribute('fill','none');
-  if(dash)p.setAttribute('stroke-dasharray','5,4');
+  p.setAttribute('stroke',C[cid]);p.setAttribute('stroke-width','2.5');p.setAttribute('fill','none');
+  if(dash)p.setAttribute('stroke-dasharray','6,5');
   p.setAttribute('marker-end','url(#a'+cid+')');
   sv.appendChild(p);
 }
 function vconn(x,y1,y2,color){
+  /* vertical causal link: draws a dashed line + downward arrowhead at y2 */
+  const bg=document.createElementNS('http://www.w3.org/2000/svg','line');
+  bg.setAttribute('x1',x);bg.setAttribute('y1',y1);bg.setAttribute('x2',x);bg.setAttribute('y2',y2);
+  bg.setAttribute('stroke','white');bg.setAttribute('stroke-width','5');
+  sv.appendChild(bg);
   const l=document.createElementNS('http://www.w3.org/2000/svg','line');
-  l.setAttribute('x1',x);l.setAttribute('y1',y1);l.setAttribute('x2',x);l.setAttribute('y2',y2);
-  l.setAttribute('stroke',color);l.setAttribute('stroke-width','1.5');
+  l.setAttribute('x1',x);l.setAttribute('y1',y1);l.setAttribute('x2',x);l.setAttribute('y2',y2-6);
+  l.setAttribute('stroke',color);l.setAttribute('stroke-width','2');l.setAttribute('stroke-dasharray','4,3');
+  /* arrowhead */
+  const mk=color.replace('#','v');
+  /* inline downward arrow triangle */
+  const tri=document.createElementNS('http://www.w3.org/2000/svg','polygon');
+  tri.setAttribute('points',`${x-5},${y2-7} ${x+5},${y2-7} ${x},${y2}`);
+  tri.setAttribute('fill',color);
   sv.appendChild(l);
+  sv.appendChild(tri);
 }
 function vdiv(x,y1,y2){
   const l=document.createElementNS('http://www.w3.org/2000/svg','line');
