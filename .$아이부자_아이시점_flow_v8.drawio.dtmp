@@ -1,6 +1,6 @@
 <mxfile host="Electron">
   <diagram name="아이부자 아이시점 Flow v8" id="v8">
-    <mxGraphModel dx="784" dy="523" grid="0" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="761" dy="508" grid="0" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -45,9 +45,6 @@
         </mxCell>
         <mxCell id="15" parent="1" style="rounded=13;fillColor=#475569;strokeColor=none;fontColor=#FFFFFF;fontSize=10;fontStyle=1;html=1;" value="5단계 · 독립 견습 · 19세~" vertex="1">
           <mxGeometry height="26" width="600" x="7520" y="5" as="geometry" />
-        </mxCell>
-        <mxCell id="16" parent="1" style="rounded=9;fillColor=#0058A8;strokeColor=none;fontColor=#FFFFFF;fontSize=8;fontStyle=1;html=1;opacity=75;" value="민법 제920조 · 친권자 완전 대리" vertex="1">
-          <mxGeometry height="17" width="170" x="1090" y="33" as="geometry" />
         </mxCell>
         <mxCell id="17" parent="1" style="rounded=9;fillColor=#7C3AED;strokeColor=none;fontColor=#FFFFFF;fontSize=8;fontStyle=1;html=1;opacity=75;" value="민법 제6조 · 사전 허락 범위" vertex="1">
           <mxGeometry height="17" width="130" x="3000" y="33" as="geometry" />
@@ -118,32 +115,32 @@
         <mxCell id="34" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" value="" vertex="1">
           <mxGeometry height="14" width="14" x="163" y="78" as="geometry" />
         </mxCell>
-        <mxCell id="35" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="아이가 태어나고 부모가 자산 계획을 처음 생각하는 시기" vertex="1">
-          <mxGeometry height="50" width="120" x="110" y="57" as="geometry" />
+        <mxCell id="35" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="아이가 태어나고 부모가&amp;nbsp;&lt;div&gt;자산&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(34, 34, 34), rgb(208, 208, 208));&quot;&gt;계획을 처음 생각하는 시기&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="120" x="110" y="94" as="geometry" />
         </mxCell>
         <mxCell id="36" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" value="" vertex="1">
           <mxGeometry height="14" width="14" x="375" y="78" as="geometry" />
         </mxCell>
         <mxCell id="37" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="PB 담당자가 정기 미팅에서 제안 &quot;자녀 계좌 만드실래요?&quot;" vertex="1">
-          <mxGeometry height="50" width="120" x="322" y="57" as="geometry" />
+          <mxGeometry height="50" width="120" x="322" y="94" as="geometry" />
         </mxCell>
         <mxCell id="38" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" value="" vertex="1">
           <mxGeometry height="14" width="14" x="588" y="78" as="geometry" />
         </mxCell>
         <mxCell id="39" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="미성년 자녀에게 10년간 2천만원까지 세금 없이 줄 수 있다는 정보 제공" vertex="1">
-          <mxGeometry height="50" width="120" x="535" y="57" as="geometry" />
+          <mxGeometry height="50" width="120" x="535" y="94" as="geometry" />
         </mxCell>
         <mxCell id="40" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" value="" vertex="1">
           <mxGeometry height="14" width="14" x="800" y="78" as="geometry" />
         </mxCell>
         <mxCell id="41" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="아이부자 앱 설치 자녀 이름으로 등록 지점에서 금융상품 개설" vertex="1">
-          <mxGeometry height="50" width="120" x="747" y="57" as="geometry" />
+          <mxGeometry height="50" width="120" x="747" y="94" as="geometry" />
         </mxCell>
         <mxCell id="42" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" value="" vertex="1">
           <mxGeometry height="14" width="14" x="1013" y="78" as="geometry" />
         </mxCell>
-        <mxCell id="43" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="입학·생일 같은 날에 현금 대신 투자계좌로 선물하기 (조부모·친척 참여)" vertex="1">
-          <mxGeometry height="50" width="120" x="960" y="57" as="geometry" />
+        <mxCell id="43" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="입학·생일 같은 날에 현금 대신&amp;nbsp;&lt;div&gt;투자계좌로 선물하기&amp;nbsp;&lt;/div&gt;&lt;div&gt;(조부모·친척 참여)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="120" x="960" y="99" as="geometry" />
         </mxCell>
         <mxCell id="48" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" value="" vertex="1">
           <mxGeometry height="12" width="12" x="314" y="229" as="geometry" />
@@ -200,7 +197,7 @@
           <mxGeometry height="16" width="16" x="1122" y="77" as="geometry" />
         </mxCell>
         <mxCell id="69" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="스마트폰 소지 부모: &quot;이 앱 열어볼래?&quot;" vertex="1">
-          <mxGeometry height="50" width="120" x="1070" y="57" as="geometry" />
+          <mxGeometry height="50" width="120" x="1070" y="95" as="geometry" />
         </mxCell>
         <mxCell id="70" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" value="" vertex="1">
           <mxGeometry height="16" width="16" x="1379" y="77" as="geometry" />
