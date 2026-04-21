@@ -1,6 +1,6 @@
 <mxfile host="Electron">
   <diagram name="아이부자 아이시점 Flow v8" id="v8">
-    <mxGraphModel dx="2755" dy="1913" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1050" dy="976" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -23,10 +23,10 @@
           <mxGeometry height="35" width="860" x="210" y="5" as="geometry" />
         </mxCell>
         <mxCell id="10" parent="1" style="rounded=13;fillColor=#0058A8;strokeColor=none;fontColor=#FFFFFF;fontSize=10;fontStyle=1;html=1;" value="STAGE 2 · 유입기 · 7–9세 · 관찰자" vertex="1">
-          <mxGeometry height="35" width="1900" x="1080" y="5" as="geometry" />
+          <mxGeometry height="35" width="2080" x="1080" y="5" as="geometry" />
         </mxCell>
         <mxCell id="11" parent="1" style="rounded=13;fillColor=#7C3AED;strokeColor=none;fontColor=#FFFFFF;fontSize=10;fontStyle=1;html=1;" value="STAGE 3a · 탐험기 · 선택자 10–12세" vertex="1">
-          <mxGeometry height="35" width="1500" x="3200" y="5" as="geometry" />
+          <mxGeometry height="35" width="1530" x="3170" y="5" as="geometry" />
         </mxCell>
         <mxCell id="12" parent="1" style="rounded=13;fillColor=#7C3AED;strokeColor=none;fontColor=#FFFFFF;fontSize=10;fontStyle=1;html=1;" value="STAGE 3b · 탐험기 · 제안자 13–15세" vertex="1">
           <mxGeometry height="26" width="1350" x="4710" y="5" as="geometry" />
@@ -800,9 +800,9 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="m2_MMmjG7j3hNbIFgG_n-376" connectable="0" parent="1" style="group" value="" vertex="1">
-          <mxGeometry height="480" width="135" x="1120" y="-40" as="geometry" />
+          <mxGeometry height="480" width="135" x="3096" y="-40" as="geometry" />
         </mxCell>
-        <mxCell id="m2_MMmjG7j3hNbIFgG_n-377" parent="m2_MMmjG7j3hNbIFgG_n-376" style="rounded=9;fillColor=#0A0A0A;strokeColor=none;fontColor=#FFFFFF;fontSize=8;fontStyle=1;html=1;" value="트리거: 스마트폰 소지" vertex="1">
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-377" parent="m2_MMmjG7j3hNbIFgG_n-376" style="rounded=9;fillColor=#0A0A0A;strokeColor=none;fontColor=#FFFFFF;fontSize=8;fontStyle=1;html=1;" value="트리거: 정기적 용돈 수령" vertex="1">
           <mxGeometry height="18.7012987012987" width="135" as="geometry" />
         </mxCell>
         <mxCell id="m2_MMmjG7j3hNbIFgG_n-378" edge="1" parent="m2_MMmjG7j3hNbIFgG_n-376" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;dashed=1;strokeColor=#B3B3B3;strokeWidth=1;" value="">
@@ -810,6 +810,15 @@
             <mxPoint x="69" y="480" as="sourcePoint" />
             <mxPoint x="69" y="23.896103896103895" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-381" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="67" width="120" x="3020" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-382" parent="m2_MMmjG7j3hNbIFgG_n-381" style="ellipse;html=1;aspect=fixed;fillColor=light-dark(#4D9900,#6500C7);strokeColor=none;fontSize=0;" value="" vertex="1">
+          <mxGeometry height="12" width="12" x="54" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-383" parent="m2_MMmjG7j3hNbIFgG_n-381" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="정기&amp;nbsp;" vertex="1">
+          <mxGeometry height="50" width="120" y="19" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
