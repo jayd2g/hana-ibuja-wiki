@@ -1,6 +1,6 @@
 <mxfile host="Electron">
   <diagram name="아이부자 아이시점 Flow v8" id="v8">
-    <mxGraphModel dx="1130" dy="1021" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="958" dy="926" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -57,12 +57,6 @@
             <mxPoint x="7730" as="sourcePoint" />
             <mxPoint x="7730" y="485" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="108" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" value="" vertex="1">
-          <mxGeometry height="18" width="18" x="3707" y="124" as="geometry" />
-        </mxCell>
-        <mxCell id="109" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="펀드 A·B·C 선택지 → 직접 선택" vertex="1">
-          <mxGeometry height="50" width="120" x="3656" y="158" as="geometry" />
         </mxCell>
         <mxCell id="110" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" value="" vertex="1">
           <mxGeometry height="20" width="20" x="3940" y="123" as="geometry" />
@@ -316,8 +310,10 @@
         <mxCell id="46" edge="1" parent="1" source="39" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#CCCCCC;strokeWidth=1.5;dashed=0;" target="41" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="120" edge="1" parent="1" source="108" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.0;dashed=0;" target="110" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="120" edge="1" parent="1" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.0;dashed=0;" target="110" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3848.9999999998145" y="133" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="121" edge="1" parent="1" source="110" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.5;dashed=0;" target="112" value="">
           <mxGeometry relative="1" as="geometry" />
@@ -811,19 +807,43 @@
         <mxCell id="m2_MMmjG7j3hNbIFgG_n-392" parent="m2_MMmjG7j3hNbIFgG_n-391" style="ellipse;html=1;aspect=fixed;fillColor=light-dark(#0066CC,#6500C7);strokeColor=none;fontSize=0;" value="" vertex="1">
           <mxGeometry height="14" width="14" x="53" as="geometry" />
         </mxCell>
-        <mxCell id="m2_MMmjG7j3hNbIFgG_n-393" parent="m2_MMmjG7j3hNbIFgG_n-391" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="저축 30% 시작" vertex="1">
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-393" parent="m2_MMmjG7j3hNbIFgG_n-391" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="용돈 중&lt;div&gt;저축 30% 시작&lt;/div&gt;" vertex="1">
           <mxGeometry height="50" width="120" y="20" as="geometry" />
         </mxCell>
         <mxCell id="m2_MMmjG7j3hNbIFgG_n-394" edge="1" parent="1" source="m2_MMmjG7j3hNbIFgG_n-387" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="m2_MMmjG7j3hNbIFgG_n-392">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="m2_MMmjG7j3hNbIFgG_n-395" connectable="0" parent="1" style="group" value="" vertex="1">
-          <mxGeometry height="70" width="120" x="3490" y="120" as="geometry" />
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-398" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="70" width="120" x="3390" y="320" as="geometry" />
         </mxCell>
-        <mxCell id="m2_MMmjG7j3hNbIFgG_n-396" parent="m2_MMmjG7j3hNbIFgG_n-395" style="ellipse;html=1;aspect=fixed;fillColor=light-dark(#0066CC,#6500C7);strokeColor=none;fontSize=0;" value="" vertex="1">
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-399" parent="m2_MMmjG7j3hNbIFgG_n-398" style="ellipse;html=1;aspect=fixed;fillColor=light-dark(#0066CC,#6500C7);strokeColor=none;fontSize=0;" value="" vertex="1">
           <mxGeometry height="14" width="14" x="53" as="geometry" />
         </mxCell>
-        <mxCell id="m2_MMmjG7j3hNbIFgG_n-397" parent="m2_MMmjG7j3hNbIFgG_n-395" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="저축 30% 시작" vertex="1">
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-400" parent="m2_MMmjG7j3hNbIFgG_n-398" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="용돈 중&lt;div&gt;소비 70% 시작&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="120" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-401" edge="1" parent="1" source="m2_MMmjG7j3hNbIFgG_n-387" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="m2_MMmjG7j3hNbIFgG_n-399">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-406" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="70" width="120" x="3590" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-407" parent="m2_MMmjG7j3hNbIFgG_n-406" style="ellipse;html=1;aspect=fixed;fillColor=light-dark(#4D9900,#6500C7);strokeColor=none;fontSize=0;" value="" vertex="1">
+          <mxGeometry height="14" width="14" x="53" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-408" parent="m2_MMmjG7j3hNbIFgG_n-406" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="미보유 종목&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(34, 34, 34), rgb(208, 208, 208));&quot;&gt;&quot;이 회사를 갖고 있었다면&lt;/span&gt;&lt;div&gt;얼마가 됐을까요?&quot; 정보 제공&lt;/div&gt;&lt;div&gt;→ 타 종목에 관심 형성&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="120" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-409" edge="1" parent="1" source="m2_MMmjG7j3hNbIFgG_n-392" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="m2_MMmjG7j3hNbIFgG_n-407">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-410" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="70" width="120" x="3720" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-411" parent="m2_MMmjG7j3hNbIFgG_n-410" style="ellipse;html=1;aspect=fixed;fillColor=light-dark(#4D9900,#6500C7);strokeColor=none;fontSize=0;" value="" vertex="1">
+          <mxGeometry height="14" width="14" x="53" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-412" parent="m2_MMmjG7j3hNbIFgG_n-410" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="해당 종목을 구매함으로써&lt;div&gt;투자 상품을 직접 선택하는 경험&lt;/div&gt;" vertex="1">
           <mxGeometry height="50" width="120" y="20" as="geometry" />
         </mxCell>
       </root>
