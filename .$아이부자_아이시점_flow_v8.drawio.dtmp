@@ -250,11 +250,17 @@
         <mxCell id="86" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="처음 받은 용돈 다 써봄" vertex="1">
           <mxGeometry height="50" width="120" x="2030" y="410" as="geometry" />
         </mxCell>
+        <mxCell id="X6f5pXRv6KnzgreqRGfj-272" edge="1" parent="1" source="87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="89">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="87" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#F97316;strokeColor=#F97316;fontSize=0;" value="" vertex="1">
           <mxGeometry height="26" width="26" x="2197" y="372" as="geometry" />
         </mxCell>
         <mxCell id="88" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B45309;fontStyle=1;whiteSpace=wrap;" value="⭐ 우연히 남김 → 칭찬 → 의도적 절약 시작" vertex="1">
           <mxGeometry height="50" width="120" x="2150" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="X6f5pXRv6KnzgreqRGfj-273" edge="1" parent="1" source="89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="91">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="89" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" value="" vertex="1">
           <mxGeometry height="16" width="16" x="2322" y="77" as="geometry" />
@@ -262,23 +268,26 @@
         <mxCell id="90" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="생일 선물금 + 부모 투자계좌 아이에게 공개" vertex="1">
           <mxGeometry height="50" width="120" x="2270" y="96" as="geometry" />
         </mxCell>
+        <mxCell id="X6f5pXRv6KnzgreqRGfj-274" edge="1" parent="1" source="91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="91" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" value="" vertex="1">
           <mxGeometry height="18" width="18" x="2441" y="226" as="geometry" />
         </mxCell>
-        <mxCell id="92" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="&quot;아빠도 +8%?&quot; 부모 수익과 함께 확인" vertex="1">
+        <mxCell id="92" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="&quot;아빠도 +8%?&quot;&amp;nbsp;&lt;div&gt;부모 수익과 함께 확인&lt;/div&gt;" vertex="1">
           <mxGeometry height="50" width="120" x="2390" y="260" as="geometry" />
         </mxCell>
         <mxCell id="93" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" value="" vertex="1">
           <mxGeometry height="16" width="16" x="2562" y="377" as="geometry" />
         </mxCell>
-        <mxCell id="94" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="&quot;에어팟 갖고 싶다&quot; 목표계좌B 생성 35,000원 목표" vertex="1">
+        <mxCell id="94" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="&quot;장난감 갖고 싶다&quot;&amp;nbsp;&lt;div&gt;목표계좌B 생성 35,000원 목표&lt;/div&gt;" vertex="1">
           <mxGeometry height="50" width="120" x="2510" y="410" as="geometry" />
         </mxCell>
         <mxCell id="95" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" value="" vertex="1">
           <mxGeometry height="16" width="16" x="2682" y="77" as="geometry" />
         </mxCell>
         <mxCell id="96" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="용돈 주기 변화 이벤트→일별" vertex="1">
-          <mxGeometry height="50" width="120" x="2630" y="57" as="geometry" />
+          <mxGeometry height="50" width="120" x="2630" y="96" as="geometry" />
         </mxCell>
         <mxCell id="97" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#F97316;strokeColor=#F97316;fontSize=0;" value="" vertex="1">
           <mxGeometry height="24" width="24" x="2798" y="223" as="geometry" />
@@ -647,21 +656,6 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="109" edge="1" parent="1" source="85" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=2.5;dashed=0;" target="87" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="110" edge="1" parent="1" source="87" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=2.5;dashed=0;" target="89" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="111" edge="1" parent="1" source="89" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=2.5;dashed=0;" target="91" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="112" edge="1" parent="1" source="91" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=2.5;dashed=0;" target="93" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="113" edge="1" parent="1" source="93" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=3.0;dashed=0;" target="95" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="114" edge="1" parent="1" source="95" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=3.0;dashed=0;" target="97" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="115" edge="1" parent="1" source="97" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=3.0;dashed=0;" target="99" value="">
