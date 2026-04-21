@@ -1,6 +1,6 @@
 <mxfile host="Electron">
   <diagram name="아이부자 아이시점 Flow v8" id="v8">
-    <mxGraphModel dx="1520" dy="1234" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1025" dy="963" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -590,7 +590,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="m2_MMmjG7j3hNbIFgG_n-267" connectable="0" parent="1" style="group" value="" vertex="1">
-          <mxGeometry height="19" width="41" x="217" y="-82" as="geometry" />
+          <mxGeometry height="19" width="41" x="210" y="-82" as="geometry" />
         </mxCell>
         <mxCell id="m2_MMmjG7j3hNbIFgG_n-265" parent="m2_MMmjG7j3hNbIFgG_n-267" style="ellipse;html=1;aspect=fixed;fillColor=light-dark(#FF8000,#6500C7);strokeColor=none;fontSize=0;" value="" vertex="1">
           <mxGeometry height="12" width="12" y="6" as="geometry" />
@@ -599,7 +599,7 @@
           <mxGeometry height="19" width="23" x="18" as="geometry" />
         </mxCell>
         <mxCell id="m2_MMmjG7j3hNbIFgG_n-268" connectable="0" parent="1" style="group" value="" vertex="1">
-          <mxGeometry height="19" width="41" x="217" y="-57" as="geometry" />
+          <mxGeometry height="19" width="41" x="210" y="-57" as="geometry" />
         </mxCell>
         <mxCell id="m2_MMmjG7j3hNbIFgG_n-269" parent="m2_MMmjG7j3hNbIFgG_n-268" style="ellipse;html=1;aspect=fixed;fillColor=light-dark(#0066CC,#6500C7);strokeColor=none;fontSize=0;" value="" vertex="1">
           <mxGeometry height="12" width="12" y="6" as="geometry" />
@@ -676,7 +676,7 @@
         <mxCell id="60" parent="m2_MMmjG7j3hNbIFgG_n-294" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" value="" vertex="1">
           <mxGeometry height="14" width="14" x="53" as="geometry" />
         </mxCell>
-        <mxCell id="61" parent="m2_MMmjG7j3hNbIFgG_n-294" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="세뱃돈이 여기 있다&amp;nbsp;&lt;div&gt;&quot;50,000원이 있대!&quot;&lt;/div&gt;" vertex="1">
+        <mxCell id="61" parent="m2_MMmjG7j3hNbIFgG_n-294" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="부모가 모아온&amp;nbsp;&lt;div&gt;세뱃돈/목돈&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(34, 34, 34), rgb(208, 208, 208));&quot;&gt;공개&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="50" width="120" y="18" as="geometry" />
         </mxCell>
         <mxCell id="m2_MMmjG7j3hNbIFgG_n-295" connectable="0" parent="1" style="group" value="" vertex="1">
@@ -685,7 +685,7 @@
         <mxCell id="m2_MMmjG7j3hNbIFgG_n-296" parent="m2_MMmjG7j3hNbIFgG_n-295" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" value="" vertex="1">
           <mxGeometry height="14" width="14" x="53" as="geometry" />
         </mxCell>
-        <mxCell id="m2_MMmjG7j3hNbIFgG_n-297" parent="m2_MMmjG7j3hNbIFgG_n-295" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="세뱃돈이 여기 있다&amp;nbsp;&lt;div&gt;&quot;50,000원이 있대!&quot;&lt;/div&gt;" vertex="1">
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-297" parent="m2_MMmjG7j3hNbIFgG_n-295" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="알림&lt;div&gt;&quot;네 돈이 340원 늘었어&quot;&lt;/div&gt;" vertex="1">
           <mxGeometry height="50" width="120" y="18" as="geometry" />
         </mxCell>
         <mxCell id="m2_MMmjG7j3hNbIFgG_n-299" edge="1" parent="1" source="60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.029;entryY=0.504;entryDx=0;entryDy=0;entryPerimeter=0;" target="m2_MMmjG7j3hNbIFgG_n-296">
@@ -694,13 +694,30 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="m2_MMmjG7j3hNbIFgG_n-300" connectable="0" parent="1" style="group" value="" vertex="1">
-          <mxGeometry height="74" width="120" x="1560" y="110" as="geometry" />
+          <mxGeometry height="74" width="120" x="1560" y="114" as="geometry" />
         </mxCell>
         <mxCell id="62" parent="m2_MMmjG7j3hNbIFgG_n-300" style="ellipse;html=1;aspect=fixed;fillColor=#F97316;strokeColor=#F97316;fontSize=0;" value="" vertex="1">
           <mxGeometry height="26" width="26" x="47" as="geometry" />
         </mxCell>
         <mxCell id="63" parent="m2_MMmjG7j3hNbIFgG_n-300" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B45309;fontStyle=1;whiteSpace=wrap;" value="⭐ &quot;50,340원? 늘어나 있어!&quot; 패시브 인컴 첫 발견" vertex="1">
           <mxGeometry height="50" width="120" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-301" edge="1" parent="1" source="m2_MMmjG7j3hNbIFgG_n-296" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-302" connectable="0" parent="m2_MMmjG7j3hNbIFgG_n-301" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="시간 Gap" vertex="1">
+          <mxGeometry relative="1" x="0.1642" as="geometry">
+            <mxPoint x="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-303" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="19" width="50" x="210" y="-30" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-304" parent="m2_MMmjG7j3hNbIFgG_n-303" style="ellipse;html=1;aspect=fixed;fillColor=light-dark(#4D9900,#6500C7);strokeColor=none;fontSize=0;" value="" vertex="1">
+          <mxGeometry height="12" width="12" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="m2_MMmjG7j3hNbIFgG_n-305" parent="m2_MMmjG7j3hNbIFgG_n-303" style="text;html=1;align=left;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#141414;fontStyle=0;whiteSpace=wrap;" value="서비스" vertex="1">
+          <mxGeometry height="19" width="32" x="18" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
