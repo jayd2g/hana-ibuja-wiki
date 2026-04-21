@@ -103,8 +103,8 @@
         <mxCell id="127" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" value="" vertex="1">
           <mxGeometry height="14" width="14" x="3476" y="320" as="geometry" />
         </mxCell>
-        <mxCell id="128" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="저축 30% 시작 매달 3,000원" vertex="1">
-          <mxGeometry height="50" width="120" x="3423" y="352" as="geometry" />
+        <mxCell id="128" parent="1" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" value="저축 30% 시작 매달 3,000원" vertex="1">
+          <mxGeometry height="50" width="120" x="3423" y="340" as="geometry" />
         </mxCell>
         <mxCell id="129" parent="1" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" value="" vertex="1">
           <mxGeometry height="14" width="14" x="3709" y="320" as="geometry" />
