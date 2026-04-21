@@ -147,3 +147,47 @@ provenance: inferred
 - **수정 파일**: wiki/index.md, wiki/HOME.md, content/CLAUDE.md, _meta/CLAUDE.md, _meta/index.md (총 5개, 14곳 교체)
 - **미수정 항목**: log.md 내 과거 로그 항목 (append-only 원칙, 역사적 경로 보존)
 - **하위 구조 변경 없음**: 00_가설~05_Tobe전략 내부 구조 그대로 유지
+
+## [2026-04-21] restructure | 위키 구조 재편 (05_Tobe전략 세분화 + 루트 정리 + 명명 규칙 통일)
+
+- **사유**: 파일 누적으로 찾기 어렵고 현행/구버전이 혼재. 사용자 승인에 따라 축 A2 + B1 + C1 권장안으로 재편
+- **백업 커밋**: `3973972 backup: pre-cleanup snapshot (HBcon26 위키 정리 작업 전)`
+- **신규 폴더**:
+  - `content/Consulting/05_Tobe전략/아이디어풀/` — 미채택 아이디어
+  - `content/Consulting/05_Tobe전략/IA/` — 정보구조 작업물
+  - `content/Consulting/05_Tobe전략/참고_구조/` — 권한이양 등 프레임 문서
+  - `content/Consulting/05_Tobe전략/_archive/` — 구버전 보관
+  - `_working/flow/` — 작업 중 flow drawio·html 보관
+- **이동·이름 변경 (8건, 05_Tobe전략 하위)**:
+  - `ideation.md` → `아이디어풀/아이디어_초기수집.md`
+  - `INSIGHT_STRUCTURE.md` → `아이디어풀/인사이트_구조.md`
+  - `시드머니투자_아이디어_리서치.md` → `아이디어풀/시드머니투자_아이디어_리서치.md`
+  - `아이부자_ToBeIA_260414.md` → `IA/아이부자_ToBeIA_260414.md`
+  - `연령별_권한이양_구조.md` → `참고_구조/연령별_권한이양_구조.md`
+  - `아이부자-종합-전략안.md` → `_archive/아이부자_종합전략안_구버전.md`
+  - `아이부자_전략장표_내러티브_260414.md` → `_archive/아이부자_전략장표_내러티브_260414.md`
+  - `아이부자_전략장표_내용_260414.md` → `_archive/아이부자_전략장표_내용_260414.md`
+- **이동 (6건, 루트 flow)**: `아이부자_아이시점_flow_v3~v8.html/drawio` → `_working/flow/` (v9만 루트 유지)
+- **이름 변경: 하이픈 → 언더스코어 (Consulting 하위 5건)**:
+  - `00_가설/연구-가설-및-질문.md` → `연구_가설_및_질문.md`
+  - `01_시장/시장-현황-분석.md` → `시장_현황_분석.md`
+  - `02_경쟁사/글로벌-핀테크-서비스-사례.md` → `글로벌_핀테크_서비스_사례.md`
+  - `03_사용자/청소년-금융-사용자-특성.md` → `청소년_금융_사용자_특성.md`
+  - `04_인사이트/전략적-인사이트.md` → `전략적_인사이트.md`
+- **삭제 (4건)**:
+  - `Tobe 전략안[[Tobe 전략안 요약.md` (0바이트, 깨진 파일명)
+  - `.$아이부자_아이시점_flow_v7.drawio.dtmp` (drawio 임시)
+  - `.$아이부자_아이시점_flow_v8.drawio.bkp` (drawio 백업)
+  - `.DS_Store` (macOS, .gitignore 적용 확인)
+- **신규 생성**:
+  - `content/Consulting/05_Tobe전략/index.md` — 폴더 네비게이션 (현행 5 + 하위 폴더 설명 + 구버전 매핑)
+- **링크 갱신 (총 17곳)**:
+  - `content/wiki/HOME.md` — 파일 트리 + 관련 링크 섹션
+  - `content/wiki/Tobe 전략안 요약.md` — 상단 링크·태그를 WealthApprentice·260420 기준으로 갱신
+  - `content/wiki/연구 가설 요약.md` · `시장 분석 요약.md` · `경쟁사 분석 요약.md` · `사용자 분석 요약.md` · `전략 인사이트 요약.md` — 상단 [[원본]] 링크 갱신
+  - `content/_meta/index.md` — 05_Tobe전략 표 갱신 (언더스코어 적용)
+- **미수정 (퍼블리시 URL 유지)**:
+  - `Consulting/05_Tobe전략/아이부자_Direction_v0.8_260420.md` — 위치·이름 동결
+  - `quartz/static/HB_아이부자개선_Direction_v0.8_260420_VINYLC.html` — 동결
+  - `content/wiki/` 루트 요약 파일명(공백 포함) — 파일명 유지, 상단 배너만 갱신
+- **보류**: Fineritage Path 태그는 wiki 요약 페이지 2곳에서 WealthApprentice로 교체, 나머지 페이지의 개별 파일명 언더스코어 통일은 링크 갱신 공수가 커 후속 세션으로 연기
