@@ -14,7 +14,7 @@ provenance: vinylc_team
 **용도**: 하나은행 아이부자팀 대상 방향성 보고
 
 > 🔗 **웹에서 바로 열기**
-> <a href="/HB_아이부자개선_Direction_v0.8_260420_VINYLC.html" target="_blank">HB_아이부자개선_Direction_v0.8_260420_VINYLC.html</a> (2.7 MB · HTML)
+> <a href="https://jayd2g.github.io/hana-ibuja-wiki/static/HB_아이부자개선_Direction_v0.8_260420_VINYLC.html" target="_blank">새 탭에서 열기</a> (2.7 MB · HTML)
 
 ---
 
