@@ -13,8 +13,8 @@ provenance: vinylc_team
 **작성**: VINYLC
 **용도**: 하나은행 아이부자팀 대상 방향성 보고
 
-> 📥 **파일 다운로드**
-> <a href="/HB_아이부자개선_Direction_v0.8_260420_VINYLC.pptx" target="_blank">HB_아이부자개선_Direction_v0.8_260420_VINYLC.pptx</a> (1.4 MB)
+> 🔗 **웹에서 바로 열기**
+> <a href="/HB_아이부자개선_Direction_v0.8_260420_VINYLC.html" target="_blank">HB_아이부자개선_Direction_v0.8_260420_VINYLC.html</a> (2.7 MB · HTML)
 
 ---
 
@@ -53,8 +53,8 @@ provenance: vinylc_team
 
 | 항목 | 내용 |
 |------|------|
-| 파일 포맷 | PPTX |
-| 크기 | 약 1.4 MB |
+| 파일 포맷 | HTML (웹 브라우저에서 바로 열람) |
+| 크기 | 약 2.7 MB |
 | 슬라이드 비율 | 16:9 |
 | 언어 | 한국어 (일부 영문 브랜드 요소) |
 | 상태 | Direction (v0.8) — 본 보고본(v1.0) 전 단계 |
@@ -64,7 +64,8 @@ provenance: vinylc_team
 ## 관련 산출물 경로
 
 ### 로컬 (HBcon26 작업 폴더)
-- `04_전략장표/HB_아이부자개선_Direction_v0.8_260420_VINYLC.pptx` — 본 파일 원본
+- `04_전략장표/HB_아이부자개선_Direction_v0.8_260420_VINYLC.html` — 웹 버전 (위키 등록본과 동일)
+- `04_전략장표/HB_아이부자개선_Direction_v0.8_260420_VINYLC.pptx` — PPTX 원본 (로컬 보관)
 - `04_전략장표/아이부자_전략장표_v4_원고_260420.md` — 슬라이드 원고 (참고)
 - `04_전략장표/아이부자_전략장표_v4_생성프롬프트_260420.md` — Claude Design용 프롬프트
 - `03_전략_내러티브/아이부자_전략장표_내러티브_260420.md` — 서사형 내러티브 전문
@@ -72,7 +73,7 @@ provenance: vinylc_team
 ### 위키 (hana-ibuja-wiki)
 - `content/Consulting/05_Tobe전략/아이부자_전략장표_내러티브_260420.md` — 내러티브 전문 (동일본)
 - `content/Consulting/05_Tobe전략/미성년자_금융투자_법적범위_260420.md` — 법적 근거 문서
-- `quartz/static/HB_아이부자개선_Direction_v0.8_260420_VINYLC.pptx` — 본 PPTX 정적 자산
+- `quartz/static/HB_아이부자개선_Direction_v0.8_260420_VINYLC.html` — 본 HTML 정적 자산
 
 ---
 
