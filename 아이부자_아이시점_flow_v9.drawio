@@ -1,0 +1,419 @@
+<mxfile host="app.diagrams.net" version="24.0.0">
+  <diagram name="아이부자 아이시점 Flow v9" id="v9">
+    <mxGraphModel dx="2000" dy="800" grid="0" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="" style="rounded=0;fillColor=#0D9488;strokeColor=none;opacity=7;" vertex="1" parent="1"><mxGeometry x="110" y="58" width="8160" height="190" as="geometry"/></mxCell>
+        <mxCell id="3" value="" style="rounded=0;fillColor=#0058A8;strokeColor=none;opacity=6;" vertex="1" parent="1"><mxGeometry x="110" y="252" width="8160" height="190" as="geometry"/></mxCell>
+        <mxCell id="4" value="" style="rounded=0;fillColor=#DCDCDC;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="110" y="252" width="8160" height="1" as="geometry"/></mxCell>
+        <mxCell id="5" value="" style="rounded=0;fillColor=#E0E0E0;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="110" y="450" width="8160" height="2" as="geometry"/></mxCell>
+        <mxCell id="6" value="시간 →" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=8;fontColor=#AAAAAA;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="5" y="448" width="100" height="22" as="geometry"/></mxCell>
+        <mxCell id="7" value="투자" style="rounded=14;fillColor=#0D9488;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;html=1;" vertex="1" parent="1"><mxGeometry x="5" y="133" width="100" height="30" as="geometry"/></mxCell>
+        <mxCell id="8" value="저축" style="rounded=14;fillColor=#0058A8;strokeColor=none;fontColor=#FFFFFF;fontSize=11;fontStyle=1;html=1;" vertex="1" parent="1"><mxGeometry x="5" y="327" width="100" height="26" as="geometry"/></mxCell>
+        <mxCell id="9" value="STAGE 1 · 유아기 · 3–8세 · 부모 진입" style="rounded=13;fillColor=#BBBBBB;strokeColor=none;fontColor=#FFFFFF;fontSize=10;fontStyle=1;html=1;" vertex="1" parent="1"><mxGeometry x="120" y="5" width="950" height="26" as="geometry"/></mxCell>
+        <mxCell id="10" value="STAGE 2 · 유입기 · 7–9세 · 관찰자" style="rounded=13;fillColor=#0058A8;strokeColor=none;fontColor=#FFFFFF;fontSize=10;fontStyle=1;html=1;" vertex="1" parent="1"><mxGeometry x="1080" y="5" width="1900" height="26" as="geometry"/></mxCell>
+        <mxCell id="11" value="STAGE 3a · 탐험기 · 선택자 10–12세" style="rounded=13;fillColor=#7C3AED;strokeColor=none;fontColor=#FFFFFF;fontSize=10;fontStyle=1;html=1;" vertex="1" parent="1"><mxGeometry x="2990" y="5" width="1500" height="26" as="geometry"/></mxCell>
+        <mxCell id="12" value="STAGE 3b · 탐험기 · 제안자 13–15세" style="rounded=13;fillColor=#7C3AED;strokeColor=none;fontColor=#FFFFFF;fontSize=10;fontStyle=1;html=1;" vertex="1" parent="1"><mxGeometry x="4500" y="5" width="1500" height="26" as="geometry"/></mxCell>
+        <mxCell id="13" value="STAGE 4 · 독립준비기 · 운용자 16–18세" style="rounded=13;fillColor=#0D9488;strokeColor=none;fontColor=#FFFFFF;fontSize=10;fontStyle=1;html=1;" vertex="1" parent="1"><mxGeometry x="6010" y="5" width="1650" height="26" as="geometry"/></mxCell>
+        <mxCell id="14" value="5단계 · 독립 견습 · 19세~" style="rounded=13;fillColor=#475569;strokeColor=none;fontColor=#FFFFFF;fontSize=10;fontStyle=1;html=1;" vertex="1" parent="1"><mxGeometry x="7670" y="5" width="600" height="26" as="geometry"/></mxCell>
+        <mxCell id="15" value="민법 제920조 · 친권자 완전 대리" style="rounded=9;fillColor=#0058A8;strokeColor=none;fontColor=#FFFFFF;fontSize=8;fontStyle=1;html=1;opacity=75;" vertex="1" parent="1"><mxGeometry x="1090" y="33" width="170" height="17" as="geometry"/></mxCell>
+        <mxCell id="16" value="민법 제6조 · 사전 허락 범위" style="rounded=9;fillColor=#7C3AED;strokeColor=none;fontColor=#FFFFFF;fontSize=8;fontStyle=1;html=1;opacity=75;" vertex="1" parent="1"><mxGeometry x="3000" y="33" width="130" height="17" as="geometry"/></mxCell>
+        <mxCell id="17" value="민법 제5조 · 개별 디지털 동의" style="rounded=9;fillColor=#7C3AED;strokeColor=none;fontColor=#FFFFFF;fontSize=8;fontStyle=1;html=1;opacity=75;" vertex="1" parent="1"><mxGeometry x="4510" y="33" width="175" height="17" as="geometry"/></mxCell>
+        <mxCell id="18" value="민법 제6조·제8조 · 포괄 허락" style="rounded=9;fillColor=#0D9488;strokeColor=none;fontColor=#FFFFFF;fontSize=8;fontStyle=1;html=1;opacity=75;" vertex="1" parent="1"><mxGeometry x="6020" y="33" width="170" height="17" as="geometry"/></mxCell>
+        <mxCell id="19" value="민법 제4조" style="rounded=9;fillColor=#475569;strokeColor=none;fontColor=#FFFFFF;fontSize=8;fontStyle=1;html=1;opacity=75;" vertex="1" parent="1"><mxGeometry x="7680" y="33" width="120" height="17" as="geometry"/></mxCell>
+        <mxCell id="20" value="트리거: 스마트폰 소지" style="rounded=9;fillColor=#0A0A0A;strokeColor=none;fontColor=#FFFFFF;fontSize=8;fontStyle=1;html=1;" vertex="1" parent="1"><mxGeometry x="1010" y="56" width="135" height="18" as="geometry"/></mxCell>
+        <mxCell id="21" value="트리거: 정기 용돈 시작" style="rounded=9;fillColor=#0A0A0A;strokeColor=none;fontColor=#FFFFFF;fontSize=8;fontStyle=1;html=1;" vertex="1" parent="1"><mxGeometry x="2920" y="56" width="135" height="18" as="geometry"/></mxCell>
+        <mxCell id="22" value="트리거: 체크카드 발급" style="rounded=9;fillColor=#0A0A0A;strokeColor=none;fontColor=#FFFFFF;fontSize=8;fontStyle=1;html=1;" vertex="1" parent="1"><mxGeometry x="5940" y="56" width="135" height="18" as="geometry"/></mxCell>
+        <mxCell id="23" value="어조: 선생님" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=8;fontColor=#C0C0C0;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="1800" y="33" width="180" height="18" as="geometry"/></mxCell>
+        <mxCell id="24" value="코치" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=8;fontColor=#C0C0C0;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="3600" y="33" width="180" height="18" as="geometry"/></mxCell>
+        <mxCell id="25" value="동료·파트너" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=8;fontColor=#C0C0C0;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="5100" y="33" width="180" height="18" as="geometry"/></mxCell>
+        <mxCell id="26" value="금융 어드바이저" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=8;fontColor=#C0C0C0;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="6800" y="33" width="180" height="18" as="geometry"/></mxCell>
+        <mxCell id="27" value="" style="endArrow=none;html=1;strokeColor=#CCCCCC;strokeWidth=1;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="1080" y="0" as="sourcePoint"/><mxPoint x="1080" y="485" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="28" value="" style="endArrow=none;html=1;strokeColor=#CCCCCC;strokeWidth=1;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="2990" y="0" as="sourcePoint"/><mxPoint x="2990" y="485" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="29" value="" style="endArrow=none;html=1;strokeColor=#CCCCCC;strokeWidth=1;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="4500" y="0" as="sourcePoint"/><mxPoint x="4500" y="485" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="30" value="" style="endArrow=none;html=1;strokeColor=#CCCCCC;strokeWidth=1;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="6010" y="0" as="sourcePoint"/><mxPoint x="6010" y="485" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="31" value="" style="endArrow=none;html=1;strokeColor=#CCCCCC;strokeWidth=1;dashed=1;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="7670" y="0" as="sourcePoint"/><mxPoint x="7670" y="485" as="targetPoint"/></mxGeometry></mxCell>
+        <mxCell id="32" value="" style="rounded=0;fillColor=#F5F5F5;strokeColor=none;opacity=55;" vertex="1" parent="1"><mxGeometry x="110" y="58" width="960" height="384" as="geometry"/></mxCell>
+        <mxCell id="33" value="" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" vertex="1" parent="1"><mxGeometry x="164" y="127" width="12" height="12" as="geometry"/></mxCell>
+        <mxCell id="34" value="PB 담당자가
+&quot;자녀 계좌
+만드실래요?&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B0B0B0;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="110" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="35" value="" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" vertex="1" parent="1"><mxGeometry x="376" y="127" width="12" height="12" as="geometry"/></mxCell>
+        <mxCell id="36" value="10년 2천만원
+비과세 증여 정보
+→ 진입 동기" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B0B0B0;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="322" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="37" value="" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" vertex="1" parent="1"><mxGeometry x="589" y="127" width="12" height="12" as="geometry"/></mxCell>
+        <mxCell id="38" value="앱 설치
+A계좌 개설
+(투자 or 소비목표 택1)" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B0B0B0;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="535" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="39" value="" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" vertex="1" parent="1"><mxGeometry x="801" y="127" width="12" height="12" as="geometry"/></mxCell>
+        <mxCell id="40" value="부모가 A계좌
+용도 선택
++ ETF 자동매수 설정" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B0B0B0;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="747" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="41" value="" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" vertex="1" parent="1"><mxGeometry x="1014" y="127" width="12" height="12" as="geometry"/></mxCell>
+        <mxCell id="42" value="입학·생일에
+A계좌로 선물
+(조부모·친척)" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B0B0B0;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="960" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="47" value="" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" vertex="1" parent="1"><mxGeometry x="164" y="321" width="12" height="12" as="geometry"/></mxCell>
+        <mxCell id="48" value="저축률 설정
+(자동 분배 비율)" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B0B0B0;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="110" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="49" value="" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" vertex="1" parent="1"><mxGeometry x="1014" y="321" width="12" height="12" as="geometry"/></mxCell>
+        <mxCell id="50" value="아이는 아직
+이 계좌를 모른다" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B0B0B0;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="960" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="52" value="" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" vertex="1" parent="1"><mxGeometry x="167" y="456" width="6" height="6" as="geometry"/></mxCell>
+        <mxCell id="53" value="출생" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=7;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="130" y="464" width="80" height="16" as="geometry"/></mxCell>
+        <mxCell id="54" value="" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" vertex="1" parent="1"><mxGeometry x="1017" y="456" width="6" height="6" as="geometry"/></mxCell>
+        <mxCell id="55" value="6–8세" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=7;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="980" y="464" width="80" height="16" as="geometry"/></mxCell>
+        <mxCell id="56" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" vertex="1" parent="1"><mxGeometry x="1124" y="127" width="12" height="12" as="geometry"/></mxCell>
+        <mxCell id="57" value="부모 권유로
+앱 설치 및 가입
+&quot;내 이름이 있네?&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="1070" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="58" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" vertex="1" parent="1"><mxGeometry x="1423" y="126" width="14" height="14" as="geometry"/></mxCell>
+        <mxCell id="59" value="부모가 모아온
+세뱃돈/목돈 공개
+&quot;50,000원이 있대!&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="1370" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="60" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" vertex="1" parent="1"><mxGeometry x="1721" y="124" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="61" value="(시간 경과)
+알림 → 다시 열어봄" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="1670" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="62" value="" style="ellipse;html=1;aspect=fixed;fillColor=#F97316;strokeColor=#F97316;fontSize=0;" vertex="1" parent="1"><mxGeometry x="2017" y="120" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="63" value="⭐ &quot;50,340원?
+늘어나 있어!&quot;
+패시브 인컴 첫 발견" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B45309;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="1970" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="64" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" vertex="1" parent="1"><mxGeometry x="2320" y="123" width="20" height="20" as="geometry"/></mxCell>
+        <mxCell id="65" value="매칭 체험
+&quot;아낀 만큼
+A계좌에 부모가
+넣어줬어!&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="2270" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="66" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" vertex="1" parent="1"><mxGeometry x="2621" y="124" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="67" value="부모와 함께 앱
+&quot;아빠도 여기서
+투자해? +8%?&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="2570" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="68" value="" style="ellipse;html=1;aspect=fixed;fillColor=#F97316;strokeColor=#F97316;fontSize=0;" vertex="1" parent="1"><mxGeometry x="2918" y="121" width="24" height="24" as="geometry"/></mxCell>
+        <mxCell id="69" value="⭐ &quot;같이 골라보자&quot;
+공동 첫 투자 결정" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B45309;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="2870" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="77" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" vertex="1" parent="1"><mxGeometry x="1124" y="321" width="12" height="12" as="geometry"/></mxCell>
+        <mxCell id="78" value="이벤트성 용돈
+처음 받아봄" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="1070" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="79" value="" style="ellipse;html=1;aspect=fixed;fillColor=#CCCCCC;strokeColor=#CCCCCC;fontSize=0;" vertex="1" parent="1"><mxGeometry x="1382" y="322" width="10" height="10" as="geometry"/></mxCell>
+        <mxCell id="80" value="다 써봄
+(첫 소비 경험)" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="1327" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="81" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" vertex="1" parent="1"><mxGeometry x="1637" y="320" width="14" height="14" as="geometry"/></mxCell>
+        <mxCell id="82" value="우연히 남김
+→ 칭찬!
+→ 절약 시작" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="1584" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="83" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" vertex="1" parent="1"><mxGeometry x="1893" y="319" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="84" value="&quot;장난감 갖고싶다&quot;
+5만원 목표 설정" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="1841" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="85" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" vertex="1" parent="1"><mxGeometry x="2151" y="320" width="14" height="14" as="geometry"/></mxCell>
+        <mxCell id="86" value="심부름·이벤트로
+조금씩 모으는 중" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="2098" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="87" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" vertex="1" parent="1"><mxGeometry x="2408" y="320" width="14" height="14" as="geometry"/></mxCell>
+        <mxCell id="88" value="중간 확인
+&quot;아직 3만원
+밖에 안 됐어…&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="2355" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="89" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" vertex="1" parent="1"><mxGeometry x="2664" y="319" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="90" value="부모: &quot;열심히
+모았네, 나머지는
+보태줄게&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="2612" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="91" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" vertex="1" parent="1"><mxGeometry x="2920" y="317" width="20" height="20" as="geometry"/></mxCell>
+        <mxCell id="92" value="5만원 달성!
+장난감 구매 ✓
+첫 목표 성공" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="2870" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="102" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" vertex="1" parent="1"><mxGeometry x="1127" y="456" width="6" height="6" as="geometry"/></mxCell>
+        <mxCell id="103" value="7세" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=7;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="1090" y="464" width="80" height="16" as="geometry"/></mxCell>
+        <mxCell id="104" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" vertex="1" parent="1"><mxGeometry x="2027" y="456" width="6" height="6" as="geometry"/></mxCell>
+        <mxCell id="105" value="8세" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=7;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="1990" y="464" width="80" height="16" as="geometry"/></mxCell>
+        <mxCell id="106" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0058A8;strokeColor=#0058A8;fontSize=0;" vertex="1" parent="1"><mxGeometry x="2927" y="456" width="6" height="6" as="geometry"/></mxCell>
+        <mxCell id="107" value="9세" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=7;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="2890" y="464" width="80" height="16" as="geometry"/></mxCell>
+        <mxCell id="108" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="3032" y="125" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="109" value="정기 용돈이 생기니
+쓸 돈 / 모을 돈
+나눠야 하는 상황" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="2980" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="110" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="3206" y="124" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="111" value="펀드 A·B·C
+선택지 → 직접 선택
+&quot;내가 골랐다!&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="3155" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="112" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="3380" y="123" width="20" height="20" as="geometry"/></mxCell>
+        <mxCell id="113" value="&quot;+2.3%&quot;
+내가 고른 건데!
+(성취감)" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="3330" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="114" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="3556" y="124" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="115" value="첫 손실 발생
+&quot;내 돈이 줄었어!&quot;
+(당황/불안)" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="3505" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="116" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="3732" y="125" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="117" value="&quot;빼고 싶다&quot;
+→ 충동 발생" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="3680" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="118" value="" style="ellipse;html=1;aspect=fixed;fillColor=#F97316;strokeColor=#F97316;fontSize=0;" vertex="1" parent="1"><mxGeometry x="3906" y="124" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="119" value="손실 기반 교육
+&quot;왜 이런 일이
+생겼는지 알아볼까?&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B45309;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="3855" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="120" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="4082" y="125" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="121" value="투자상품에 대한
+이해 형성
+&quot;이런 일이 있으면
+ETF가 떨어지는구나&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="4030" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="122" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="4256" y="124" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="123" value="&quot;그래도
+계속 해볼래&quot;
+(버티기로 결정)" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="4205" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="124" value="" style="ellipse;html=1;aspect=fixed;fillColor=#F97316;strokeColor=#F97316;fontSize=0;" vertex="1" parent="1"><mxGeometry x="4429" y="122" width="22" height="22" as="geometry"/></mxCell>
+        <mxCell id="125" value="⭐ 시간 경과 →
+회복 목격
+&quot;어? 다시 올라갔어!&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B45309;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="4380" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="135" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="3033" y="320" width="14" height="14" as="geometry"/></mxCell>
+        <mxCell id="136" value="정기 용돈 시작
+저축률에 따라
+자동 분배" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="2980" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="137" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="3233" y="320" width="14" height="14" as="geometry"/></mxCell>
+        <mxCell id="138" value="소비분은
+아이부자 내
+자유 사용" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="3180" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="139" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="3433" y="320" width="14" height="14" as="geometry"/></mxCell>
+        <mxCell id="140" value="잘 관리함
+→ 부모 신뢰 ↑
+용돈 주기 변화
+(일별→주별)" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="3380" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="141" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="3632" y="319" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="142" value="게임기 목표
+120,000원
+&quot;언제 다 모으지?&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="3580" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="143" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="3833" y="320" width="14" height="14" as="geometry"/></mxCell>
+        <mxCell id="144" value="저축분 꾸준히
++ 중간 확인
+&quot;벌써 절반!&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="3780" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="145" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="4033" y="320" width="14" height="14" as="geometry"/></mxCell>
+        <mxCell id="146" value="주별도 잘 관리
+→ 신뢰 ↑↑
+용돈 주기 월별로" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="3980" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="147" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="4232" y="319" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="148" value="성과 기반
+용돈 협상
+→ 15,000원" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="4180" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="149" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="4431" y="318" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="150" value="게임기 달성! ✓" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="4380" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="160" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="3037" y="456" width="6" height="6" as="geometry"/></mxCell>
+        <mxCell id="161" value="10세" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=7;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="3000" y="464" width="80" height="16" as="geometry"/></mxCell>
+        <mxCell id="162" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="3737" y="456" width="6" height="6" as="geometry"/></mxCell>
+        <mxCell id="163" value="11세" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=7;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="3700" y="464" width="80" height="16" as="geometry"/></mxCell>
+        <mxCell id="164" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="4437" y="456" width="6" height="6" as="geometry"/></mxCell>
+        <mxCell id="165" value="12세" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=7;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="4400" y="464" width="80" height="16" as="geometry"/></mxCell>
+        <mxCell id="166" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="4541" y="124" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="167" value="저축률 재설정
+투자 비중 올림" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="4490" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="168" value="" style="ellipse;html=1;aspect=fixed;fillColor=#F97316;strokeColor=#F97316;fontSize=0;" vertex="1" parent="1"><mxGeometry x="4819" y="122" width="22" height="22" as="geometry"/></mxCell>
+        <mxCell id="169" value="⭐ &quot;토스=쓰는 돈
+아이부자=자라는 돈&quot;
+역할 인식" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B45309;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="4770" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="170" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="5101" y="124" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="171" value="&quot;이 ETF
+더 사고 싶은데...&quot;
+→ 스스로 제안서 작성" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="5050" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="172" value="" style="ellipse;html=1;aspect=fixed;fillColor=#F97316;strokeColor=#F97316;fontSize=0;" vertex="1" parent="1"><mxGeometry x="5373" y="116" width="34" height="34" as="geometry"/></mxCell>
+        <mxCell id="173" value="⭐ 마이크로 협상
+&quot;ETF 5만원 올려줘&quot;
+→ 부모 동의
+→ 즉시 매수" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B45309;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="5330" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="174" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="5661" y="124" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="175" value="리스크 분석
+→ 부모에게 전달" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="5610" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="176" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="5940" y="123" width="20" height="20" as="geometry"/></mxCell>
+        <mxCell id="177" value="분기 리포트 확인
++7.1%
+&quot;내가 제안한 건데!&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="5890" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="184" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="4543" y="320" width="14" height="14" as="geometry"/></mxCell>
+        <mxCell id="185" value="또래가 토스로
+송금하는 걸 목격
+&quot;야 토스로 보내줄게&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="4490" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="186" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="4743" y="320" width="14" height="14" as="geometry"/></mxCell>
+        <mxCell id="187" value="&quot;나도 하고 싶다&quot;
+부러움 + 호기심" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="4690" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="188" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="4942" y="319" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="189" value="부모에게 요청
+→ 동의
+→ 토스 개설" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="4890" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="190" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="5142" y="319" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="191" value="첫 토스 사용
+친구에게 송금
+편의점 결제
+&quot;와, 내가 직접!&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="5090" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="192" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="5342" y="319" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="193" value="잔고가 금방 줄어듦
+&quot;어? 벌써
+이만큼 썼어?&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="5290" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="194" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="5541" y="318" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="195" value="아이부자와 비교
+아이부자=자라는 돈
+토스=나가는 돈" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="5490" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="196" value="" style="ellipse;html=1;aspect=fixed;fillColor=#F97316;strokeColor=#F97316;fontSize=0;" vertex="1" parent="1"><mxGeometry x="5740" y="317" width="20" height="20" as="geometry"/></mxCell>
+        <mxCell id="197" value="⭐ 쓸 돈 / 모을 돈
+구분 시작
+&quot;아이부자 돈은
+함부로 빼면 안 돼&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B45309;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="5690" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="198" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="5942" y="319" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="199" value="용돈 → 저축률대로
+자동 분배
+소비분 → 토스 이체" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="5890" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="209" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="4547" y="456" width="6" height="6" as="geometry"/></mxCell>
+        <mxCell id="210" value="13세" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=7;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="4510" y="464" width="80" height="16" as="geometry"/></mxCell>
+        <mxCell id="211" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="5387" y="456" width="6" height="6" as="geometry"/></mxCell>
+        <mxCell id="212" value="14세" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=7;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="5350" y="464" width="80" height="16" as="geometry"/></mxCell>
+        <mxCell id="213" value="" style="ellipse;html=1;aspect=fixed;fillColor=#7C3AED;strokeColor=#7C3AED;fontSize=0;" vertex="1" parent="1"><mxGeometry x="5947" y="456" width="6" height="6" as="geometry"/></mxCell>
+        <mxCell id="214" value="15세" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=7;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="5910" y="464" width="80" height="16" as="geometry"/></mxCell>
+        <mxCell id="215" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0D9488;strokeColor=#0D9488;fontSize=0;" vertex="1" parent="1"><mxGeometry x="6051" y="124" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="216" value="포괄 허락 범위 설정
+&quot;월 N만원
+X 상품군&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="6000" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="217" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0D9488;strokeColor=#0D9488;fontSize=0;" vertex="1" parent="1"><mxGeometry x="6273" y="125" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="218" value="자율 매매 시작
+(처음에는 소심하게)" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="6221" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="219" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0D9488;strokeColor=#0D9488;fontSize=0;" vertex="1" parent="1"><mxGeometry x="6494" y="125" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="220" value="실수/손실 경험
+→ 스스로 복기
+→ 점점 대담해짐" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="6442" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="221" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0D9488;strokeColor=#0D9488;fontSize=0;" vertex="1" parent="1"><mxGeometry x="6715" y="124" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="222" value="범위 초과 시도
+→ 개별동의 전환
+→ 개별주식 직접 투자" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="6664" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="223" value="" style="ellipse;html=1;aspect=fixed;fillColor=#F97316;strokeColor=#F97316;fontSize=0;" vertex="1" parent="1"><mxGeometry x="6933" y="121" width="24" height="24" as="geometry"/></mxCell>
+        <mxCell id="224" value="⭐ 역할 역전
+부모에게
+투자 조언" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B45309;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="6885" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="225" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0D9488;strokeColor=#0D9488;fontSize=0;" vertex="1" parent="1"><mxGeometry x="7158" y="124" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="226" value="리밸런싱 직접 실행
++ 투자 연대기
+340원→4,800원" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="7107" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="227" value="" style="ellipse;html=1;aspect=fixed;fillColor=#F97316;strokeColor=#F97316;fontSize=0;" vertex="1" parent="1"><mxGeometry x="7371" y="116" width="34" height="34" as="geometry"/></mxCell>
+        <mxCell id="228" value="⭐⭐ TWA 클라이맥스
+360만+780만
+=1,140만" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#B45309;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="7328" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="229" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0D9488;strokeColor=#0D9488;fontSize=0;" vertex="1" parent="1"><mxGeometry x="7598" y="121" width="24" height="24" as="geometry"/></mxCell>
+        <mxCell id="230" value="하나원큐 이관
+&quot;종료가 아니라
+채널 변경&quot;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="7550" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="239" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0D9488;strokeColor=#0D9488;fontSize=0;" vertex="1" parent="1"><mxGeometry x="6052" y="319" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="240" value="체크카드 발급
+소비 데이터가
+아이부자로 연결" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="6000" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="241" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0D9488;strokeColor=#0D9488;fontSize=0;" vertex="1" parent="1"><mxGeometry x="6311" y="320" width="14" height="14" as="geometry"/></mxCell>
+        <mxCell id="242" value="첫 독립 소비의 설렘
+→ 과소비 경험" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="6258" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="243" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0D9488;strokeColor=#0D9488;fontSize=0;" vertex="1" parent="1"><mxGeometry x="6569" y="320" width="14" height="14" as="geometry"/></mxCell>
+        <mxCell id="244" value="&quot;이번 달 너무
+많이 썼다…&quot;
+→ 예산 조절" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="6516" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="245" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0D9488;strokeColor=#0D9488;fontSize=0;" vertex="1" parent="1"><mxGeometry x="6828" y="320" width="14" height="14" as="geometry"/></mxCell>
+        <mxCell id="246" value="용돈 주기
+분기→반기
+(신뢰 ↑)" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="6775" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="247" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0D9488;strokeColor=#0D9488;fontSize=0;" vertex="1" parent="1"><mxGeometry x="7085" y="319" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="248" value="알바 시작
+번 돈 일부를
+투자에 자발 배분" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="7033" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="249" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0D9488;strokeColor=#0D9488;fontSize=0;" vertex="1" parent="1"><mxGeometry x="7343" y="319" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="250" value="용돈 주기
+반기→학제별
+(30만원×6개월 운용)" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="7291" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="251" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0D9488;strokeColor=#0D9488;fontSize=0;" vertex="1" parent="1"><mxGeometry x="7602" y="319" width="16" height="16" as="geometry"/></mxCell>
+        <mxCell id="252" value="소비·저축·투자
+자율 비율 운영
++ 학기 인출·잔고 이월" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="7550" y="352" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="261" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0D9488;strokeColor=#0D9488;fontSize=0;" vertex="1" parent="1"><mxGeometry x="6057" y="456" width="6" height="6" as="geometry"/></mxCell>
+        <mxCell id="262" value="16세" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=7;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="6020" y="464" width="80" height="16" as="geometry"/></mxCell>
+        <mxCell id="263" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0D9488;strokeColor=#0D9488;fontSize=0;" vertex="1" parent="1"><mxGeometry x="6942" y="456" width="6" height="6" as="geometry"/></mxCell>
+        <mxCell id="264" value="17세" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=7;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="6905" y="464" width="80" height="16" as="geometry"/></mxCell>
+        <mxCell id="265" value="" style="ellipse;html=1;aspect=fixed;fillColor=#0D9488;strokeColor=#0D9488;fontSize=0;" vertex="1" parent="1"><mxGeometry x="7607" y="456" width="6" height="6" as="geometry"/></mxCell>
+        <mxCell id="266" value="18세" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=7;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="7570" y="464" width="80" height="16" as="geometry"/></mxCell>
+        <mxCell id="267" value="" style="ellipse;html=1;aspect=fixed;fillColor=#475569;strokeColor=#475569;fontSize=0;" vertex="1" parent="1"><mxGeometry x="7711" y="124" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="268" value="법적 대리 해소
+하나원큐
+자율 운용" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="7660" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="269" value="" style="ellipse;html=1;aspect=fixed;fillColor=#475569;strokeColor=#475569;fontSize=0;" vertex="1" parent="1"><mxGeometry x="7961" y="124" width="18" height="18" as="geometry"/></mxCell>
+        <mxCell id="270" value="후기 견습
+서비스=조언·도구" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="7910" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="271" value="" style="ellipse;html=1;aspect=fixed;fillColor=#475569;strokeColor=#475569;fontSize=0;" vertex="1" parent="1"><mxGeometry x="8203" y="116" width="34" height="34" as="geometry"/></mxCell>
+        <mxCell id="272" value="재정 독립 ✓
+독립 시드
++ 체화된 습관" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=9;fontColor=#222222;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="8160" y="158" width="120" height="50" as="geometry"/></mxCell>
+        <mxCell id="276" value="" style="ellipse;html=1;aspect=fixed;fillColor=#475569;strokeColor=#475569;fontSize=0;" vertex="1" parent="1"><mxGeometry x="7717" y="456" width="6" height="6" as="geometry"/></mxCell>
+        <mxCell id="277" value="19세" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=7;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="7680" y="464" width="80" height="16" as="geometry"/></mxCell>
+        <mxCell id="278" value="" style="ellipse;html=1;aspect=fixed;fillColor=#475569;strokeColor=#475569;fontSize=0;" vertex="1" parent="1"><mxGeometry x="8217" y="456" width="6" height="6" as="geometry"/></mxCell>
+        <mxCell id="279" value="20세+" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=7;fontColor=#999999;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="8180" y="464" width="80" height="16" as="geometry"/></mxCell>
+        <mxCell id="43" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#CCCCCC;strokeWidth=1.0;dashed=0;" edge="1" source="33" target="35" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="44" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#CCCCCC;strokeWidth=1.0;dashed=0;" edge="1" source="35" target="37" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="45" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#CCCCCC;strokeWidth=1.5;dashed=0;" edge="1" source="37" target="39" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="46" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#CCCCCC;strokeWidth=1.5;dashed=0;" edge="1" source="39" target="41" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="51" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#CCCCCC;strokeWidth=1.0;dashed=0;" edge="1" source="47" target="49" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="70" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=1.5;dashed=0;" edge="1" source="56" target="58" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="71" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=2.0;dashed=0;" edge="1" source="58" target="60" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="72" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=2.0;dashed=0;" edge="1" source="60" target="62" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="73" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=2.5;dashed=0;" edge="1" source="62" target="64" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="74" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=2.5;dashed=0;" edge="1" source="64" target="66" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="75" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=3.0;dashed=0;" edge="1" source="66" target="68" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="76" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=2;dashed=1;dashPattern=8 4;" edge="1" source="41" target="56" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="93" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=1.5;dashed=0;" edge="1" source="77" target="79" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="94" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=2.0;dashed=0;" edge="1" source="79" target="81" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="95" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=2.0;dashed=0;" edge="1" source="81" target="83" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="96" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=2.0;dashed=0;" edge="1" source="83" target="85" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="97" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=2.5;dashed=0;" edge="1" source="85" target="87" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="98" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=3.0;dashed=0;" edge="1" source="87" target="89" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="99" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=3.0;dashed=0;" edge="1" source="89" target="91" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="100" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0058A8;strokeWidth=1.5;dashed=1;dashPattern=8 4;" edge="1" source="49" target="77" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="101" value="" style="edgeStyle=none;html=1;endArrow=open;endFill=0;strokeColor=#0058A8;strokeWidth=1.5;dashed=1;dashPattern=4 3;" edge="1" source="81" target="64" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="126" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=1.5;dashed=0;" edge="1" source="108" target="110" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="127" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=1.5;dashed=0;" edge="1" source="110" target="112" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="128" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.0;dashed=0;" edge="1" source="112" target="114" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="129" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.0;dashed=0;" edge="1" source="114" target="116" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="130" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.5;dashed=0;" edge="1" source="116" target="118" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="131" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.5;dashed=0;" edge="1" source="118" target="120" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="132" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=3.0;dashed=0;" edge="1" source="120" target="122" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="133" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=3.0;dashed=0;" edge="1" source="122" target="124" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="134" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#AAAAAA;strokeWidth=2;dashed=1;dashPattern=8 4;" edge="1" source="68" target="108" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="151" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=1.5;dashed=0;" edge="1" source="135" target="137" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="152" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.0;dashed=0;" edge="1" source="137" target="139" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="153" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.0;dashed=0;" edge="1" source="139" target="141" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="154" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.0;dashed=0;" edge="1" source="141" target="143" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="155" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.5;dashed=0;" edge="1" source="143" target="145" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="156" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=3.0;dashed=0;" edge="1" source="145" target="147" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="157" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=3.0;dashed=0;" edge="1" source="147" target="149" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="158" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#AAAAAA;strokeWidth=1.5;dashed=1;dashPattern=8 4;" edge="1" source="91" target="135" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="159" value="" style="edgeStyle=none;html=1;endArrow=open;endFill=0;strokeColor=#7C3AED;strokeWidth=1.5;dashed=1;dashPattern=4 3;" edge="1" source="135" target="108" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="178" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=1.5;dashed=0;" edge="1" source="166" target="168" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="179" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.0;dashed=0;" edge="1" source="168" target="170" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="180" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.0;dashed=0;" edge="1" source="170" target="172" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="181" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.5;dashed=0;" edge="1" source="172" target="174" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="182" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=3.0;dashed=0;" edge="1" source="174" target="176" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="183" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=3;dashed=0;" edge="1" source="124" target="166" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="200" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=1.5;dashed=0;" edge="1" source="184" target="186" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="201" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.0;dashed=0;" edge="1" source="186" target="188" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="202" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.0;dashed=0;" edge="1" source="188" target="190" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="203" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.0;dashed=0;" edge="1" source="190" target="192" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="204" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=2.5;dashed=0;" edge="1" source="192" target="194" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="205" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=3.0;dashed=0;" edge="1" source="194" target="196" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="206" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#7C3AED;strokeWidth=3.0;dashed=0;" edge="1" source="196" target="198" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="207" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#AAAAAA;strokeWidth=2;dashed=1;dashPattern=8 4;" edge="1" source="149" target="184" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="208" value="" style="edgeStyle=none;html=1;endArrow=open;endFill=0;strokeColor=#7C3AED;strokeWidth=1.5;dashed=1;dashPattern=4 3;" edge="1" source="194" target="168" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="231" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0D9488;strokeWidth=1.5;dashed=0;" edge="1" source="215" target="217" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="232" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0D9488;strokeWidth=2.0;dashed=0;" edge="1" source="217" target="219" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="233" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0D9488;strokeWidth=2.0;dashed=0;" edge="1" source="219" target="221" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="234" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0D9488;strokeWidth=2.0;dashed=0;" edge="1" source="221" target="223" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="235" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0D9488;strokeWidth=2.5;dashed=0;" edge="1" source="223" target="225" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="236" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0D9488;strokeWidth=3.0;dashed=0;" edge="1" source="225" target="227" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="237" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0D9488;strokeWidth=3.0;dashed=0;" edge="1" source="227" target="229" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="238" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#AAAAAA;strokeWidth=2;dashed=1;dashPattern=8 4;" edge="1" source="176" target="215" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="253" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0D9488;strokeWidth=1.5;dashed=0;" edge="1" source="239" target="241" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="254" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0D9488;strokeWidth=2.0;dashed=0;" edge="1" source="241" target="243" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="255" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0D9488;strokeWidth=2.0;dashed=0;" edge="1" source="243" target="245" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="256" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0D9488;strokeWidth=2.5;dashed=0;" edge="1" source="245" target="247" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="257" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0D9488;strokeWidth=2.5;dashed=0;" edge="1" source="247" target="249" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="258" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#0D9488;strokeWidth=3.0;dashed=0;" edge="1" source="249" target="251" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="259" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#AAAAAA;strokeWidth=1.5;dashed=1;dashPattern=8 4;" edge="1" source="198" target="239" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="260" value="" style="edgeStyle=none;html=1;endArrow=open;endFill=0;strokeColor=#F97316;strokeWidth=2;dashed=1;dashPattern=4 3;" edge="1" source="249" target="227" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="273" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#475569;strokeWidth=2.5;dashed=0;" edge="1" source="267" target="269" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="274" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#475569;strokeWidth=3.0;dashed=0;" edge="1" source="269" target="271" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="275" value="" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#475569;strokeWidth=2;dashed=1;dashPattern=8 4;" edge="1" source="229" target="267" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
