@@ -10,3 +10,8 @@
 # 임시 파일
 *.tmp
 conflict-files-obsidian-git.md
+
+# 원본 PDF 보관소 (수정 금지 · 로컬 전용)
+# - 한글 파일명이 macOS NFD 인코딩으로 Linux 255바이트 한계 초과
+# - 요약본은 content/wiki/sources/에 별도 관리
+content/sc/
