@@ -359,6 +359,9 @@
 		{"id":"4a074d2c17a8e63d","fromNode":"t2_1","fromSide":"right","toNode":"ms1","toSide":"left","label":"미션설계"},
 		{"id":"abb4da478db33a0f","fromNode":"t2_1","fromSide":"right","toNode":"m1","toSide":"left","label":"매칭설계"},
 		{"id":"6878b790ee46e3ad","fromNode":"tr1","fromSide":"right","toNode":"t2_5","toSide":"left"},
-		{"id":"476dcbc4eabb04dd","fromNode":"t2_5","fromSide":"right","toNode":"tr2","toSide":"left"}
+		{"id":"476dcbc4eabb04dd","fromNode":"t2_5","fromSide":"right","toNode":"tr2","toSide":"left"},
+		{"id":"e_hana_to_entry","fromNode":"8ef7fc972537175e","fromSide":"right","toNode":"f6d62cbfdf3799a7","toSide":"left","label":"진입 결심"},
+		{"id":"e_s0inv3_to_s0tr3","fromNode":"s0_inv3","fromSide":"right","toNode":"s0_tr3","toSide":"left","label":"성장 인식 → S1 준비"},
+		{"id":"e_s1t27_to_s1tr1","fromNode":"s1_t2_7","fromSide":"bottom","toNode":"s1_tr1","toSide":"top","label":"9세 도달 → S2 준비"}
 	]
 }
