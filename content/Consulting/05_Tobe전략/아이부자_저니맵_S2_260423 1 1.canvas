@@ -249,7 +249,6 @@
 		{"id":"s1_sav4_to_m1","fromNode":"s1_sav4","fromSide":"right","toNode":"m1","toSide":"left","label":"③ 분기: 매칭"},
 		{"id":"s1_sav4_to_ms1","fromNode":"s1_sav4","fromSide":"bottom","toNode":"ms1","toSide":"left","label":"③ 분기: 미션"},
 		{"id":"s1_tr_to_s2","fromNode":"s1_tr1","fromSide":"right","toNode":"s2_entry","toSide":"left","label":"역할 전환 준비"},
-		{"id":"s0_ev_inv","fromNode":"s0_ev1","fromSide":"bottom","toNode":"s0_inv1","toSide":"top","label":"계좌 개설 → 입금"},
 		{"id":"s0_inv12","fromNode":"s0_inv1","fromSide":"right","toNode":"s0_inv2","toSide":"left"},
 		{"id":"s0_inv23","fromNode":"s0_inv2","fromSide":"right","toNode":"s0_inv3","toSide":"left"},
 		{"id":"s0_ev_to_s1ev","fromNode":"s0_ev1","fromSide":"right","toNode":"s1_ev1","toSide":"left","label":"이벤트 시드 계속 →"},
@@ -365,6 +364,7 @@
 		{"id":"99b2271eb6aee3cc","fromNode":"ms5","fromSide":"right","toNode":"tr1","toSide":"top"},
 		{"id":"6032cf69f1479642","fromNode":"m5","fromSide":"right","toNode":"tr1","toSide":"top","label":"신뢰 누적"},
 		{"id":"f7d60f83cf1b9477","fromNode":"t2_4","fromSide":"right","toNode":"tr1","toSide":"top"},
-		{"id":"c4f28400642ea8c4","fromNode":"t2_5","fromSide":"right","toNode":"tr2","toSide":"right"}
+		{"id":"c4f28400642ea8c4","fromNode":"t2_5","fromSide":"right","toNode":"tr2","toSide":"right"},
+		{"id":"afedd5bd209036e1","fromNode":"s0_inv1","fromSide":"top","toNode":"s0_ev1","toSide":"bottom","label":"계좌"}
 	]
 }
