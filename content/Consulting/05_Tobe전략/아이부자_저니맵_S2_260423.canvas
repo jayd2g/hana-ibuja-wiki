@@ -6,7 +6,6 @@
 		{"id":"g_s0","type":"group","x":-6800,"y":-180,"width":3000,"height":1820,"label":"S0. 부모 준비기 — 출생~6세 | 부모 단독 운용, 자녀 미인지"},
 		{"id":"g_s1","type":"group","x":-3760,"y":-180,"width":3000,"height":1820,"label":"S1. 금융 감각 형성기 — 7~9세 | 부모: 코치, 자녀: 관찰자"},
 		{"id":"g_s5","type":"group","x":11520,"y":-180,"width":2400,"height":1830,"label":"S5. 독립 견습기 — 19세~ | 부모: 금융 파트너(송금만) → 자녀: 독립 견습"},
-		{"id":"s0_bg_tr3","type":"group","x":-5200,"y":1240,"width":360,"height":400,"color":"4","label":"오프라인 (S1 전환 준비 결심)"},
 		{"id":"s1_t2_6","type":"text","text":"🔵 앱 지갑 첫 용돈 수령\n'내가 번 것 같아' 뿌듯함","x":-1400,"y":225,"width":220,"height":80,"color":"5"},
 		{"id":"s1_sav3","type":"text","text":"🔵 잔액 조금씩 쌓임\n저금통 시각화","x":-1400,"y":505,"width":220,"height":80,"color":"5"},
 		{"id":"s1_t2_4","type":"text","text":"🔵 심부름 완료","x":-2080,"y":225,"width":220,"height":80,"color":"5"},
