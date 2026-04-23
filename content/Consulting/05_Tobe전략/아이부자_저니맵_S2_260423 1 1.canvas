@@ -202,11 +202,11 @@
 		{"id":"churn_s2_first","type":"text","text":"⚡🔵 **토스·카카오로\n친구에게 첫 송금**\n또래 디지털 금융 생태계 진입","x":1080,"y":1170,"width":220,"height":124,"color":"1"},
 		{"id":"churn_s3_accel","type":"text","text":"⚡🔵 **토스·카카오\n일상 결제로 고착화**\n아이부자 오픈 빈도 급감","x":5200,"y":1170,"width":240,"height":106,"color":"1"},
 		{"id":"churn_exit","type":"text","text":"❌ **완전 이탈**\n토스·카카오로 금융 습관 고착\n→ 하나은행 미복귀","x":6560,"y":1170,"width":260,"height":106,"color":"1"},
-		{"id":"s0_tr1","type":"text","text":"🟢 아이부자 인지\nPB 창구·지인·캠페인 등을 통한 인지\n'세뱃돈 관리 고민'\n[[F-2]]","x":-6560,"y":1170,"width":220,"height":160,"color":"4"},
 		{"id":"s0_notif1","type":"text","text":"**📣 세뱃돈 시즌 알림**\n→ 부모(미가입): \"설날 D-7, 세뱃돈을 아이부자로 관리해볼까요? [지금 시작하기]\"","x":-6560,"y":1380,"width":290,"height":136,"color":"2"},
 		{"id":"f6d62cbfdf3799a7","type":"text","text":"🟢 진입 결심\n앱 다운로드\n계좌 개설\n[[D-6]] [[D-7]]","x":-6140,"y":280,"width":220,"height":160,"color":"4"},
-		{"id":"8ef7fc972537175e","type":"text","text":"🟢 아이부자 인지\n하나원큐 내 세뱃돈 / 자녀 금융 교육 넛지를 통한 인지\n[[F-2]]","x":-6560,"y":1000,"width":220,"height":124,"color":"4"},
-		{"id":"s0_t2_1","type":"text","text":"🔵 현금 용돈 체험\n받으면 금방 다 써버림\n'없어지네' 원체험","x":-6820,"y":820,"width":220,"height":124,"color":"5"}
+		{"id":"s0_t2_1","type":"text","text":"🔵 현금 용돈 체험\n받으면 금방 다 써버림\n'없어지네' 원체험","x":-6820,"y":800,"width":220,"height":124,"color":"5"},
+		{"id":"8ef7fc972537175e","type":"text","text":"🟢 아이부자 인지\n하나원큐 내 세뱃돈 / 자녀 금융 교육 넛지를 통한 인지\n[[F-2]]","x":-6560,"y":980,"width":220,"height":124,"color":"4"},
+		{"id":"s0_tr1","type":"text","text":"🟢 아이부자 인지\nPB 창구·지인·캠페인 등을 통한 인지\n'세뱃돈 관리 고민'\n[[F-2]]","x":-6560,"y":1140,"width":220,"height":160,"color":"4"}
 	],
 	"edges":[
 		{"id":"e_ev12","fromNode":"ev1","fromSide":"right","toNode":"ev2","toSide":"left"},
