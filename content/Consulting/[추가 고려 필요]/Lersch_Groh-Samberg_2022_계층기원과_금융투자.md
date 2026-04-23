@@ -206,9 +206,46 @@ Parental class ──┐
 
 ---
 
-## 7. 보관 정보
+## 7. 인용 시 권장 문구 (Slide 삽입용)
+
+### 7-1. Slide 21 "계층별 금융 투자 격차" 실증 근거 (Occurrence 격차)
+
+> 부모의 계층적 기원은 자녀 세대의 **위험자산(주식·펀드) 투자 빈도**에 통계적으로 유의한 영향을 줍니다(Lersch & Groh-Samberg, 2022; SHARE 14개국 데이터). 30세 시점 상위 서비스 계층 부모 자녀의 **6%가 이미 주식 투자 경험**, 비숙련 노동자 부모 자녀는 **2% 미만**. 50세 시점에는 **26% vs 13%** 로 격차가 누적됩니다. **"자산가 가정의 금융 습관"이 실체를 가진 구조적 격차**임을 SHARE 14개국 데이터로 검증한 결과입니다.
+
+### 7-2. Element 4요소의 이론적 정당화 (학술 매핑 근거)
+
+> 자산가 가정이 자녀에게 금융 투자 습관을 전승하는 이론적 메커니즘은 네 가지로 정리됩니다(Lersch & Groh-Samberg, 2022): ① 상대적 위험 회피의 완화(safety net), ② 장기 할인율 선호, ③ 금융 리터러시와 기대 수준, ④ 금융 제도·네트워크 접근. **아이부자의 Element 01·02·00·03은 각각 이 네 메커니즘을 서비스로 대체·매개하는 구조**로 설계됩니다. 즉 Element 4요소는 임의 구성이 아니라 **학술적 전승 메커니즘의 네 축에 각각 대응**합니다.
+
+### 7-3. Figure 1 novel path 서비스화 (Slide 21 포지셔닝)
+
+> Lersch & Groh-Samberg(2022)의 Figure 1은 기존 사회이동 연구가 누락했던 **"Parental class → Financial investments → Net worth"** 경로를 제시합니다. 즉 **부모 계층이 자녀의 금융 투자 행동 자체를 조건 짓는다**는 구조입니다. 아이부자 서비스는 이 경로를 **계층과 무관하게 모든 가정에 제공하는 개입 장치** — 자연 상태에서 계층별로 차등적으로 열려 있는 경로를, 앱을 통해 계층 독립적으로 제공하는 사회적 평등 장치 — 로 재정의될 수 있습니다. 이는 하나은행의 ESG·금융포용 내러티브와도 자연스럽게 연결됩니다.
+
+### 7-4. "조기 체험" 프레임 재조정 (내부 방어용)
+
+> **Timing Hypothesis는 실증적으로 기각되었습니다**(Lersch & Groh-Samberg, 2022): "While advantaged parental class is associated with an overall higher occurrence of investments in stocks and mutual funds, **individuals from advantaged parental class do not systematically invest earlier in their life course** than individuals from the less advantaged parental class." 즉 상위 계층 자녀는 **더 일찍** 투자하지 않고 **더 자주** 투자합니다. **아이부자의 프레이밍을 "조기 체험"이 아닌 "반복·밀도 있는 체험(occurrence)"으로 전환**해야 하는 학술적 근거입니다. (단, SHARE 데이터는 성인 최초 투자 기준이므로 미성년기 체험 효과는 측정 범위 밖 — 이 공백은 별도 서술 가능.)
+
+### 7-5. "금융 자산가" 카피 어조 완화 근거 (Slide 21 내부 교정)
+
+> Net Worth Mediation Hypothesis 기각(Lersch & Groh-Samberg, 2022): "Our hypothesis that **distinct investment strategies may explain the wealth advantage was rejected.**" **(해석)** "독특한 투자 전략이 자산 우위를 설명할 수 있다는 가설은 기각되었다." 즉 **투자 행동 차이만으로는 성인기 자산 격차를 설명할 수 없습니다**. 따라서 Slide 21의 "아이 — 경력직 신입 같은 **금융 자산가**로" 카피는 학술 기준에서 과대 약속입니다. **"금융 경험 보유자" 또는 "자산 관리 습관 보유자"** 로 어조 완화를 권장합니다. 서비스의 목적을 "자산 증가 결과 보장"이 아닌 **"자산 관리 습관·금융 리터러시의 내재화"**로 재정의합니다.
+
+### 7-6. "부모 포트폴리오 공개" 아이디어 근거 (기능 설계용)
+
+> "Exposure to diverse financial options in the family of origin may **increase the subjective range of investment options later in life.**" — Lersch & Groh-Samberg (2022, p.214)
+> 
+> **(해석)** "원가정에서 다양한 금융 옵션에 노출되는 경험은, **성인이 된 후의 투자 선택지 범위를 주관적으로 넓힙니다.**"
+> 
+> 이 문장은 "부모 포트폴리오 일부 공개"(검토된 주요 아이디어 #3) 기능의 **학술적 근거**입니다. 자녀가 부모의 금융 선택을 본다는 것 자체가, 성인기 투자 행동의 가능한 선택지 범위를 확장합니다.
+
+### 7-7. 하나은행 고객 세그먼트 타깃 정당성 (H3 문화자본 vs 경제자본)
+
+> Lersch & Groh-Samberg(2022)의 Hypothesis 3(부분 지지): **단순히 "고학력·고소득 = 금융 투자 활발"이 아니라, 경제자본 지배 계층(경영·관리직)에서만 위험자산 투자가 활발**합니다. 사회·문화 전문직은 고학력이어도 생명보험·연금 등 secure 자산을 선호합니다. 이는 하나은행의 **PB·GOLD·VVIP 고객 = 경제자본 지배 계층**이 실제로 아이부자가 이식하려는 투자 습관의 보유자임을 지지합니다. 즉 **하나은행 보유 고객 풀 자체가 Slide 21의 "이식 원본"으로 정합**합니다.
+
+---
+
+## 8. 보관 정보
 
 - **파일**: `/04_전략장표/`나 `/03_전략_내러티브/`의 근거 인용표에는 아직 포함하지 않음 — 본 문서 검토 후 반영 여부 결정.
 - **원본 PDF 위치**: `/sessions/wonderful-sweet-goodall/mnt/uploads/lersch-groh-samberg-2022-the-long-reach-of-class-origin-on-financial-investments-and-net-worth.pdf`
+- **관련 자료**: 같은 폴더 `Vistica_2025_자산가가정_금융교육_10단계.md`, `CFAInstitute_2025_3세대저주_재평가.md`, `Cerulli_2022_84조달러_세대간자산이전.md`, `Grubman_2022_70퍼센트법칙_원전비판.md`
 - **검토 작성일**: 2026-04-23
 - **검토 작성자**: Claude (JayD 요청)
