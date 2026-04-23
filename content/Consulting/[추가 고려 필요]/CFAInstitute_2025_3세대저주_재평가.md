@@ -163,31 +163,51 @@ Capgemini Research Institute for Financial Services Analysis, 2024
 
 ---
 
-## 7. 핵심 인용문 — 장표·내러티브 활용 후보
+## 7. 인용 시 권장 문구 (Slide 삽입용)
 
-### 7-1. "자산 이전 준비보다 상속자 준비"
-> "In order to create multi-generational family wealth, we need to focus on **preparing our heirs to manage the assets, rather than just preparing the assets to be transferred.**"
-> — Noah Harden, National Wealth Planning Manager, Comerica Bank
+### 7-1. "부의 이전이 아니라 능력의 이전" (Slide 21 핵심 근거)
 
-**활용 포인트**: Slide 21 "자산가 방식의 서비스 이식" 논거 강화. "부의 이전"이 아닌 "능력의 이전"이라는 프레임.
+> "In order to create multi-generational family wealth, we need to focus on **preparing our heirs to manage the assets, rather than just preparing the assets to be transferred.**" — Noah Harden, National Wealth Planning Manager, Comerica Bank (CFA Institute, 2025)
+> 
+> **(해석)** "다세대 가문 자산을 만들려면, 자산을 이전할 준비가 아니라 **상속자가 자산을 관리할 준비**에 초점을 맞춰야 합니다."
+> 
+> 아이부자의 "서비스 이식" 포지셔닝의 직접 근거. **"부의 이전"이 아닌 "능력의 이전"** 프레임으로 내러티브를 재정비할 때 쓸 수 있는 1순위 인용.
 
-### 7-2. "자기실현적 예언"
-> "parents often respond by shielding their children from financial decisions, leaving them less prepared to deal with wealth when it passes into their hands. It then becomes **a self-fulfilling prophecy.**"
-> — Jim Grubman
+### 7-2. 자기실현적 예언 (Slide 19 제약 설명용)
 
-**활용 포인트**: Slide 19 "부모 자녀 간 낮은 신뢰관계" 제약의 작동 메커니즘 설명. 부모의 과잉 보호가 자녀의 준비 부족을 만든다는 구조.
+> "parents often respond by shielding their children from financial decisions, leaving them less prepared to deal with wealth when it passes into their hands. It then becomes **a self-fulfilling prophecy.**" — Jim Grubman (CFA Institute, 2025)
+> 
+> **(해석)** "부모는 자녀를 금융 결정에서 보호하려다, 오히려 자녀가 자산을 다룰 준비를 덜 갖추게 만듭니다. 그 결과 실패는 **자기실현적 예언**이 됩니다."
+> 
+> Slide 19의 제약 중 "부모의 낮은 신뢰관계·과잉 보호"가 **왜 구조적 실패를 낳는지**를 한 문장으로 설명하는 권위 있는 인용.
 
-### 7-3. "점진적·연령별 평생 학습"
-> "You have to do lifelong learning, starting when they're young, and instill skills in a **progressive, age-appropriate way.**"
-> — Jim Grubman
+### 7-3. 연령별 체험 프로그램 원칙 (Element 설계 근거)
 
-**활용 포인트**: 연령별 체험 프로그램 설계 원칙의 업계 최상급 뒷받침.
+> "You have to do lifelong learning, starting when they're young, and instill skills in a **progressive, age-appropriate way.**" — Jim Grubman (CFA Institute, 2025)
+> 
+> **(해석)** "평생 학습이어야 하며, 어릴 때부터 시작해, **점진적이고 연령에 맞는 방식**으로 기술을 내재화해야 합니다."
+> 
+> 아이부자의 **연령별 체험 프로그램 설계**(아이부자_연령별_체험프로그램_설계.xlsx)의 설계 원칙을 CFA Institute 인용으로 직접 뒷받침.
 
-### 7-4. "계획된 상속자 교육"
-> "Preparing heirs for stewardship of family wealth has become **more structured and intentional.** Families are increasingly engaging younger generations through educational programs, financial literacy training, and involvement in family governance."
-> — Stacy Francis, Francis Financial CEO
+### 7-4. J.P. Morgan 10x10 Roadmap 위상 인용 (Element 4요소 체계 근거)
 
-**활용 포인트**: 아이부자 서비스의 "구조화된 금융 교육 플랫폼" 포지션 뒷받침.
+> 세계 최상위 자산운용사 **J.P. Morgan Wealth Management의 Head of Family Engagement and Governance**가 설계한 **10x10 Roadmap**(10 Life Stages × 10 Competencies)은 자산 가문이 자녀에게 이식하는 금융·비금융 역량을 100개 셀 매트릭스로 정의합니다(CFA Institute, 2025). 아이부자의 **Element 4요소**는 이 매트릭스의 앞 4단계(초등~청년 초반) × 핵심 역량(Financial Skills / Stewardship & Governance / Wealth Planning / Responsibility & Accountability)을 **한국 시장에 맞게 서비스화한 구조**입니다.
+
+### 7-5. 구조화된 상속자 교육 트렌드 (Part 2·7 맥락용)
+
+> "Preparing heirs for stewardship of family wealth has become **more structured and intentional.** Families are increasingly engaging younger generations through educational programs, financial literacy training, and involvement in family governance." — Stacy Francis, Francis Financial CEO (CFA Institute, 2025)
+> 
+> **(해석)** "상속자를 가문 자산의 **스튜어드**로 준비시키는 과정이 **더 구조화되고 의도적**으로 바뀌고 있습니다. 가문들은 교육 프로그램·금융 리터러시 훈련·가족 거버넌스 참여를 통해 젊은 세대를 점점 더 적극적으로 참여시키고 있습니다."
+> 
+> 아이부자 서비스를 "개인 앱"이 아니라 **"구조화된 금융 교육·거버넌스 플랫폼"**으로 포지셔닝할 때 사용.
+
+### 7-6. Millionaires Next Door 세그먼트 (Slide 21·22 타깃 근거)
+
+> Capgemini(2024)에 따르면, 글로벌 HNWI 중 "Millionaires next door"(순자산 $1M~$5M) 세그먼트가 **인구의 89.9%, 자산의 43%** 를 차지합니다(CFA Institute, 2025 Figure 1). 이들은 기존 프라이빗뱅커가 1:1로 서비스하지 않는, 그러나 **자녀에게 자산가적 금융 습관을 이식하고 싶은 열망**은 HNW와 동일한 층입니다. 아이부자의 핵심 타깃은 한국 시장의 이 세그먼트 — **상위 중산층~하위 자산가** — 입니다.
+
+### 7-7. 70%/90% 수치 방어용 권고 (Slide 20 주의)
+
+> 업계 통념인 "3세대 만에 자산 소멸 70% / 90%" 수치는, CFA Institute(2025) 자체가 **원전(1987 단일 연구)의 방법론 한계**를 명시하며 재평가하고 있습니다. Slide에서 수치를 복창하는 대신, **"세대간 자산 이전이 준비된 상속자가 없는 경우 실패 가능성이 있다는 업계의 질적 컨센서스"**라는 서술로 전환할 것을 권장합니다(함께 참조: `Grubman_2022_70퍼센트법칙_원전비판.md`).
 
 ---
 
