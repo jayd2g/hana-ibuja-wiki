@@ -4,7 +4,7 @@
 
 - **저자**: Jeff Vistica (CFP®, ChSNC®, ChFC®, AIF®) — Vistica Wealth Advisors Managing Principal
 - **출처**: Vistica Wealth Advisors 공식 블로그
-- **URL**: https://www.visticawa.com/blog/prepare-the-next-generation-teaching-financial-literacy-in-affluent-families
+- **URL**: https://www.visticawa.com/blog/prepare-the-next-generation-teaching-financial-literacy-in-affhttps://www.visticawa.com/blog/prepare-the-next-generation-teaching-financial-literacy-in-affluent-familiesluent-families
 - **게재일**: 2025년 7월 29일
 - **유형**: 자문사 블로그 포스트 (Content Marketing / Thought Leadership)
 
