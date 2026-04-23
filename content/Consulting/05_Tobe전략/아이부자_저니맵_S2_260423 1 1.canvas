@@ -2061,6 +2061,36 @@
       "height": 110,
       "text": "**🟢 부모**: 금융 파트너 — 정기 송금만. 모든 모니터링 종료\n**🔵 자녀**: 독립 견습 — 지금까지의 습관을 독립 생활에 이식한다\n⭐ **핵심**: 성년 전환 · 완전 독립 · 하나원큐 자동 이관",
       "color": "6"
+    },
+    {
+      "id": "churn_s2_first",
+      "type": "text",
+      "x": 1080,
+      "y": 1170,
+      "width": 220,
+      "height": 100,
+      "color": "1",
+      "text": "⚡🔵 **토스·카카오로\n친구에게 첫 송금**\n또래 디지털 금융 생태계 진입"
+    },
+    {
+      "id": "churn_s3_accel",
+      "type": "text",
+      "x": 5200,
+      "y": 1170,
+      "width": 240,
+      "height": 100,
+      "color": "1",
+      "text": "⚡🔵 **토스·카카오\n일상 결제로 고착화**\n아이부자 오픈 빈도 급감"
+    },
+    {
+      "id": "churn_exit",
+      "type": "text",
+      "x": 6560,
+      "y": 1170,
+      "width": 260,
+      "height": 100,
+      "color": "1",
+      "text": "❌ **완전 이탈**\n토스·카카오로 금융 습관 고착\n→ 하나은행 미복귀"
     }
   ],
   "edges": [
@@ -3188,6 +3218,42 @@
       "toNode": "s5_tr1",
       "toSide": "top",
       "label": "성인 금융 시작"
+    },
+    {
+      "id": "churn_e1",
+      "fromNode": "choice",
+      "fromSide": "bottom",
+      "toNode": "churn_s2_first",
+      "toSide": "top",
+      "color": "1",
+      "label": "또래 압력·편의성"
+    },
+    {
+      "id": "churn_e2",
+      "fromNode": "churn_s2_first",
+      "fromSide": "right",
+      "toNode": "churn_s3_accel",
+      "toSide": "left",
+      "color": "1",
+      "label": "토스 습관 누적"
+    },
+    {
+      "id": "churn_e3",
+      "fromNode": "ba65c420bb045d01",
+      "fromSide": "bottom",
+      "toNode": "churn_s3_accel",
+      "toSide": "top",
+      "color": "1",
+      "label": "소비 채널 이동"
+    },
+    {
+      "id": "churn_e4",
+      "fromNode": "churn_s3_accel",
+      "fromSide": "right",
+      "toNode": "churn_exit",
+      "toSide": "left",
+      "color": "1",
+      "label": "S3 이탈 고착화"
     }
   ]
 }
