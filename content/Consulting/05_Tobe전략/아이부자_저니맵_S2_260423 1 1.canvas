@@ -200,12 +200,12 @@
 		{"id":"s1_t2_6","type":"text","text":"🔵 앱 지갑 첫 용돈 수령\n'내가 번 것 같아' 뿌듯함\n[[G-3]]","x":-1400,"y":140,"width":220,"height":125,"color":"5"},
 		{"id":"s1_sav4","type":"text","text":"⭐ **목표 달성 & 공동구매**\n'돈이 모이면 더 좋은 걸\n살 수 있어!' 핵심 인식\n[[E-1]] [[E-4]]","x":-1060,"y":780,"width":220,"height":160,"color":"3"},
 		{"id":"ev1","type":"text","text":"🟢 세뱃돈·명절 입금\n(S0~S1에서 계속 이어짐)\n[[B-7]] [[F-2]]","x":70,"y":20,"width":220,"height":124,"color":"4"},
-		{"id":"t2_1","type":"text","text":"🟢 정기 용돈 설정\n금액·주기 설정\n자동이체 시작\n[[C-4]]","x":70,"y":980,"width":220,"height":135,"color":"4"},
 		{"id":"chlbl_s2_app","type":"text","text":"**아이부자\n앱**","x":-420,"y":114,"width":140,"height":88},
 		{"id":"s2_entry","type":"text","text":"📌 **S2 진입**\n초등 3~4학년 진학\n스마트폰 첫 지급\nS2 진입 안내 수신","x":-200,"y":249,"width":200,"height":160,"color":"2"},
 		{"id":"m1","type":"text","text":"🟢 매칭 저축 설계\n비율(0.5x~3x) 설정\n자녀에게 제안 발송\n[[A-1]]","x":360,"y":267,"width":220,"height":124,"color":"4"},
 		{"id":"ms1","type":"text","text":"🟢 미션 저축 설계\n희망 항목 확인\n조건 제안 발송\n[[B-3]] [[B-4]] [[B-5]]","x":360,"y":420,"width":220,"height":142,"color":"4"},
-		{"id":"inv1","type":"text","text":"🟢 투자 옵션 A/B 제안\n선택 카드 제시\n[[A-3]]","x":360,"y":589,"width":220,"height":124,"color":"4"}
+		{"id":"inv1","type":"text","text":"🟢 투자 옵션 A/B 제안\n선택 카드 제시\n[[A-3]]","x":360,"y":589,"width":220,"height":124,"color":"4"},
+		{"id":"t2_1","type":"text","text":"🟢 정기 용돈 설정\n금액·주기 설정\n자동이체 시작\n[[C-4]]","x":-200,"y":93,"width":220,"height":135,"color":"4"}
 	],
 	"edges":[
 		{"id":"e_ev12","fromNode":"ev1","fromSide":"right","toNode":"ev2","toSide":"left"},
