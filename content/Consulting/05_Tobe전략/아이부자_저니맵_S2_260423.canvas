@@ -1,583 +1,73 @@
 {
-  "nodes": [
-    {
-      "id": "g_s2",
-      "type": "group",
-      "label": "S2. 선택 체험기 — 10~13세 | 부모: 설정자 → 자녀: 선택자",
-      "x": -440,
-      "y": -180,
-      "width": 3460,
-      "height": 1740
-    },
-    {
-      "id": "lbl_ev",
-      "type": "text",
-      "text": "**① 이벤트\n자금**",
-      "x": -420,
-      "y": -40,
-      "width": 140,
-      "height": 80
-    },
-    {
-      "id": "lbl_t2",
-      "type": "text",
-      "text": "**② 정기\n용돈**",
-      "x": -420,
-      "y": 240,
-      "width": 140,
-      "height": 80
-    },
-    {
-      "id": "lbl_m",
-      "type": "text",
-      "text": "**③-A\n저축·매칭**",
-      "x": -420,
-      "y": 520,
-      "width": 140,
-      "height": 80
-    },
-    {
-      "id": "lbl_ms",
-      "type": "text",
-      "text": "**③-B\n저축·미션**",
-      "x": -420,
-      "y": 800,
-      "width": 140,
-      "height": 80
-    },
-    {
-      "id": "lbl_inv",
-      "type": "text",
-      "text": "**④ 투자**",
-      "x": -420,
-      "y": 1080,
-      "width": 140,
-      "height": 80
-    },
-    {
-      "id": "lbl_tr",
-      "type": "text",
-      "text": "**⑤ 주도권\n관계**",
-      "x": -420,
-      "y": 1380,
-      "width": 140,
-      "height": 80
-    },
-    {
-      "id": "s2_entry",
-      "type": "text",
-      "text": "📌 **S2 진입**\n초등 3~4학년 진학\n스마트폰 첫 지급\nS2 진입 안내 수신",
-      "x": -240,
-      "y": 500,
-      "width": 200,
-      "height": 100,
-      "color": "2"
-    },
-    {
-      "id": "ev1",
-      "type": "text",
-      "text": "🟢 세뱃돈·명절 입금\n(S0~S1에서 계속 이어짐)",
-      "x": 0,
-      "y": -40,
-      "width": 220,
-      "height": 80,
-      "color": "4"
-    },
-    {
-      "id": "ev2",
-      "type": "text",
-      "text": "🔵 배당·이자 발생\n'자는 동안 돈이 일했어'",
-      "x": 1080,
-      "y": -40,
-      "width": 220,
-      "height": 80,
-      "color": "5"
-    },
-    {
-      "id": "t2_1",
-      "type": "text",
-      "text": "🟢 정기 용돈 설정\n금액·주기 설정\n자동이체 시작",
-      "x": 0,
-      "y": 240,
-      "width": 220,
-      "height": 80,
-      "color": "4"
-    },
-    {
-      "id": "t2_2",
-      "type": "text",
-      "text": "🔵 매일 용돈 수령 시작\n예측 가능한 수입 생김",
-      "x": 360,
-      "y": 240,
-      "width": 220,
-      "height": 80,
-      "color": "5"
-    },
-    {
-      "id": "t2_3",
-      "type": "text",
-      "text": "🔵 쓸 돈 · 모을 돈 나눔\n앱에서 직접 분배",
-      "x": 720,
-      "y": 240,
-      "width": 220,
-      "height": 80,
-      "color": "5"
-    },
-    {
-      "id": "t2_4",
-      "type": "text",
-      "text": "🟢 3개월 연속 달성 확인\n일→주 전환 결정\n'주별 전환 타이밍' 넛지",
-      "x": 1800,
-      "y": 240,
-      "width": 220,
-      "height": 80,
-      "color": "4"
-    },
-    {
-      "id": "t2_5",
-      "type": "text",
-      "text": "🔵 용돈 주기 일→주 변화\n부모 신뢰 상승 인식",
-      "x": 2160,
-      "y": 240,
-      "width": 220,
-      "height": 80,
-      "color": "5"
-    },
-    {
-      "id": "m1",
-      "type": "text",
-      "text": "🟢 매칭 저축 설계\n비율(0.5x~3x) 설정\n자녀에게 제안 발송",
-      "x": 360,
-      "y": 520,
-      "width": 220,
-      "height": 80,
-      "color": "4"
-    },
-    {
-      "id": "m2",
-      "type": "text",
-      "text": "🔵 매칭 제안 수신\n'OO원 모으면 엄마가\nX배로 만들어준대!'",
-      "x": 720,
-      "y": 520,
-      "width": 220,
-      "height": 80,
-      "color": "5"
-    },
-    {
-      "id": "m3",
-      "type": "text",
-      "text": "🔵 목표 향해 저축\n조금씩 쌓아감",
-      "x": 1080,
-      "y": 520,
-      "width": 220,
-      "height": 80,
-      "color": "5"
-    },
-    {
-      "id": "m4",
-      "type": "text",
-      "text": "🟢 달성 알림 수신\n매칭 입금 실행",
-      "x": 1440,
-      "y": 520,
-      "width": 220,
-      "height": 80,
-      "color": "4"
-    },
-    {
-      "id": "m5",
-      "type": "text",
-      "text": "⭐ **매칭 달성 경험**\n'아낀 만큼 엄마가\n보태줬어!' 핵심 경험",
-      "x": 1800,
-      "y": 520,
-      "width": 220,
-      "height": 80,
-      "color": "3"
-    },
-    {
-      "id": "ms1",
-      "type": "text",
-      "text": "🟢 미션 저축 설계\n희망 항목 확인\n조건 제안 발송",
-      "x": 360,
-      "y": 800,
-      "width": 220,
-      "height": 80,
-      "color": "4"
-    },
-    {
-      "id": "ms2",
-      "type": "text",
-      "text": "🔵 미션 제안 수신\n'OO원 모으면 엄마가\n나머지 보태줄게!'",
-      "x": 720,
-      "y": 800,
-      "width": 220,
-      "height": 80,
-      "color": "5"
-    },
-    {
-      "id": "ms3",
-      "type": "text",
-      "text": "🔵 목표 금액 향해 저축\n'이만큼 모으면\n보태준대!'",
-      "x": 1080,
-      "y": 800,
-      "width": 220,
-      "height": 80,
-      "color": "5"
-    },
-    {
-      "id": "ms4",
-      "type": "text",
-      "text": "🟢 달성 알림 수신\n나머지 금액 보태줌",
-      "x": 1440,
-      "y": 800,
-      "width": 220,
-      "height": 80,
-      "color": "4"
-    },
-    {
-      "id": "ms5",
-      "type": "text",
-      "text": "⭐ **미션 & 공동구매**\n'내가 모은 것 +\n엄마 보탠 것 = 내 것!'",
-      "x": 1800,
-      "y": 800,
-      "width": 220,
-      "height": 80,
-      "color": "3"
-    },
-    {
-      "id": "choice",
-      "type": "text",
-      "text": "🔵 소비 vs 저축 반복 선택\n'오늘 간식 vs 더 모으기'\n(③A·B 진행 중 내내 반복)",
-      "x": 1080,
-      "y": 960,
-      "width": 220,
-      "height": 80,
-      "color": "5"
-    },
-    {
-      "id": "inv1",
-      "type": "text",
-      "text": "🟢 투자 옵션 A/B 제안\n선택 카드 제시",
-      "x": 360,
-      "y": 1080,
-      "width": 220,
-      "height": 80,
-      "color": "4"
-    },
-    {
-      "id": "inv2",
-      "type": "text",
-      "text": "🔵 투자 상품 직접 선택\n'내가 골랐다!'",
-      "x": 720,
-      "y": 1080,
-      "width": 220,
-      "height": 80,
-      "color": "5"
-    },
-    {
-      "id": "inv3",
-      "type": "text",
-      "text": "🔵 수익률 확인\n'내가 고른 건데!'\n주체감 형성",
-      "x": 1080,
-      "y": 1080,
-      "width": 220,
-      "height": 80,
-      "color": "5"
-    },
-    {
-      "id": "inv4",
-      "type": "text",
-      "text": "⭐ **첫 손실 목격**\n'내 돈이 줄었어!'\n당황",
-      "x": 1440,
-      "y": 1080,
-      "width": 220,
-      "height": 80,
-      "color": "3"
-    },
-    {
-      "id": "inv5",
-      "type": "text",
-      "text": "🟣 부모+자녀\n손실 원인 함께 분석\n📌 '최고의 교육 기회' 넛지",
-      "x": 1800,
-      "y": 1080,
-      "width": 220,
-      "height": 80,
-      "color": "6"
-    },
-    {
-      "id": "inv6",
-      "type": "text",
-      "text": "🔵 매도하지 않기로\n스스로 결정\n자기 결정",
-      "x": 2160,
-      "y": 1080,
-      "width": 220,
-      "height": 80,
-      "color": "5"
-    },
-    {
-      "id": "inv7",
-      "type": "text",
-      "text": "⭐ **회복 체득**\n'어? 다시 올라갔어!'\n시간의 가치 체득",
-      "x": 2520,
-      "y": 1080,
-      "width": 220,
-      "height": 80,
-      "color": "3"
-    },
-    {
-      "id": "tr1",
-      "type": "text",
-      "text": "🟢 월간 선택 리포트\n자녀 패턴 확인\n(월말 리포트 수신)",
-      "x": 1800,
-      "y": 1380,
-      "width": 220,
-      "height": 80,
-      "color": "4"
-    },
-    {
-      "id": "tr2",
-      "type": "text",
-      "text": "🟢 용돈 일→주 전환\n저축 현황 확인 후 결정",
-      "x": 2160,
-      "y": 1380,
-      "width": 220,
-      "height": 80,
-      "color": "4"
-    },
-    {
-      "id": "tr3",
-      "type": "text",
-      "text": "🟣 S3 진입 예고\n자녀 주도권 이양 시작\n→ 역할 전환 준비",
-      "x": 2520,
-      "y": 1380,
-      "width": 220,
-      "height": 80,
-      "color": "6"
-    }
-  ],
-  "edges": [
-    {
-      "id": "e_ev12",
-      "fromNode": "ev1",
-      "fromSide": "right",
-      "toNode": "ev2",
-      "toSide": "left"
-    },
-    {
-      "id": "e_t2_12",
-      "fromNode": "t2_1",
-      "fromSide": "right",
-      "toNode": "t2_2",
-      "toSide": "left"
-    },
-    {
-      "id": "e_t2_23",
-      "fromNode": "t2_2",
-      "fromSide": "right",
-      "toNode": "t2_3",
-      "toSide": "left"
-    },
-    {
-      "id": "e_t2_34",
-      "fromNode": "t2_3",
-      "fromSide": "right",
-      "toNode": "t2_4",
-      "toSide": "left",
-      "label": "3개월 경과"
-    },
-    {
-      "id": "e_t2_45",
-      "fromNode": "t2_4",
-      "fromSide": "right",
-      "toNode": "t2_5",
-      "toSide": "left"
-    },
-    {
-      "id": "e_m12",
-      "fromNode": "m1",
-      "fromSide": "right",
-      "toNode": "m2",
-      "toSide": "left"
-    },
-    {
-      "id": "e_m23",
-      "fromNode": "m2",
-      "fromSide": "right",
-      "toNode": "m3",
-      "toSide": "left"
-    },
-    {
-      "id": "e_m34",
-      "fromNode": "m3",
-      "fromSide": "right",
-      "toNode": "m4",
-      "toSide": "left"
-    },
-    {
-      "id": "e_m45",
-      "fromNode": "m4",
-      "fromSide": "right",
-      "toNode": "m5",
-      "toSide": "left"
-    },
-    {
-      "id": "e_ms12",
-      "fromNode": "ms1",
-      "fromSide": "right",
-      "toNode": "ms2",
-      "toSide": "left"
-    },
-    {
-      "id": "e_ms23",
-      "fromNode": "ms2",
-      "fromSide": "right",
-      "toNode": "ms3",
-      "toSide": "left"
-    },
-    {
-      "id": "e_ms34",
-      "fromNode": "ms3",
-      "fromSide": "right",
-      "toNode": "ms4",
-      "toSide": "left"
-    },
-    {
-      "id": "e_ms45",
-      "fromNode": "ms4",
-      "fromSide": "right",
-      "toNode": "ms5",
-      "toSide": "left"
-    },
-    {
-      "id": "e_i12",
-      "fromNode": "inv1",
-      "fromSide": "right",
-      "toNode": "inv2",
-      "toSide": "left"
-    },
-    {
-      "id": "e_i23",
-      "fromNode": "inv2",
-      "fromSide": "right",
-      "toNode": "inv3",
-      "toSide": "left"
-    },
-    {
-      "id": "e_i34",
-      "fromNode": "inv3",
-      "fromSide": "right",
-      "toNode": "inv4",
-      "toSide": "left"
-    },
-    {
-      "id": "e_i45",
-      "fromNode": "inv4",
-      "fromSide": "right",
-      "toNode": "inv5",
-      "toSide": "left"
-    },
-    {
-      "id": "e_i56",
-      "fromNode": "inv5",
-      "fromSide": "right",
-      "toNode": "inv6",
-      "toSide": "left"
-    },
-    {
-      "id": "e_i67",
-      "fromNode": "inv6",
-      "fromSide": "right",
-      "toNode": "inv7",
-      "toSide": "left"
-    },
-    {
-      "id": "e_tr12",
-      "fromNode": "tr1",
-      "fromSide": "right",
-      "toNode": "tr2",
-      "toSide": "left"
-    },
-    {
-      "id": "e_tr23",
-      "fromNode": "tr2",
-      "fromSide": "right",
-      "toNode": "tr3",
-      "toSide": "left"
-    },
-    {
-      "id": "e_entry_t2",
-      "fromNode": "s2_entry",
-      "fromSide": "right",
-      "toNode": "t2_1",
-      "toSide": "left",
-      "label": "용돈 설정"
-    },
-    {
-      "id": "e_entry_m",
-      "fromNode": "s2_entry",
-      "fromSide": "right",
-      "toNode": "m1",
-      "toSide": "left",
-      "label": "매칭 설계"
-    },
-    {
-      "id": "e_entry_ms",
-      "fromNode": "s2_entry",
-      "fromSide": "right",
-      "toNode": "ms1",
-      "toSide": "left",
-      "label": "미션 설계"
-    },
-    {
-      "id": "e_entry_inv",
-      "fromNode": "s2_entry",
-      "fromSide": "right",
-      "toNode": "inv1",
-      "toSide": "left",
-      "label": "투자 교육"
-    },
-    {
-      "id": "e_m3_choice",
-      "fromNode": "m3",
-      "fromSide": "bottom",
-      "toNode": "choice",
-      "toSide": "top",
-      "label": "반복 선택 상황"
-    },
-    {
-      "id": "e_ms3_choice",
-      "fromNode": "ms3",
-      "fromSide": "bottom",
-      "toNode": "choice",
-      "toSide": "top"
-    },
-    {
-      "id": "e_m5_tr1",
-      "fromNode": "m5",
-      "fromSide": "bottom",
-      "toNode": "tr1",
-      "toSide": "top",
-      "label": "신뢰 누적"
-    },
-    {
-      "id": "e_ms5_tr1",
-      "fromNode": "ms5",
-      "fromSide": "bottom",
-      "toNode": "tr1",
-      "toSide": "top"
-    },
-    {
-      "id": "e_inv5_tr1",
-      "fromNode": "inv5",
-      "fromSide": "bottom",
-      "toNode": "tr1",
-      "toSide": "top"
-    },
-    {
-      "id": "e_t25_tr2",
-      "fromNode": "t2_5",
-      "fromSide": "bottom",
-      "toNode": "tr2",
-      "toSide": "top"
-    }
-  ]
+	"nodes":[
+		{"id":"g_s2","type":"group","label":"S2. 선택 체험기 — 10~13세 | 부모: 설정자 → 자녀: 선택자","x":-440,"y":-180,"width":3460,"height":1740},
+		{"id":"lbl_ev","type":"text","text":"**① 이벤트\n자금**","x":-420,"y":-40,"width":140,"height":80},
+		{"id":"lbl_t2","type":"text","text":"**② 정기\n용돈**","x":-420,"y":240,"width":140,"height":80},
+		{"id":"lbl_m","type":"text","text":"**③-A\n저축·매칭**","x":-420,"y":520,"width":140,"height":80},
+		{"id":"lbl_ms","type":"text","text":"**③-B\n저축·미션**","x":-420,"y":800,"width":140,"height":80},
+		{"id":"lbl_inv","type":"text","text":"**④ 투자**","x":-420,"y":1080,"width":140,"height":80},
+		{"id":"lbl_tr","type":"text","text":"**⑤ 주도권\n관계**","x":-420,"y":1380,"width":140,"height":80},
+		{"id":"s2_entry","type":"text","text":"📌 **S2 진입**\n초등 3~4학년 진학\n스마트폰 첫 지급\nS2 진입 안내 수신","x":-240,"y":500,"width":200,"height":100,"color":"2"},
+		{"id":"ev1","type":"text","text":"🟢 세뱃돈·명절 입금\n(S0~S1에서 계속 이어짐)","x":0,"y":-40,"width":220,"height":80,"color":"4"},
+		{"id":"ev2","type":"text","text":"🔵 배당·이자 발생\n'자는 동안 돈이 일했어'","x":1080,"y":-40,"width":220,"height":80,"color":"5"},
+		{"id":"t2_1","type":"text","text":"🟢 정기 용돈 설정\n금액·주기 설정\n자동이체 시작","x":0,"y":240,"width":220,"height":80,"color":"4"},
+		{"id":"t2_2","type":"text","text":"🔵 매일 용돈 수령 시작\n예측 가능한 수입 생김","x":360,"y":240,"width":220,"height":80,"color":"5"},
+		{"id":"t2_3","type":"text","text":"🔵 쓸 돈 · 모을 돈 나눔\n앱에서 직접 분배","x":720,"y":240,"width":220,"height":80,"color":"5"},
+		{"id":"t2_4","type":"text","text":"🟢 3개월 연속 달성 확인\n일→주 전환 결정\n'주별 전환 타이밍' 넛지","x":1800,"y":240,"width":220,"height":80,"color":"4"},
+		{"id":"t2_5","type":"text","text":"🔵 용돈 주기 일→주 변화\n부모 신뢰 상승 인식","x":2160,"y":240,"width":220,"height":80,"color":"5"},
+		{"id":"m1","type":"text","text":"🟢 매칭 저축 설계\n비율(0.5x~3x) 설정\n자녀에게 제안 발송","x":360,"y":520,"width":220,"height":80,"color":"4"},
+		{"id":"m2","type":"text","text":"🔵 매칭 제안 수신\n'OO원 모으면 엄마가\nX배로 만들어준대!'","x":720,"y":520,"width":220,"height":80,"color":"5"},
+		{"id":"m3","type":"text","text":"🔵 목표 향해 저축\n조금씩 쌓아감","x":1080,"y":520,"width":220,"height":80,"color":"5"},
+		{"id":"m4","type":"text","text":"🟢 달성 알림 수신\n매칭 입금 실행","x":1440,"y":520,"width":220,"height":80,"color":"4"},
+		{"id":"m5","type":"text","text":"⭐ **매칭 달성 경험**\n'아낀 만큼 엄마가\n보태줬어!' 핵심 경험","x":1800,"y":520,"width":220,"height":80,"color":"3"},
+		{"id":"ms1","type":"text","text":"🟢 미션 저축 설계\n희망 항목 확인\n조건 제안 발송","x":360,"y":800,"width":220,"height":80,"color":"4"},
+		{"id":"ms2","type":"text","text":"🔵 미션 제안 수신\n'OO원 모으면 엄마가\n나머지 보태줄게!'","x":720,"y":800,"width":220,"height":80,"color":"5"},
+		{"id":"ms3","type":"text","text":"🔵 목표 금액 향해 저축\n'이만큼 모으면\n보태준대!'","x":1080,"y":800,"width":220,"height":80,"color":"5"},
+		{"id":"ms4","type":"text","text":"🟢 달성 알림 수신\n나머지 금액 보태줌","x":1440,"y":800,"width":220,"height":80,"color":"4"},
+		{"id":"ms5","type":"text","text":"⭐ **미션 & 공동구매**\n'내가 모은 것 +\n엄마 보탠 것 = 내 것!'","x":1800,"y":800,"width":220,"height":80,"color":"3"},
+		{"id":"choice","type":"text","text":"🔵 소비 vs 저축 반복 선택\n'오늘 간식 vs 더 모으기'\n(③A·B 진행 중 내내 반복)","x":1080,"y":960,"width":220,"height":80,"color":"5"},
+		{"id":"inv1","type":"text","text":"🟢 투자 옵션 A/B 제안\n선택 카드 제시","x":360,"y":1080,"width":220,"height":80,"color":"4"},
+		{"id":"inv2","type":"text","text":"🔵 투자 상품 직접 선택\n'내가 골랐다!'","x":720,"y":1080,"width":220,"height":80,"color":"5"},
+		{"id":"inv3","type":"text","text":"🔵 수익률 확인\n'내가 고른 건데!'\n주체감 형성","x":1080,"y":1080,"width":220,"height":80,"color":"5"},
+		{"id":"inv4","type":"text","text":"⭐ **첫 손실 목격**\n'내 돈이 줄었어!'\n당황","x":1440,"y":1080,"width":220,"height":80,"color":"3"},
+		{"id":"inv5","type":"text","text":"🟣 부모+자녀\n손실 원인 함께 분석\n📌 '최고의 교육 기회' 넛지","x":1800,"y":1080,"width":220,"height":80,"color":"6"},
+		{"id":"inv6","type":"text","text":"🔵 매도하지 않기로\n스스로 결정\n자기 결정","x":2160,"y":1080,"width":220,"height":80,"color":"5"},
+		{"id":"inv7","type":"text","text":"⭐ **회복 체득**\n'어? 다시 올라갔어!'\n시간의 가치 체득","x":2520,"y":1080,"width":220,"height":80,"color":"3"},
+		{"id":"tr1","type":"text","text":"🟢 월간 선택 리포트\n자녀 패턴 확인\n(월말 리포트 수신)","x":1800,"y":1380,"width":220,"height":80,"color":"4"},
+		{"id":"tr2","type":"text","text":"🟢 용돈 일→주 전환\n저축 현황 확인 후 결정","x":2160,"y":1380,"width":220,"height":80,"color":"4"},
+		{"id":"tr3","type":"text","text":"🟣 S3 진입 예고\n자녀 주도권 이양 시작\n→ 역할 전환 준비","x":2520,"y":1380,"width":220,"height":80,"color":"6"}
+	],
+	"edges":[
+		{"id":"e_ev12","fromNode":"ev1","fromSide":"right","toNode":"ev2","toSide":"left"},
+		{"id":"e_t2_12","fromNode":"t2_1","fromSide":"right","toNode":"t2_2","toSide":"left"},
+		{"id":"e_t2_23","fromNode":"t2_2","fromSide":"right","toNode":"t2_3","toSide":"left"},
+		{"id":"e_t2_34","fromNode":"t2_3","fromSide":"right","toNode":"t2_4","toSide":"left","label":"3개월 경과"},
+		{"id":"e_t2_45","fromNode":"t2_4","fromSide":"right","toNode":"t2_5","toSide":"left"},
+		{"id":"e_m12","fromNode":"m1","fromSide":"right","toNode":"m2","toSide":"left"},
+		{"id":"e_m23","fromNode":"m2","fromSide":"right","toNode":"m3","toSide":"left"},
+		{"id":"e_m34","fromNode":"m3","fromSide":"right","toNode":"m4","toSide":"left"},
+		{"id":"e_m45","fromNode":"m4","fromSide":"right","toNode":"m5","toSide":"left"},
+		{"id":"e_ms12","fromNode":"ms1","fromSide":"right","toNode":"ms2","toSide":"left"},
+		{"id":"e_ms23","fromNode":"ms2","fromSide":"right","toNode":"ms3","toSide":"left"},
+		{"id":"e_ms34","fromNode":"ms3","fromSide":"right","toNode":"ms4","toSide":"left"},
+		{"id":"e_ms45","fromNode":"ms4","fromSide":"right","toNode":"ms5","toSide":"left"},
+		{"id":"e_i12","fromNode":"inv1","fromSide":"right","toNode":"inv2","toSide":"left"},
+		{"id":"e_i23","fromNode":"inv2","fromSide":"right","toNode":"inv3","toSide":"left"},
+		{"id":"e_i34","fromNode":"inv3","fromSide":"right","toNode":"inv4","toSide":"left"},
+		{"id":"e_i45","fromNode":"inv4","fromSide":"right","toNode":"inv5","toSide":"left"},
+		{"id":"e_i56","fromNode":"inv5","fromSide":"right","toNode":"inv6","toSide":"left"},
+		{"id":"e_i67","fromNode":"inv6","fromSide":"right","toNode":"inv7","toSide":"left"},
+		{"id":"e_tr12","fromNode":"tr1","fromSide":"right","toNode":"tr2","toSide":"left"},
+		{"id":"e_tr23","fromNode":"tr2","fromSide":"right","toNode":"tr3","toSide":"left"},
+		{"id":"e_entry_t2","fromNode":"s2_entry","fromSide":"right","toNode":"t2_1","toSide":"left","label":"용돈 설정"},
+		{"id":"e_entry_m","fromNode":"s2_entry","fromSide":"right","toNode":"m1","toSide":"left","label":"매칭 설계"},
+		{"id":"e_entry_ms","fromNode":"s2_entry","fromSide":"right","toNode":"ms1","toSide":"left","label":"미션 설계"},
+		{"id":"e_entry_inv","fromNode":"s2_entry","fromSide":"right","toNode":"inv1","toSide":"left","label":"투자 교육"},
+		{"id":"e_m3_choice","fromNode":"m3","fromSide":"bottom","toNode":"choice","toSide":"top","label":"반복 선택 상황"},
+		{"id":"e_ms3_choice","fromNode":"ms3","fromSide":"bottom","toNode":"choice","toSide":"top"},
+		{"id":"e_m5_tr1","fromNode":"m5","fromSide":"bottom","toNode":"tr1","toSide":"top","label":"신뢰 누적"},
+		{"id":"e_ms5_tr1","fromNode":"ms5","fromSide":"bottom","toNode":"tr1","toSide":"top"},
+		{"id":"e_inv5_tr1","fromNode":"inv5","fromSide":"bottom","toNode":"tr1","toSide":"top"},
+		{"id":"e_t25_tr2","fromNode":"t2_5","fromSide":"bottom","toNode":"tr2","toSide":"top"}
+	]
 }
