@@ -1,7 +1,7 @@
 {
 	"nodes":[
-		{"id":"S1_GRP_PARENT","type":"group","x":5600,"y":80,"width":4600,"height":1100,"color":"4","label":"🟢 부모 행동"},
 		{"id":"S1_GRP_CHILD","type":"group","x":5600,"y":1420,"width":4600,"height":1100,"color":"6","label":"🔵 자녀 행동"},
+		{"id":"S1_GRP_PARENT","type":"group","x":5600,"y":80,"width":4600,"height":1100,"color":"4","label":"🟢 부모 행동"},
 		{"id":"S1_GRP_TOUCH","type":"group","x":5600,"y":2740,"width":4600,"height":520,"color":"3","label":"📱 터치포인트 및 메시지 (채널·트리거·왜)"},
 		{"id":"NEW_0014","type":"text","text":"⚠ S3 이탈 위험 구간\n(14~15세 · 최고 이탈률)\nF-3 이탈 방어 5장치 집중 구간","x":16800,"y":-240,"width":5400,"height":3190,"color":"1"},
 		{"id":"NEW_0001","type":"text","text":"### ⬅ 부모 통제 100%　　　　　　　　　🔄 자율도 이양 게이지 — 시간이 갈수록 자녀 자율이 커집니다　　　　　　　　　자녀 자율 100% ➡\n🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢　 S0 🛡설계자　S1 👁코치　S2 ⚙설정자　S3 ✅동의자　S4 🗺범위설정자　S5 🎓조언자 　🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵","x":-1100,"y":-1100,"width":34200,"height":140,"color":"4"},
@@ -319,12 +319,6 @@
 		{"id":"2b61e9af383b4dc0","fromNode":"25ff56ed2b0c4e88","fromSide":"right","toNode":"00ff3ff364184040","toSide":"left","color":"5"},
 		{"id":"ccc6871aa6c649f1","fromNode":"00ff3ff364184040","fromSide":"right","toNode":"69fcc0c179ca46ea","toSide":"left","color":"5"},
 		{"id":"474f054a7fa845d6","fromNode":"69fcc0c179ca46ea","fromSide":"right","toNode":"ab82c3e8e6824dc5","toSide":"left","color":"5"},
-		{"id":"S1_EP1_2","fromNode":"S1_P1","fromSide":"right","toNode":"S1_P2","toSide":"left"},
-		{"id":"S1_EP2_3","fromNode":"S1_P2","fromSide":"right","toNode":"S1_P3","toSide":"left"},
-		{"id":"S1_EP3_4","fromNode":"S1_P3","fromSide":"right","toNode":"S1_P4","toSide":"left"},
-		{"id":"S1_EP4_5","fromNode":"S1_P4","fromSide":"right","toNode":"S1_P5","toSide":"left"},
-		{"id":"S1_EP5_6","fromNode":"S1_P5","fromSide":"right","toNode":"S1_P6","toSide":"left"},
-		{"id":"S1_EP6_7","fromNode":"S1_P6","fromSide":"right","toNode":"S1_P7","toSide":"left"},
 		{"id":"S1_ECA_AB","fromNode":"S1_CA_A","fromSide":"right","toNode":"S1_CA_B","toSide":"left"},
 		{"id":"S1_ECA_BC","fromNode":"S1_CA_B","fromSide":"right","toNode":"S1_CA_C","toSide":"left"},
 		{"id":"S1_ECA_CD","fromNode":"S1_CA_C","fromSide":"right","toNode":"S1_CA_D","toSide":"left"},
@@ -333,6 +327,12 @@
 		{"id":"S1_ECB_34","fromNode":"S1_CB_3","fromSide":"right","toNode":"S1_CB_4","toSide":"left"},
 		{"id":"S1_ECB_45","fromNode":"S1_CB_4","fromSide":"right","toNode":"S1_CB_5","toSide":"left"},
 		{"id":"S1_ECB_56","fromNode":"S1_CB_5","fromSide":"right","toNode":"S1_CB_6","toSide":"left"},
+		{"id":"S1_EP1_2","fromNode":"S1_P1","fromSide":"right","toNode":"S1_P2","toSide":"left"},
+		{"id":"S1_EP2_3","fromNode":"S1_P2","fromSide":"right","toNode":"S1_P3","toSide":"left"},
+		{"id":"S1_EP3_4","fromNode":"S1_P3","fromSide":"right","toNode":"S1_P4","toSide":"left"},
+		{"id":"S1_EP4_5","fromNode":"S1_P4","fromSide":"right","toNode":"S1_P5","toSide":"left"},
+		{"id":"S1_EP5_6","fromNode":"S1_P5","fromSide":"right","toNode":"S1_P6","toSide":"left"},
+		{"id":"S1_EP6_7","fromNode":"S1_P6","fromSide":"right","toNode":"S1_P7","toSide":"left"},
 		{"id":"S1_ECB_67","fromNode":"S1_CB_6","fromSide":"right","toNode":"S1_CB_7","toSide":"left"},
 		{"id":"S1_INT_1","fromNode":"S1_P1","fromSide":"bottom","toNode":"S1_CA_A","toSide":"top","color":"2","label":"앱 설치 → 첫 접속"},
 		{"id":"S1_INT_2","fromNode":"S1_P2","fromSide":"bottom","toNode":"S1_CB_1","toSide":"top","color":"2","label":"간헐적 용돈 지급"},
@@ -340,6 +340,7 @@
 		{"id":"S1_INT_4","fromNode":"S1_P4","fromSide":"bottom","toNode":"S1_CA_B","toSide":"top","color":"2","label":"시드 공개 → 잔액 발견"},
 		{"id":"S1_INT_5","fromNode":"S1_P5","fromSide":"bottom","toNode":"S1_CA_D","toSide":"top","color":"2","label":"공동 투자 실행"},
 		{"id":"S1_INT_6","fromNode":"S1_P5","fromSide":"bottom","toNode":"S1_CB_5","toSide":"top","color":"2","label":"매칭 실행 → 체험"},
-		{"id":"S1_INT_7","fromNode":"S1_P6","fromSide":"bottom","toNode":"S1_CB_6","toSide":"top","color":"2","label":"정기 전환 결정"}
+		{"id":"S1_INT_7","fromNode":"S1_P6","fromSide":"bottom","toNode":"S1_CB_6","toSide":"top","color":"2","label":"정기 전환 결정"},
+		{"id":"2503d2bcfbfc608a","fromNode":"S1_CA_B","fromSide":"top","toNode":"2d1811e26ce87de6","toSide":"bottom"}
 	]
 }
