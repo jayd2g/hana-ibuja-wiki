@@ -197,11 +197,7 @@
 		{"id":"s5_t2_1","type":"text","text":"🟢 필요 시 정기 생활비·용돈\n아이부자 통해 송금\n📌 자녀 요청/부모 자율","x":11880,"y":180,"width":220,"height":80,"color":"4"},
 		{"id":"s5_t2_2","type":"text","text":"🔵 생활비·용돈\n아이부자로 수령\n(지금까지와 같은 채널)","x":12240,"y":180,"width":220,"height":80,"color":"5"},
 		{"id":"s5_t2_3","type":"text","text":"🔵 월급·아르바이트 소득도\n아이부자 계좌로 받아 운용\n입금 채널 확장","x":12600,"y":180,"width":220,"height":80,"color":"5"},
-		{"id":"s5_inv1","type":"text","text":"⭐🔵 신용카드 처음 발급받음\n혜택 비교해서 선택\n(하나원큐 연계 가능)","x":11915,"y":1020,"width":220,"height":80,"color":"5"},
-		{"id":"s0_bg_ibuja1","type":"group","x":-6800,"y":-175,"width":3000,"height":300,"label":"📱 아이부자","color":"5"},
-		{"id":"s0_bg_offline","type":"group","x":-6800,"y":125,"width":3000,"height":835,"label":"🌍 오프라인","color":"4"},
-		{"id":"s0_bg_ibuja2","type":"group","x":-6800,"y":960,"width":3000,"height":280,"label":"📱 아이부자","color":"5"},
-		{"id":"s0_bg_other","type":"group","x":-6800,"y":1240,"width":3000,"height":400,"label":"🌍 오프라인 · 기타","color":"3"}
+		{"id":"s5_inv1","type":"text","text":"⭐🔵 신용카드 처음 발급받음\n혜택 비교해서 선택\n(하나원큐 연계 가능)","x":11915,"y":1020,"width":220,"height":80,"color":"5"}
 	],
 	"edges":[
 		{"id":"e_ev12","fromNode":"ev1","fromSide":"right","toNode":"ev2","toSide":"left"},
