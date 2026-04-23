@@ -1,7 +1,21 @@
 {
 	"nodes":[
+		{"id":"g_s0","type":"group","x":-6800,"y":-180,"width":3000,"height":1740,"label":"S0. 부모 준비기 — 출생~6세 | 부모 단독 운용, 자녀 미인지"},
 		{"id":"g_s2","type":"group","x":-440,"y":-180,"width":3460,"height":1740,"label":"S2. 선택 체험기 — 10~13세 | 부모: 설정자 → 자녀: 선택자"},
 		{"id":"g_s1","type":"group","x":-3760,"y":-180,"width":3000,"height":1740,"label":"S1. 금융 감각 형성기 — 7~9세 | 부모: 코치, 자녀: 관찰자"},
+		{"id":"s0_lbl_ev","type":"text","text":"**① 이벤트\n자금**","x":-6780,"y":-55,"width":140,"height":80},
+		{"id":"s0_lbl_t2","type":"text","text":"**② 현금\n용돈**","x":-6780,"y":225,"width":140,"height":80},
+		{"id":"s0_lbl_inv","type":"text","text":"**④ 투자\n설정**","x":-6780,"y":1065,"width":140,"height":80},
+		{"id":"s0_lbl_tr","type":"text","text":"**⑤ 인지·\n결심**","x":-6780,"y":1365,"width":140,"height":80},
+		{"id":"s0_entry","type":"text","text":"📌 **S0 출생~6세**\n부모만 움직임\n자녀 미인지","x":-6460,"y":500,"width":200,"height":80,"color":"2"},
+		{"id":"s0_t2_1","type":"text","text":"🔵 현금 용돈 체험\n받으면 금방 다 써버림\n'없어지네' 원체험","x":-6100,"y":240,"width":220,"height":80,"color":"5"},
+		{"id":"s0_ev1","type":"text","text":"🟢 세뱃돈·목돈 입금\n자녀 투자계좌 적립\n📌 명절·생일 첫 시드","x":-5760,"y":-40,"width":220,"height":80,"color":"4"},
+		{"id":"s0_inv1","type":"text","text":"🟢 투자계좌 + 지갑계좌\n개설 완료","x":-5760,"y":1080,"width":220,"height":80,"color":"4"},
+		{"id":"s0_inv2","type":"text","text":"🟢 ETF 자동투자 연결\n이벤트 시드 운용 시작","x":-5420,"y":1080,"width":220,"height":80,"color":"4"},
+		{"id":"s0_inv3","type":"text","text":"🟣 월간 성장 화면 공유\n⭐ '돈이 늘고 있구나'\n자녀 첫 인지","x":-5080,"y":1080,"width":220,"height":80,"color":"6"},
+		{"id":"s0_tr1","type":"text","text":"🟢 아이부자 인지\nPB 창구·지인·캠페인\n'세뱃돈 관리 고민'","x":-6100,"y":1380,"width":220,"height":80,"color":"4"},
+		{"id":"s0_tr2","type":"text","text":"🟢 진입 결심\n앱 다운로드\n계좌 개설","x":-5760,"y":1380,"width":220,"height":80,"color":"4"},
+		{"id":"s0_tr3","type":"text","text":"🟢 S1 전환 준비\n자녀 초등 입학 고려\n금융 교육 시작 결심","x":-5080,"y":1380,"width":220,"height":80,"color":"4"},
 		{"id":"ev1","type":"text","text":"🟢 세뱃돈·명절 입금\n(S0~S1에서 계속 이어짐)","x":0,"y":-40,"width":220,"height":80,"color":"4"},
 		{"id":"ev2","type":"text","text":"🔵 배당·이자 발생\n'자는 동안 돈이 일했어'","x":1080,"y":-40,"width":220,"height":80,"color":"5"},
 		{"id":"t2_1","type":"text","text":"🟢 정기 용돈 설정\n금액·주기 설정\n자동이체 시작","x":0,"y":240,"width":220,"height":80,"color":"4"},
@@ -105,6 +119,17 @@
 		{"id":"s1_to_t21","fromNode":"s1_t2_7","fromSide":"right","toNode":"t2_1","toSide":"left","label":"정기 용돈 전환 →"},
 		{"id":"s1_sav4_to_m1","fromNode":"s1_sav4","fromSide":"right","toNode":"m1","toSide":"left","label":"③ 분기: 매칭"},
 		{"id":"s1_sav4_to_ms1","fromNode":"s1_sav4","fromSide":"bottom","toNode":"ms1","toSide":"left","label":"③ 분기: 미션"},
-		{"id":"s1_tr_to_s2","fromNode":"s1_tr1","fromSide":"right","toNode":"s2_entry","toSide":"left","label":"역할 전환 준비"}
+		{"id":"s1_tr_to_s2","fromNode":"s1_tr1","fromSide":"right","toNode":"s2_entry","toSide":"left","label":"역할 전환 준비"},
+		{"id":"s0_entry_t2","fromNode":"s0_entry","fromSide":"right","toNode":"s0_t2_1","toSide":"left","label":"현금 체험 관찰"},
+		{"id":"s0_entry_tr","fromNode":"s0_entry","fromSide":"right","toNode":"s0_tr1","toSide":"left","label":"인지 시작"},
+		{"id":"s0_t2_fail","fromNode":"s0_t2_1","fromSide":"bottom","toNode":"s0_tr1","toSide":"top","label":"현금 실패 → 고민 촉발"},
+		{"id":"s0_tr12","fromNode":"s0_tr1","fromSide":"right","toNode":"s0_tr2","toSide":"left"},
+		{"id":"s0_tr23","fromNode":"s0_tr2","fromSide":"right","toNode":"s0_tr3","toSide":"left"},
+		{"id":"s0_ev_inv","fromNode":"s0_ev1","fromSide":"bottom","toNode":"s0_inv1","toSide":"top","label":"입금 → 계좌 개설"},
+		{"id":"s0_inv12","fromNode":"s0_inv1","fromSide":"right","toNode":"s0_inv2","toSide":"left"},
+		{"id":"s0_inv23","fromNode":"s0_inv2","fromSide":"right","toNode":"s0_inv3","toSide":"left"},
+		{"id":"s0_ev_to_s1ev","fromNode":"s0_ev1","fromSide":"right","toNode":"s1_ev1","toSide":"left","label":"이벤트 시드 계속 →"},
+		{"id":"s0_inv3_to_s1inv","fromNode":"s0_inv3","fromSide":"right","toNode":"s1_inv1","toSide":"left","label":"투자 관찰 계속 →"},
+		{"id":"s0_tr3_to_s1","fromNode":"s0_tr3","fromSide":"right","toNode":"s1_entry","toSide":"left","label":"S1 진입 →"}
 	]
 }
