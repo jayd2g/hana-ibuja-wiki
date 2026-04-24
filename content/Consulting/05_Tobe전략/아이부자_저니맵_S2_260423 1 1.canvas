@@ -44,7 +44,7 @@
 		{"id":"s0_notif3","type":"text","text":"**📣 투자 계좌에서 돈이 늘고 있다는 내용을 자녀에게 공유해달라는 안내**","x":-4780,"y":382,"width":195,"height":120,"color":"2"},
 		{"id":"s0_t2_1","type":"text","text":"🔵 현금 용돈 체험\n받으면 금방 다 써버림\n'없어지네' 원체험","x":-6780,"y":800,"width":220,"height":124,"color":"5"},
 		{"id":"8ef7fc972537175e","type":"text","text":"🟢 아이부자 인지\n하나원큐 내 세뱃돈 / 자녀 금융 교육 넛지를 통한 인지\n[[F-2]]","x":-6520,"y":980,"width":220,"height":124,"color":"4"},
-		{"id":"s1_notif1","type":"text","text":"**📣 S1 진입 알림**\n→ 부모: \"초등 입학! 금융 교육을 시작할 타이밍이에요. 자녀 앱을 설치하고 첫 용돈을 보내보세요. [설치 안내]\"","x":-3740,"y":580,"width":290,"height":136,"color":"2"},
+		{"id":"s1_notif1","type":"text","text":"**📣 S1 진입 알림**\n부모: 자녀 앱 설치 & 선불카드 신청 \n필요 안내","x":-3740,"y":580,"width":290,"height":136,"color":"2"},
 		{"id":"10c787e107396ac7","type":"text","text":"**📣 미션 설계 유도 - 원하는걸 사기 위해 모아보는 경험**\n\n**미션 설계 이후 - 매칭 설계 유도 - 모은만큼 돈이 쌓이는 경험**","x":260,"y":553,"width":240,"height":148,"color":"2"},
 		{"id":"s1_t2_5","type":"text","text":"🟢 즉시 앱 이체\n📌 완료 현장\n[[G-3]]","x":-1740,"y":567,"width":220,"height":124,"color":"4"},
 		{"id":"s2_notif1","type":"text","text":"**📣 S2 진입 알림**\n부모: 목표X회 달성, 정기용돈 필요성 안내","x":-400,"y":464,"width":220,"height":152,"color":"2"},
@@ -52,7 +52,7 @@
 		{"id":"s1_t2_4","type":"text","text":"🔵 심부름 완료","x":-2120,"y":820,"width":220,"height":80,"color":"5"},
 		{"id":"s1_sav1","type":"text","text":"🔵 위시리스트 등록\n'저 갖고 싶어요'\n[[B-3]]","x":-2080,"y":420,"width":220,"height":124,"color":"5"},
 		{"id":"s1_sav4","type":"text","text":"⭐ **목표 달성 & 공동구매**\n'돈이 모이면 더 좋은 걸\n살 수 있어!' 핵심 인식\n[[E-1]] [[E-4]]","x":-1100,"y":460,"width":220,"height":160,"color":"3"},
-		{"id":"d6a9f98b92aa77e0","type":"text","text":"**중간 유입 PEAK**\n- 정기 용돈 필요성 인식 및 시작","x":-70,"y":1340,"width":280,"height":160,"color":"1"},
+		{"id":"d6a9f98b92aa77e0","type":"text","text":"**유입지점**\n- 정기 용돈 필요성 인식 및 시작","x":-70,"y":1340,"width":280,"height":160,"color":"1"},
 		{"id":"ms1","type":"text","text":"🟢 미션 저축 설계\n희망 항목 확인\n조건 제안 발송\n[[B-3]] [[B-4]] [[B-5]]","x":660,"y":574,"width":220,"height":142,"color":"4"},
 		{"id":"ms3","type":"text","text":"🔵 목표 금액 향해 저축\n'이만큼 모으면\n보태준대!'\n[[G-3]]","x":1230,"y":586,"width":220,"height":120,"color":"5"},
 		{"id":"ms2","type":"text","text":"🔵 미션 제안 수신\n'OO원 모으면 엄마가\n나머지 보태줄게!'\n[[B-5]]","x":940,"y":581,"width":220,"height":129,"color":"5"},
@@ -67,8 +67,6 @@
 		{"id":"inv2","type":"text","text":"🔵 투자 상품 직접 선택\n'내가 골랐다!'\n[[A-3]]","x":940,"y":120,"width":220,"height":124,"color":"5"},
 		{"id":"t2_3","type":"text","text":"🔵 쓸 돈 · 모을 돈 나눔\n앱에서 직접 분배\n[[B-2]]","x":940,"y":276,"width":220,"height":124,"color":"5"},
 		{"id":"m2","type":"text","text":"🔵 매칭 제안 수신\n'OO원 모으면 엄마가\nX배로 만들어준대!'\n[[A-1]]","x":940,"y":429,"width":220,"height":126,"color":"5"},
-		{"id":"s1_t2_3","type":"text","text":"🟣 심부름 약속 합의 \n'이걸 하면 OO원 줄게'\n[[D-2]]","x":-2480,"y":798,"width":220,"height":124,"color":"6"},
-		{"id":"dec28eb492678e27","type":"text","text":"**📣 소액의 돈이 쌓이는 경험**","x":-2467,"y":590,"width":195,"height":120,"color":"2"},
 		{"id":"ms4","type":"text","text":"🟢 달성 알림 수신\n나머지 금액 보태줌","x":1510,"y":602,"width":220,"height":88,"color":"4"},
 		{"id":"m4","type":"text","text":"🟢 달성 알림 수신\n매칭 입금 실행\n[[A-1]]","x":1510,"y":444,"width":220,"height":97,"color":"4"},
 		{"id":"ab14d518f3cca754","type":"text","text":"🟢 부모 부담 금액 조정 후\n수락 → 수락 알림 발송\n[[B-5]]","x":4950,"y":606,"width":220,"height":124,"color":"4"},
@@ -150,7 +148,9 @@
 		{"id":"045b909813e633ff","type":"text","text":"🔵 포괄 허락 범위 안에서\n종목·ETF 스스로 선택 매수\n(부모 개입 없음)\n[[A-2]] [[A-3]]","x":9445,"y":106,"width":220,"height":124,"color":"5"},
 		{"id":"de76b9fbdc2fcf81","type":"text","text":"🟢 범위 초과 매수 요청\n검토 후 수락·거절\n📌 범위 초과 요청 알림\n[[D-6]]","x":10660,"y":88,"width":220,"height":160,"color":"4"},
 		{"id":"b136a40c8ba93472","type":"text","text":"⭐ '돈이 늘고 있구나'\n자녀 첫 인지\n[[A-6]] [[G-3]]","x":-4230,"y":371,"width":220,"height":142,"color":"3"},
-		{"id":"s1_ev1","type":"text","text":"🔵 세뱃돈·생일선물\n계좌 발견\n'내 돈이 이미 있었네!'\n[[A-6]] [[B-7]]","x":-2960,"y":0,"width":220,"height":140,"color":"5"}
+		{"id":"s1_ev1","type":"text","text":"🔵 세뱃돈·생일선물\n계좌 발견\n'내 돈이 이미 있었네!'\n[[A-6]] [[B-7]]","x":-2960,"y":0,"width":220,"height":140,"color":"5"},
+		{"id":"dec28eb492678e27","type":"text","text":"**📣 소액의 돈이 쌓이는 경험**","x":-2520,"y":586,"width":195,"height":120,"color":"2"},
+		{"id":"s1_t2_3","type":"text","text":"🟣 심부름 약속 합의 \n'이걸 하면 OO원 줄게'\n[[D-2]]","x":-2532,"y":798,"width":220,"height":124,"color":"6"}
 	],
 	"edges":[
 		{"id":"e_ev12","fromNode":"ev1","fromSide":"right","toNode":"ev2","toSide":"left"},
